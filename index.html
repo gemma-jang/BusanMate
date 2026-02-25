@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 고정 너비 레이아웃을 유지하려면 아래 뷰포트 설정 유지 (반응형을 원하면 width=device-width로 변경) -->
+    <meta name="viewport" content="width=1580">
+
+    <title>Busan Mate</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/main/logo5.svg" type="image/x-icon">
+
+    <!-- webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!-- Swiper CSS (CDN 필수) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+    <div id="wrap">
+
+       
+        <!-- #header S -->
+        <div id="header">
+            <div class="inner_header">
+                <!-- 로고 영역 -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/main/logo1.svg" alt="logo"
+                            onerror="this.src='https://placehold.co/60x60/00548B/FFFFFF?text=LOGO'">
+                    </a>
+                </div>
+
+                <!-- GNB 메뉴 영역 -->
+                <ul class="gnb">
+                    <li><a href="#">About Busan</a>
+                        <!-- 서브 메뉴 추가 -->
+                        <ul class="depth2">
+                            <li><a href="sub1.html">The City</a></li>
+                            <li><a href="sub1_2.html">Characters</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sub2.html">How Busan Feels</a></li>
+                    <li><a href="sub3.html">Meet a mate</a></li>
+                </ul>
+
+                <!-- 우측 상단 그룹 (날씨 + 유틸) -->
+                <div class="header_right">
+                    <!-- 날씨 -->
+                    <ul class="weather">
+                        <li>
+                            <img src="./images/main/mingcute_sun-line.svg" alt="Sunny">
+                        </li>
+                        <li>
+                            <p>12°C</p>
+                        </li>
+                    </ul>
+
+                    <!-- 유틸리티 아이콘 -->
+                    <ul class="util">
+                        <li><a href="#"><img src="./images/main/util_1.png" alt="Search"></a></li>
+                        <li><a href="#"><img src="./images/main/util_2.png" alt="Language"></a></li>
+                        <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"></a></li>
+                        <li><a href="#"><img src="./images/main/util_4.png" alt="Account"></a></li>
+                    </ul>
+                </div><!-- .header_right -->
+            </div><!-- .inner_header -->
+        </div><!-- #header -->
+        <!-- #header E -->
+
+
+
+        <!-- hero banner S -->
+        <div id="visual-sec">
+            <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="txt-box">
+                            <h3 class="txt">Explore Busan with a Mate</h3>
+                            <p>See the city through a local's eyes</p>
+                        </div>
+                        <div class="img-box">
+                            <img src="./images/main/banner1.png" alt="Banner 1">
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="txt-box">
+                            <h3 class="txt">Busan, Beyond the View</h3>
+                            <p>Moments that stay long after the photo</p>
+                        </div>
+                        <div class="img-box">
+                            <img src="./images/main/banner2.png" alt="Banner 2">
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="txt-box">
+                            <h3 class="txt">Meet. Share. Explore</h3>
+                            <p>Travel feels better when shared</p>
+                        </div>
+                        <div class="img-box">
+                            <img src="./images/main/banner4.png" alt="Banner 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 컨트롤 박스 (구조 유지) -->
+            <div class="all-box">
+                <div class="progress-box">
+                    <!-- 페이지네이션 커스텀 -->
+                    <div class="swiper-pagination"></div>
+                    <!-- 자동재생 바 -->
+                    <div class="autoplay-progress">
+                        <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <line x1="0" y1="5" x2="100" y2="5"></line>
+                        </svg>
+                    </div>
+                </div>
+                <!-- 화살표 박스 -->
+                <div class="arrow-box">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <!-- hero banner E -->
+
+
+        <div id="container1">
+            <!-- content1 S -->
+            <div id="content1">
+                <div class="banner2">
+                    <div class="banner2_img">
+                        <img src="./images/main/content1.png" alt="content1">
+                    </div><!-- .banner2_img -->
+
+                    <div class="banner_wrap">
+                        <img src="./images/main/logo3.svg" alt="logo symbol">
+                        <h1>Navigating Busan is Better with Company. <br>
+                            Meet Your Perfect Travel Mate in the City of the Sea.</h1>
+
+                        <p>
+                            We've designed this for you, navigating through language barriers and an ocean of
+                            information. Our verified local Mates provide everything from real-time weather tips to
+                            practical assistance. Find your perfect travel partner within our safe and enjoyable
+                            community.
+                        </p>
+
+                        <a href="#" class="learn-btn">
+                            <span>Learn More</span>
+                            <img src="./images/main/mdi_arrow-right.svg" alt="arrow">
+                        </a><!-- .learn_btn -->
+                    </div><!-- .banner_wrap -->
+                </div><!-- .banner2 -->
+
+
+                <ul class="counter" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+                    <li>
+                        <!-- 숫자 32를 span으로 감쌈 -->
+                        <p class="count"><span>32,000</span><span class="count_suffix">K+</span></p>
+                        <p class="counter_letter">Visitors to Busan / year</p>
+                    </li>
+                    <li>
+                        <!-- 숫자 22을 span으로 감쌈 -->
+                        <p class="count"><span>980</span><span class="count_suffix">K+</span></p>
+                        <p class="counter_letter">Mate Connected</p>
+                    </li>
+                    <li>
+                        <!-- 숫자 3.5를 span으로 감쌈 -->
+                        <p class="count"><span>10,200</span><span class="count_suffix">K+</span></p>
+                        <p class="counter_letter">Stories Shared</p>
+                    </li>
+                </ul><!-- .counter -->
+            </div><!-- #content1 E-->
+
+            <!-- Content 2: Overview Busan -->
+            <div id="content2">
+                <!-- [수정] 배경 이미지 애니메이션용 태그 (클래스명: content2-bg-animate) -->
+                <div class="content2-bg-animate" data-aos="zoom-in" data-aos-duration="1500"></div>
+
+                <!-- [수정] 텍스트 영역 (배경 위로 띄움) -->
+                <div class="overview" data-aos="fade-down" data-aos-duration="1000"
+                    style="position: relative; z-index: 10;">
+                    <h1>Overview Busan</h1>
+                    <p>Where the sea meets mountains, and the city flows in between.</p>
+                </div><!-- .overview -->
+
+                <!-- [수정] 지도 및 카드 영역 (배경 위로 띄움) -->
+                <div class="overview_container" style="position: relative; z-index: 10;">
+                    <!-- 지도 영역 -->
+                    <div class="map_area" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                        <img src="./images/main/overview_busan_maps.svg" class="map_img" alt="Busan Map"
+                            onerror="this.src='https://placehold.co/800x600/81C784/fff?text=Busan+Map'">
+
+                        <!-- 랜드마크 핀 (수정: AOS 충돌 방지를 위해 내부 div에 애니메이션 적용) -->
+
+                        <!-- 1. 해동용궁사 -->
+                        <div class="landmark p1" onclick="changeOverviewSlide(0)">
+                            <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="600"
+                                data-aos-anchor=".map_area">
+                                <img src="./images/main/overview_landmark1_1.svg" class="land_bubble default"
+                                    alt="Bubble 1" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark1_2.svg" class="land_bubble hover"
+                                    alt="Bubble 1 Hover" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark1.svg" class="land_img default"
+                                    alt="Yonggungsa" onerror="this.src='https://placehold.co/60x60/f00/fff?text=1'">
+                                <img src="./images/main/overview_landmark1_3.svg" class="land_img hover"
+                                    alt="Yonggungsa Hover"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=1H'"
+                                    style="display:none;">
+                            </div>
+                        </div>
+
+                        <!-- 2. 해운대해변열차 -->
+                        <div class="landmark p2" onclick="changeOverviewSlide(1)">
+                            <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="700"
+                                data-aos-anchor=".map_area">
+                                <img src="./images/main/overview_landmark2_1.svg" class="land_bubble default"
+                                    alt="Bubble 2" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark2_2.svg" class="land_bubble hover"
+                                    alt="Bubble 2 Hover" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark2.svg" class="land_img default"
+                                    alt="Beach Train" onerror="this.src='https://placehold.co/60x60/f00/fff?text=2'">
+                                <img src="./images/main/overview_landmark2_3.svg" class="land_img hover"
+                                    alt="Beach Train Hover"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=2H'"
+                                    style="display:none;">
+                            </div>
+                        </div>
+
+                        <!-- 3. 광안리 비치 -->
+                        <div class="landmark p3" onclick="changeOverviewSlide(2)">
+                            <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="800"
+                                data-aos-anchor=".map_area">
+                                <img src="./images/main/overview_landmark3_1.svg" class="land_bubble default"
+                                    alt="Bubble 3" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark3_2.svg" class="land_bubble hover"
+                                    alt="Bubble 3 Hover" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark3.svg" class="land_img default" alt="Gwangalli"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=3'">
+                                <img src="./images/main/overview_landmark3_3.svg" class="land_img hover"
+                                    alt="Gwangalli Hover"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=3H'"
+                                    style="display:none;">
+                            </div>
+                        </div>
+
+                        <!-- 4. 벡스코 -->
+                        <div class="landmark p4" onclick="changeOverviewSlide(3)">
+                            <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="900"
+                                data-aos-anchor=".map_area">
+                                <img src="./images/main/overview_landmark4_1.svg" class="land_bubble default"
+                                    alt="Bubble 4" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark4_2.svg" class="land_bubble hover"
+                                    alt="Bubble 4 Hover" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark4.svg" class="land_img default" alt="BEXCO"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=4'">
+                                <img src="./images/main/overview_landmark4_3.svg" class="land_img hover"
+                                    alt="BEXCO Hover" onerror="this.src='https://placehold.co/60x60/f00/fff?text=4H'"
+                                    style="display:none;">
+                            </div>
+                        </div>
+
+                        <!-- 5. 사직야구장 -->
+                        <div class="landmark p5" onclick="changeOverviewSlide(4)">
+                            <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="1000"
+                                data-aos-anchor=".map_area">
+                                <img src="./images/main/overview_landmark5_1.svg" class="land_bubble default"
+                                    alt="Bubble 5" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark5_2.svg" class="land_bubble hover"
+                                    alt="Bubble 5 Hover" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark5.svg" class="land_img default" alt="Baseball"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=5'">
+                                <img src="./images/main/overview_landmark5_3.svg" class="land_img hover"
+                                    alt="Baseball Hover" onerror="this.src='https://placehold.co/60x60/f00/fff?text=5H'"
+                                    style="display:none;">
+                            </div>
+                        </div>
+
+                        <!-- 6. 감천문화마을 -->
+                        <div class="landmark p6" onclick="changeOverviewSlide(5)">
+                            <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="1100"
+                                data-aos-anchor=".map_area">
+                                <img src="./images/main/overview_landmark6_1.svg" class="land_bubble default"
+                                    alt="Bubble 6" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark6_2.svg" class="land_bubble hover"
+                                    alt="Bubble 6 Hover" onerror="this.style.display='none'">
+                                <img src="./images/main/overview_landmark6.svg" class="land_img default" alt="Gamcheon"
+                                    onerror="this.src='https://placehold.co/60x60/f00/fff?text=6'">
+                                <img src="./images/main/overview_landmark6_3.svg" class="land_img hover"
+                                    alt="Gamcheon Hover" onerror="this.src='https://placehold.co/60x60/f00/fff?text=6H'"
+                                    style="display:none;">
+                            </div>
+                        </div>
+                    </div><!-- //map_area -->
+
+                    <!-- 정보 카드 영역 -->
+                    <div class="info_card_wrap">
+                        <!-- 캐릭터 (카드 뒤에서 등장 효과) -->
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
+                            data-aos-easing="ease-out-back">
+                            <img src="./images/main/overview_ming1.png" class="ming_char" alt="Ming Character"
+                                onerror="this.src='https://placehold.co/100x100/F4D03F/000?text=Ming'">
+                        </div>
+
+                        <!-- 하얀 박스 (오른쪽에서 등장) -->
+                        <div class="info_card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="card_img">
+                                <img src="./images/main/gamcheon.svg" alt="Spot Photo" id="slide-img"
+                                    onerror="this.src='https://placehold.co/320x180/ccc/333?text=Spot'">
+                            </div>
+                            <div class="card_body">
+                                <a href="#" id="slide-title-link" target="_blank">
+                                    <h3 id="slide-title">Gamcheon Culture Village</h3>
+                                </a>
+                                <ul class="info_list">
+                                    <li><img src="./images/main/overview_icon1.png" alt="Addr"
+                                            onerror="this.src='https://placehold.co/16x16/333/fff?text=A'"> <span
+                                            id="slide-addr">203, Gamnae 2-ro, Saha-gu, Busan</span></li>
+                                    <li><img src="./images/main/overview_icon2.png" alt="Tel"
+                                            onerror="this.style.display='none'"> <span
+                                            id="slide-tel">+82-51-204-1444</span></li>
+                                    <li><img src="./images/main/overview_icon3.png" alt="Time"
+                                            onerror="this.style.display='none'"> <span id="slide-time">Open daily 09:00
+                                            AM - 06:00 PM</span></li>
+                                    <li><img src="./images/main/overview_icon4.png" alt="Price"
+                                            onerror="this.style.display='none'"> <span id="slide-price">Free
+                                            Entry</span></li>
+                                </ul>
+                                <div class="card_footer">
+                                    <a href="https://www.google.com/maps" target="_blank" class="google_btn"
+                                        id="slide-map">
+                                        <img src="./images/main/overview_icon5.png" alt="Google Maps"
+                                            onerror="this.src='https://placehold.co/18x18/333/fff?text=G'"> Google Maps
+                                    </a>
+                                    <div class="slide_controls">
+                                        <button class="prev_btn" onclick="prevSlide()"><img
+                                                src="./images/main/overview_icon6.png" alt="Prev"
+                                                onerror="this.src='https://placehold.co/24x24/333/fff?text=<'"></button>
+                                        <button class="next_btn" onclick="nextSlide()"><img
+                                                src="./images/main/overview_icon7.png" alt="Next"
+                                                onerror="this.src='https://placehold.co/24x24/333/fff?text=>'"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- //info_card_wrap -->
+                </div><!-- //overview_container -->
+            </div><!-- #content2 E-->
+
+
+
+
+            <!-- [중요] Live from Mates Section (AOS 적용) -->
+            <div id="content3">
+                <div class="inner_content3">
+                    <!-- 1. 타이틀: 아래에서 위로 등장 -->
+                    <h2 class="live_title" data-aos="fade-down" data-aos-duration="1000">Live from Mates</h2>
+
+                    <div class="live_card_container">
+                        <!-- 2. 왼쪽 카드: fade-right 대신 fade-up으로 변경하여 자연스럽게 -->
+                        <div class="live_card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="card_header">
+                                <span class="card_title">Weather Now</span>
+                                <a href="#" class="more_btn">More +</a>
+                            </div><!-- //card_header -->
+                            <a href="#" class="white_card_link">
+                                <div class="slide_wrapper" id="weather-slide-wrapper">
+                                    <!-- 초기 컨텐츠 (해운대) -->
+                                    <div class="weather_info">
+                                        <img src="./images/main/haeundae.jpg" alt="Haeundae" class="location_img"
+                                            onerror="this.src='https://placehold.co/48x48/81C784/FFFFFF?text=Sea'">
+                                        <div class="location_text">
+                                            <h3><span class="ico ico_loc"></span> Haeundae</h3>
+                                            <span><span class="ico ico_weather"></span> 22°C</span>
+                                        </div>
+                                    </div><!-- //weather_info -->
+                                    <ul class="comment_list">
+                                        <li>
+                                            <div class="user_info"><span class="ico ico_flag flag_usa"></span> Sophie
+                                            </div>
+                                            <div class="comment_text">"Great weather for walking around."</div>
+                                            <span class="time_ago">2 mins ago</span>
+                                        </li>
+                                        <li>
+                                            <div class="user_info"><span class="ico ico_flag flag_can"></span> Mark
+                                            </div>
+                                            <div class="comment_text">"A bit windy but sunny!"</div>
+                                            <span class="time_ago">11 mins ago</span>
+                                        </li>
+                                        <li>
+                                            <div class="user_info"><span class="ico ico_flag flag_kor"></span> Yuri
+                                            </div>
+                                            <div class="comment_text">"Perfect day for a picnic."</div>
+                                            <span class="time_ago">1h 36m ago</span>
+                                        </li>
+                                    </ul><!-- //comment_list -->
+                                </div><!-- //slide_wrapper -->
+                            </a><!-- //white_card_link -->
+                        </div><!-- //live_card -->
+
+                        <!-- 3. 오른쪽 카드: fade-left 대신 fade-up으로 변경하여 자연스럽게 -->
+                        <div class="live_card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                            <div class="card_header">
+                                <span class="card_title">Live Travel Updates</span>
+                                <a href="#" class="more_btn">More +</a>
+                            </div><!-- //card_header -->
+                            <a href="#" class="white_card_link">
+                                <div class="slide_wrapper" id="travel-slide-wrapper">
+                                    <!-- 초기 컨텐츠 -->
+                                    <div class="travel_item">
+                                        <img src="./images/main/user1.png" alt="User" class="user_avatar"
+                                            onerror="this.src='https://placehold.co/38x38/ccc/333?text=Mark'">
+                                        <div class="travel_content">
+                                            <div class="travel_user"><span class="ico ico_flag flag_can"></span> Mark
+                                            </div>
+                                            <p class="travel_msg">"Just arrived at Gimhae Airport! Excited."</p>
+                                            <div class="travel_meta"><span><span class="ico ico_loc_gray"></span> Gimhae
+                                                    Airport</span><span class="meta_badge">Now</span></div>
+                                        </div><!-- //travel_content -->
+                                    </div><!-- //travel_item -->
+                                    <div class="travel_item">
+                                        <img src="./images/main/user2.png" alt="User" class="user_avatar"
+                                            onerror="this.src='https://placehold.co/38x38/ccc/333?text=Amy'">
+                                        <div class="travel_content">
+                                            <div class="travel_user"><span class="ico ico_flag flag_usa"></span> Amy
+                                            </div>
+                                            <p class="travel_msg">"The coffee at Jeonpo Cafe Street is amazing."</p>
+                                            <div class="travel_meta"><span><span class="ico ico_loc_gray"></span>
+                                                    Jeonpo</span><span class="meta_badge">5m ago</span></div>
+                                        </div><!-- //travel_content -->
+                                    </div><!-- //travel_item -->
+                                </div><!-- //slide_wrapper -->
+                            </a><!-- //white_card_link -->
+                        </div><!-- //live_card -->
+                    </div><!-- //live_card_container -->
+
+
+
+                    <!-- [추가] 캐릭터 그림자 (커졌다가 작아지는 효과: zoom-in + ease-out-back) -->
+                    <img src="./images/main/shadow.png" class="jjoyak-shadow" alt="Jjoyak Shadow" data-aos="fade-down"
+                        data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease-out-back"
+                        onerror="this.style.display='none'">
+
+                    <!-- [수정] 캐릭터 (위로 올라오는 효과) -->
+                    <img src="./images/main/jjoyak1.png" alt="Jjoyak Character" class="jjoyak_char" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-out-back"
+                        onerror="this.src='https://placehold.co/200x200/F4D03F/000?text=JJOYAK'">
+                </div><!-- //inner_content3 -->
+            </div><!-- //content3 -->
+
+
+            <!-- Content 4: Banners -->
+            <div id="content4">
+                <div class="inner_content4">
+                    <h2 class="today_busan" data-aos="fade-down" data-aos-duration="1000">Today Busan</h2>
+
+                    <!-- [추가] 왼쪽 그림자 (fade-down) -->
+                    <img src="./images/main/shadow.png" class="char-shadow-left" alt="Shadow Left" data-aos="fade-down"
+                        data-aos-duration="1200" data-aos-delay="300" data-aos-anchor=".today_busan"
+                        data-aos-easing="ease-out-back" data-aos-anchor-placement="top-center"
+                        onerror="this.style.display='none'">
+
+                    <!-- [수정] 왼쪽 캐릭터: 위로 올라오면서 퉁! 튀는 효과 (ease-out-back) -->
+                    <img src="./images/main/ad_banner_char2.png" class="banner-char-left" alt="Character Left"
+                        data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-anchor=".today_busan"
+                        data-aos-easing="ease-out-back" data-aos-anchor-placement="top-center"
+                        onerror="this.src='https://placehold.co/400x500/transparent/eee?text=CharL'">
+
+                    <!-- [추가] 오른쪽 그림자 (fade-down) -->
+                    <img src="./images/main/shadow.png" class="char-shadow-right" alt="Shadow Right"
+                        data-aos="fade-down" data-aos-duration="1200" data-aos-delay="500"
+                        data-aos-anchor=".today_busan" data-aos-easing="ease-out-back"
+                        data-aos-anchor-placement="top-center" onerror="this.style.display='none'">
+
+                    <!-- [수정] 오른쪽 캐릭터: 위로 올라오면서 퉁! 튀는 효과 (ease-out-back) -->
+                    <img src="./images/main/ad_banner_char1.png" class="banner-char-right" alt="Character Right"
+                        data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400" data-aos-anchor=".today_busan"
+                        data-aos-easing="ease-out-back" data-aos-anchor-placement="top-center"
+                        onerror="this.src='https://placehold.co/400x500/transparent/eee?text=CharR'">
+
+                    <ul class="banner_list" data-aos="fade-up" data-aos-duration="1000">
+                        <li class="banner_item"><a href="#" class="banner_link">
+                                <div class="banner_img_box"><img src="./images/main/ad_1.png" alt="Beomeosa"
+                                        onerror="this.src='https://placehold.co/315x460/555/fff?text=Beomeosa'"></div>
+                                <div class="banner_info">
+                                    <h3>Beomeosa Templestay</h3>
+                                    <p>Mar 2 - Apr 25, 2026</p>
+                                </div>
+                            </a></li>
+                        <li class="banner_item"><a href="#" class="banner_link">
+                                <div class="banner_img_box"><img src="./images/main/ad_2.png" alt="Snap"
+                                        onerror="this.src='https://placehold.co/315x460/e0cba8/333?text=Snap'"></div>
+                                <div class="banner_info">
+                                    <h3>Snap With a Mate</h3>
+                                    <p>Oct 6 - Oct 15, 2026</p>
+                                </div>
+                            </a></li>
+                        <li class="banner_item"><a href="#" class="banner_link">
+                                <div class="banner_img_box"><img src="./images/main/ad_3.png" alt="BIFF"
+                                        onerror="this.src='https://placehold.co/315x460/00a500/fff?text=BIFF'"></div>
+                                <div class="banner_info">
+                                    <h3>2026 BIFF</h3>
+                                    <p>Mar 2 - Apr 25, 2026</p>
+                                </div>
+                            </a></li>
+                        <li class="banner_item"><a href="#" class="banner_link">
+                                <div class="banner_img_box"><img src="./images/main/ad_4.png" alt="Jazz"
+                                        onerror="this.src='https://placehold.co/315x460/2c3e50/fff?text=Cinema'"></div>
+                                <div class="banner_info">
+                                    <h3>2026 Busan Jazz Port</h3>
+                                    <p>Mar 2 - Apr 25, 2026</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!-- [수정] Content 5: Mate's Stories (Zoom-in 효과 + 부드러운 오퍼시티 적용) -->
+            <div id="content5">
+                <!-- 배경은 고정하고, 내부 컨텐츠(inner_content5)에만 애니메이션 적용 -->
+                <!-- data-aos-delay="200": 스크롤 후 살짝 늦게 나타나 오퍼시티 효과 강조 -->
+                <div class="inner_content5" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200"
+                    data-aos-easing="ease-out">
+                    <div class="mate_text_box">
+                        <h4 class="mate_subtitle">Mate's stories</h4>
+                        <h2 class="mate_title">Meet Stories<br>from Our Mates</h2>
+                        <p class="mate_desc">Real moments shared by people who know Busan</p>
+
+                        <div class="hashtag_list" id="hashtagList">
+                            <button class="hash_btn active" onclick="changeMateStory(0)">#WithAMate</button>
+                            <button class="hash_btn" onclick="changeMateStory(1)">#FirstTimeInBusan</button>
+                            <button class="hash_btn" onclick="changeMateStory(2)">#LocalTips</button>
+                            <button class="hash_btn" onclick="changeMateStory(3)">#HiddenSpots</button>
+                            <button class="hash_btn" onclick="changeMateStory(4)">#FoodWalk</button>
+                            <button class="hash_btn" onclick="changeMateStory(5)">#NightMoments</button>
+                            <button class="hash_btn" onclick="changeMateStory(6)">#SlowTravel</button>
+                            <button class="hash_btn" onclick="changeMateStory(7)">#UnexpectedMoments</button>
+                        </div><!-- //hashtag_list -->
+                        <a href="./stories.html" class="read_more_btn">Read More Stories →</a>
+                    </div><!-- //mate_text_box -->
+
+                    <div class="mate_card_box">
+                        <div class="mate_card_img">
+                            <!-- 초기 이미지 설정 -->
+                            <img src="./images/main/mate_stories_photo1.svg" alt="Story" id="mate-story-img"
+                                onerror="this.src='https://placehold.co/680x383/ccc/333?text=Story+1'">
+                        </div><!-- //mate_card_img -->
+                        <div class="mate_card_info" id="mate-card-info">
+                            <h3 class="mate_name" id="mate-name">Sarah</h3>
+                            <!-- 해시태그 5개 -->
+                            <div class="mate_tags" id="mate-tags">
+                                <span onclick="location.href='./stories.html'">#WithAMate</span>
+                                <span onclick="location.href='./stories.html'">#BusanLife</span>
+                                <span onclick="location.href='./stories.html'">#GamcheonCultureVillage</span>
+                                <span onclick="location.href='./stories.html'">#TravelGram</span>
+                                <span onclick="location.href='./stories.html'">#KoreaTrip</span>
+                            </div><!-- //mate_tags -->
+                            <p class="mate_review" id="mate-review">
+                                "Walking through Gamcheon with a local mate made the steep paths feel like a breeze!"
+                            </p>
+                        </div><!-- //mate_card_info -->
+                    </div><!-- //mate_card_box -->
+                </div><!-- //inner_content5 -->
+            </div><!-- //content5 -->
+        </div><!-- //container1 -->
+
+        <!-- [NEW] Footer -->
+        <footer id="footer">
+            <!-- [추가] 푸터 캐릭터 그림자 (zoom-in 효과) -->
+            <img src="./images/main/shadow1.png" class="footer-char-shadow" alt="Footer Shadow" data-aos="zoom-in" data-aos-easing="ease-out-back" 
+                data-aos-duration="1000" data-aos-delay="200" onerror="this.style.display='none'">
+
+            <!-- [수정] 푸터 캐릭터 (fade-up 효과 추가) -->
+            <img src="./images/main/footer_char.png" class="footer_char" alt="Footer Character" data-aos="fade-up" data-aos-easing="ease-out-back" 
+                data-aos-duration="1000" onerror="this.src='https://placehold.co/250x250/F4D03F/000?text=Char'">
+
+            <div class="inner_footer">
+                <div class="footer_left">
+                    <div class="footer_logo" onclick="location.href='#'">
+                        <img src="./images/main/footer_logo.png" alt="Busan Mate Logo"
+                            onerror="this.src='https://placehold.co/150x40/00548B/fff?text=BUSAN+MATE'">
+                    </div><!-- //footer_logo -->
+                    <p class="footer_desc">Don't just visit, belong to Busan. Get the latest travel tips and local mate
+                        updates directly in your inbox.</p>
+                </div><!-- //footer_left -->
+
+                <div class="footer_links">
+                    <div class="footer_col">
+                        <h4>DISCOVER</h4>
+                        <ul>
+                            <li><a href="#">Local Picks</a></li>
+                            <li><a href="#">Mate's Stories</a></li>
+                            <li><a href="#">Busan Dialect</a></li>
+                            <li><a href="#">How Busan Feels</a></li>
+                        </ul>
+                    </div><!-- //footer_col -->
+                    <div class="footer_col">
+                        <h4>PLAN YOUR TRIP</h4>
+                        <ul>
+                            <li><a href="#">Weather & Live Updates</a></li>
+                            <li><a href="#">Transportation</a></li>
+                            <li><a href="#">Safety & Emergency</a></li>
+                            <li><a href="#">Useful Tips</a></li>
+                        </ul>
+                    </div><!-- //footer_col -->
+                    <div class="footer_col">
+                        <h4>EXPLORE</h4>
+                        <ul>
+                            <li><a href="#">About Busan Mate</a></li>
+                            <li><a href="#">Become a Mate</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div><!-- //footer_col -->
+                    <div class="footer_col">
+                        <h4>FOLLOW</h4>
+                        <div class="footer_social">
+                            <a href="https://www.instagram.com/" target="_blank"><img
+                                    src="./images/main/footer_icon1.svg" alt="Insta"
+                                    onerror="this.src='https://placehold.co/30x30/ddd/333?text=I'"></a>
+                            <a href="https://www.youtube.com/" target="_blank"><img src="./images/main/footer_icon2.svg"
+                                    alt="Youtube" onerror="this.src='https://placehold.co/30x30/ddd/333?text=Y'"></a>
+                            <a href="https://x.com/" target="_blank"><img src="./images/main/footer_icon3.svg" alt="X"
+                                    onerror="this.src='https://placehold.co/30x30/ddd/333?text=X'"></a>
+                            <a href="https://www.facebook.com/" target="_blank"><img
+                                    src="./images/main/footer_icon4.svg" alt="Facebook"
+                                    onerror="this.src='https://placehold.co/30x30/ddd/333?text=F'"></a>
+                        </div>
+                    </div><!-- //footer_col -->
+                </div><!-- //footer_links -->
+            </div><!-- //inner_footer -->
+
+            <div class="footer_bottom">
+                <div class="footer_bottom_links">
+                    <div class="lang_btn">
+                        <img src="./images/main/footer_icon5.png" alt="Globe"
+                            onerror="this.src='https://placehold.co/16x16/333/fff?text=G'">
+                        <span>English</span> <span>Korean</span>
+                    </div>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div><!-- //footer_bottom_links -->
+                <p>Copyright © 2026 BUSAN MATE. All rights reserved.</p>
+            </div><!-- //footer_bottom -->
+
+            <div class="site_url"
+                style="text-align: left; width: 1320px; margin: 10px auto 0; font-size: 12px; color: #00548B;"
+                onclick="location.href='#'">www.busanmate.com</div>
+        </footer><!-- //footer -->
+
+    </div><!-- #wrap -->
+
+
+
+
+    <!-- Scripts for Slides & Interactions -->
+    <!-- swiper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS 제어구문 -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+
+
+
+</body>
+
+
+
+</html>

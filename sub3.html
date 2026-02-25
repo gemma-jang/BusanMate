@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1580">
+    <title>Busan Mate</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/main/logo5.svg" type="image/x-icon">
+
+    <!-- webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!--  font-family: 'Otomanopee One Regular'; -->
+
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style_sub3.css">
+
+</head>
+
+<body>
+
+
+    <div id="wrap">
+
+        <!-- #header S -->
+        <div id="header">
+            <div class="inner_header">
+                <!-- 로고 영역 -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="./images/main/logo1.svg" alt="logo"
+                            onerror="this.src='https://placehold.co/60x60/00548B/FFFFFF?text=LOGO'">
+                    </a>
+                </div><!-- .logo -->
+
+                <!-- GNB 메뉴 영역 -->
+                <ul class="gnb">
+                    <li><a href="#">About Busan</a>
+                        <!-- 서브 메뉴 추가 -->
+                        <ul class="depth2">
+                            <li><a href="sub1.html">The City</a></li>
+                            <li><a href="sub1_2.html">Characters</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sub2.html">How Busan Feels</a></li>
+                    <li><a href="sub3.html">Meet a mate</a></li>
+                </ul>
+
+                <!-- 우측 상단 그룹 (날씨 + 유틸) -->
+                <div class="header_right">
+                    <ul class="weather">
+                        <li>
+                            <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
+                                onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
+                        </li>
+                        <li>
+                            <p>12°C</p>
+                        </li>
+                    </ul><!-- .weather -->
+
+                    <!-- 유틸리티 아이콘 -->
+                    <ul class="util">
+                        <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
+                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=S'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_2.png" alt="Language"
+                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=L'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"
+                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=H'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_4.png" alt="Account"
+                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=A'"></a></li>
+                    </ul><!-- .util -->
+                </div><!-- .header_right -->
+            </div><!-- .inner_header -->
+        </div><!-- #header -->
+        <!-- #header E -->
+
+        <!-- 
+            [새로운 Banner 영역]
+            Parallax 효과, 그라데이션 오버레이, 텍스트 애니메이션 적용 
+        -->
+        <div class="banner_sub3_parallax">
+            <!-- 배경 이미지: fixed 적용으로 스크롤 시 고정됨 -->
+            <div id="banner-bg" class="banner_bg"></div>
+
+            <!-- 그라데이션 오버레이 -->
+            <div class="banner_overlay"></div>
+
+            <!-- 텍스트 콘텐츠 -->
+            <div class="banner_content">
+                <div class="banner_inner">
+                    <h2 class="banner_title animate-fade-up">What is a Mate?</h2>
+                    <div class="banner_line animate-fade-up delay-300"></div>
+                    <p class="banner_desc animate-fade-up delay-500">
+                        A Mate is a travel companion who helps you experience Busan like a local.<br>
+                        They’re not a tour guide, but someone to explore, talk, and share moments with.<br>
+                        Whether it’s walking the city, finding hidden spots, or just grabbing coffee,<br>
+                        a mate makes your trip feel more personal and connected.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- #findamate S -->
+        <div id="findamate">
+            <!-- Header & Filters -->
+            <div class="findamate_header">
+                <div class="title_wrap">
+                    <img src="./images/sub3/Vector.png" alt="search" onerror="this.style.display='none'">
+                    <h2>Find a Mate</h2>
+                </div>
+                <p>Make your Busan trip unforgettable with the perfect travel mate.</p>
+
+                <!-- Filters Row -->
+                <div class="filters_row">
+                    <div class="filter_group">
+                        <span class="filter_label">Language</span>
+                        <!-- 수정: id 추가 -->
+                        <select class="custom_select" id="langSelect">
+                            <option>Select a language</option>
+                            <option>English</option>
+                            <option>Korean</option>
+                            <option>Japanese</option>
+                            <option>Chinese</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                            <option>German</option>
+                            <option>Russian</option>
+                            <option>Portuguese</option>
+                            <option>Italian</option>
+                            <option>Vietnamese</option>
+                            <option>Thai</option>
+                            <option>Indonesian</option>
+                            <option>Arabic</option>
+                            <option>Hindi</option>
+                        </select>
+                    </div>
+                    <div class="filter_group">
+                        <span class="filter_label">Travel Style</span>
+                        <!-- 수정: id 추가 -->
+                        <select class="custom_select" id="styleSelect">
+                            <option>Select a Travel style</option>
+                            <option>Foodie</option>
+                            <option>Active</option>
+                            <option>Relaxed</option>
+                            <option>Cultural</option>
+                            <option>Nightlife</option>
+                            <option>Shopping</option>
+                            <option>Nature Lover</option>
+                            <option>History Buff</option>
+                            <option>Adventure</option>
+                            <option>Luxury</option>
+                            <option>Local Life</option>
+                        </select>
+                    </div>
+                    <div class="filter_group">
+                        <span class="filter_label">Availability</span>
+                        <!-- 수정: id 추가 -->
+                        <select class="custom_select" id="availSelect">
+                            <option>Select availability</option>
+                            <option>Weekdays</option>
+                            <option>Weekends</option>
+                            <option>Anytime</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Interest Tags -->
+                <!-- 수정: data-value 추가 -->
+                <div class="interest_tags">
+                    <span class="tag_title">Interest</span>
+
+                    <button class="tag_btn" data-value="coffee">☕ coffee</button>
+                    <button class="tag_btn" data-value="Local Food">🍽️ Local Food</button>
+                    <button class="tag_btn" data-value="Walking">🚶 Walking</button>
+                    <button class="tag_btn" data-value="Beach">🌊 Beach</button>
+                    <button class="tag_btn" data-value="Nightview">🌃 Nightview</button>
+                    <button class="tag_btn" data-value="Photography">📷 Photography</button>
+                    <button class="tag_btn" data-value="Hiking">🥾 Hiking</button>
+                    <button class="tag_btn" data-value="Sunset">🌅 Sunset</button>
+                    <button class="tag_btn" data-value="Shopping">🛍️ Shopping</button>
+                    <!-- 추가 태그들 -->
+                    <button class="tag_btn" data-value="Exhibitions">🎨 Exhibitions</button>
+                    <button class="tag_btn" data-value="Reading">📚 Reading</button>
+                    <button class="tag_btn" data-value="Surfing">🏄 Surfing</button>
+                    <!-- 수정: Alcohol -> Pubs & Bars -->
+                    <button class="tag_btn" data-value="Pubs & Bars">🍻 Pubs & Bars</button>
+
+                    <!-- 수정: Reset 버튼 위치 변경 (맨 끝으로) -->
+                    <button id="resetTagsBtn" class="reset_btn">↺ Reset</button>
+                </div>
+            </div><!-- .findamate_header -->
+
+            <!-- Mate Cards Grid -->
+            <!-- 수정: 자바스크립트로 렌더링되므로 내부는 비워둡니다. -->
+            <div class="mate_grid" id="mateGrid">
+                <!-- Javascript will inject cards here -->
+            </div><!-- .mate_grid -->
+        </div><!-- #findamate -->
+
+        <!-- 수정: Mate Stories 리뷰 섹션 구조 변경 (CSS 박스 + 말풍선 이미지) -->
+        <div id="matestories">
+            <h3>Mate Stories</h3>
+            <div class="marquee_container">
+                <div class="marquee_track">
+                    <!-- Review Set 1 -->
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/FF5733/fff?text=A" class="review_profile_img"
+                                    alt="Angela">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇦🇷</span>
+                                        <h4>Angela</h4>
+                                    </div>
+                                    <span>Felt like a friend</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">It felt natural from the first meeting. We shared stories, laughed a
+                                lot, and the trip felt less like travel and more like hanging out with a friend.</p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/3357FF/fff?text=M" class="review_profile_img"
+                                    alt="Mike">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇺🇸</span>
+                                        <h4>Mike</h4>
+                                    </div>
+                                    <span>Best local guide</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">I discovered hidden gems in Busan that I would never have found on my
+                                own. My mate was knowledgeable and super friendly. The best way to experience the city!
+                            </p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/33FF57/fff?text=S" class="review_profile_img"
+                                    alt="Sarah">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇨🇦</span>
+                                        <h4>Sarah</h4>
+                                    </div>
+                                    <span>Safe and fun</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">As a female solo traveler, safety was my priority. Meeting a verified
+                                mate made me feel secure and I had so much fun exploring the night markets together.</p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/FF33A8/fff?text=K" class="review_profile_img"
+                                    alt="Ken">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇯🇵</span>
+                                        <h4>Ken</h4>
+                                    </div>
+                                    <span>Unforgettable memories</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">We went surfing at Songjeong beach and had amazing seafood
+                                afterwards. It was the highlight of my trip to Korea. Thanks for the unforgettable
+                                memories!</p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/F39C12/fff?text=J" class="review_profile_img"
+                                    alt="Jessica">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇩🇪</span>
+                                        <h4>Jessica</h4>
+                                    </div>
+                                    <span>Language exchange</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">Great opportunity to practice my Korean while helping my mate with
+                                English. We visited cultural sites and had deep conversations. A true cultural exchange.
+                            </p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <!-- Review Set 2 (Duplicate for smooth infinite scroll) -->
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/FF5733/fff?text=A" class="review_profile_img"
+                                    alt="Angela">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇦🇷</span>
+                                        <h4>Angela</h4>
+                                    </div>
+                                    <span>Felt like a friend</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">It felt natural from the first meeting. We shared stories, laughed a
+                                lot, and the trip felt less like travel and more like hanging out with a friend.</p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/3357FF/fff?text=M" class="review_profile_img"
+                                    alt="Mike">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇺🇸</span>
+                                        <h4>Mike</h4>
+                                    </div>
+                                    <span>Best local guide</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">I discovered hidden gems in Busan that I would never have found on my
+                                own. My mate was knowledgeable and super friendly. The best way to experience the city!
+                            </p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/33FF57/fff?text=S" class="review_profile_img"
+                                    alt="Sarah">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇨🇦</span>
+                                        <h4>Sarah</h4>
+                                    </div>
+                                    <span>Safe and fun</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">As a female solo traveler, safety was my priority. Meeting a verified
+                                mate made me feel secure and I had so much fun exploring the night markets together.</p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/FF33A8/fff?text=K" class="review_profile_img"
+                                    alt="Ken">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇯🇵</span>
+                                        <h4>Ken</h4>
+                                    </div>
+                                    <span>Unforgettable memories</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">We went surfing at Songjeong beach and had amazing seafood
+                                afterwards. It was the highlight of my trip to Korea. Thanks for the unforgettable
+                                memories!</p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+
+                    <div class="review_item">
+                        <img src="./images/sub3/mate_review.png" class="review_tag_img" alt="Mate Review"
+                            onerror="this.style.display='none'">
+                        <div class="review_inner_card">
+                            <div class="review_header">
+                                <img src="https://placehold.co/50x50/F39C12/fff?text=J" class="review_profile_img"
+                                    alt="Jessica">
+                                <div class="review_info">
+                                    <div class="review_name_row">
+                                        <span class="flag_icon">🇩🇪</span>
+                                        <h4>Jessica</h4>
+                                    </div>
+                                    <span>Language exchange</span>
+                                </div>
+                            </div>
+                            <div class="review_divider"></div>
+                            <p class="review_text">Great opportunity to practice my Korean while helping my mate with
+                                English. We visited cultural sites and had deep conversations. A true cultural exchange.
+                            </p>
+                            <button class="read_more_btn">Read More +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- #matestories -->
+
+
+        <!-- NOTICE 섹션 추가 -->
+        <div id="notice_section">
+            <div class="inner_notice">
+                <div class="notice_box">
+                    <div class="notice_title">
+                        NOTICE
+                        <a href="#"><img src="./images/sub3/notice_icon.png" class="notice_icon_img" alt="Notice Icon"
+                                onerror="this.style.display='none'"></a>
+                    </div>
+
+                    <!-- 수정: 가로 2개 배치를 유지하며 롤링되도록 구조 변경 -->
+                    <div class="notice_content">
+                        <ul class="notice_list">
+                            <!-- Set 1 -->
+                            <li class="notice_row">
+                                <a href="#" class="notice_link">A quick safety reminder for meeting your mate</a>
+                                <div class="notice_separator"></div>
+                                <a href="#" class="notice_link">New Mate Stories from real trips in Busan</a>
+                            </li>
+                            <!-- Set 2 (롤링될 다음 공지) -->
+                            <li class="notice_row">
+                                <a href="#" class="notice_link">Check out the top 10 photo spots in Busan!</a>
+                                <div class="notice_separator"></div>
+                                <a href="#" class="notice_link">Busan Fireworks Festival 2026 Guide</a>
+                            </li>
+                            <!-- Set 3 -->
+                            <li class="notice_row">
+                                <a href="#" class="notice_link">Join our weekly language exchange meetup</a>
+                                <div class="notice_separator"></div>
+                                <a href="#" class="notice_link">Best local food restaurants near Haeundae</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="notice_icons_row">
+                    <a href="#" class="notice_icon_item">
+                        <img src="./images/sub3/notice1.png" class="notice_menu_img" alt="Tourist Info"
+                            onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Tourist+Info'">
+                        <p class="notice_menu_label">Tourist Info</p>
+                    </a>
+                    <a href="#" class="notice_icon_item">
+                        <img src="./images/sub3/notice2.png" class="notice_menu_img" alt="Maps & Guide"
+                            onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Maps+Guide'">
+                        <p class="notice_menu_label">Maps & Guide</p>
+                    </a>
+                    <a href="#" class="notice_icon_item">
+                        <img src="./images/sub3/notice3.png" class="notice_menu_img" alt="Emergency"
+                            onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Emergency'">
+                        <p class="notice_menu_label">Emergency</p>
+                    </a>
+                    <a href="#" class="notice_icon_item">
+                        <img src="./images/sub3/notice4.png" class="notice_menu_img" alt="Medical"
+                            onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Medical'">
+                        <p class="notice_menu_label">Medical</p>
+                    </a>
+                    <a href="#" class="notice_icon_item">
+                        <img src="./images/sub3/notice5.png" class="notice_menu_img" alt="Lost & Found"
+                            onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Lost+Found'">
+                        <p class="notice_menu_label">Lost & Found</p>
+                    </a>
+                    <a href="#" class="notice_icon_item">
+                        <img src="./images/sub3/notice6.png" class="notice_menu_img" alt="Safety Tips"
+                            onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Safety+Tips'">
+                        <p class="notice_menu_label">Safety Tips</p>
+                    </a>
+                </div>
+            </div>
+        </div><!-- #notice_section -->
+
+
+        <!-- Subpage Footer S -->
+        <footer id="footer_sub1">
+
+            <div class="inner_footer">
+                <!-- Clouds inside inner_footer for relative positioning -->
+                <img src="./images/sub1/footer_cloud1.png" class="footer_cloud cloud_1" alt="cloud"
+                    onerror="this.style.display='none'">
+                <img src="./images/sub1/footer_cloud2.png" class="footer_cloud cloud_2" alt="cloud"
+                    onerror="this.style.display='none'">
+                <img src="./images/sub1/footer_cloud3.png" class="footer_cloud cloud_3" alt="cloud"
+                    onerror="this.style.display='none'">
+                <img src="./images/sub1/footer_cloud4.png" class="footer_cloud cloud_4" alt="cloud"
+                    onerror="this.style.display='none'">
+                <img src="./images/sub1/footer_cloud5.png" class="footer_cloud cloud_5" alt="cloud"
+                    onerror="this.style.display='none'">
+
+                <div class="footer_left">
+                    <div class="footer_logo" onclick="location.href='#'">
+                        <img src="./images/main/footer_logo.png" alt="Busan Mate Logo"
+                            onerror="this.src='https://placehold.co/150x40/00548B/fff?text=BUSAN+MATE'">
+                    </div>
+                    <p class="footer_desc">Don't just visit, belong to Busan. Get the latest travel tips and
+                        local
+                        mate updates directly in your inbox.</p>
+                </div>
+
+                <div class="footer_links">
+                    <div class="footer_col">
+                        <h4>DISCOVER</h4>
+                        <ul>
+                            <li><a href="#">Local Picks</a></li>
+                            <li><a href="#">Mate's Stories</a></li>
+                            <li><a href="#">Busan Dialect</a></li>
+                            <li><a href="#">How Busan Feels</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>PLAN YOUR TRIP</h4>
+                        <ul>
+                            <li><a href="#">Weather & Live Updates</a></li>
+                            <li><a href="#">Transportation</a></li>
+                            <li><a href="#">Safety & Emergency</a></li>
+                            <li><a href="#">Useful Tips</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>EXPLORE</h4>
+                        <ul>
+                            <li><a href="#">About Busan Mate</a></li>
+                            <li><a href="#">Become a Mate</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>FOLLOW</h4>
+                        <div class="footer_social">
+                            <a href="https://www.instagram.com/" target="_blank"><img
+                                    src="./images/main/footer_icon1.svg" alt="Insta"
+                                    onerror="this.src='https://placehold.co/30x30/00548B/fff?text=I'"></a>
+                            <a href="https://www.youtube.com/" target="_blank"><img src="./images/main/footer_icon2.svg"
+                                    alt="Youtube" onerror="this.src='https://placehold.co/30x30/00548B/fff?text=Y'"></a>
+                            <a href="https://x.com/" target="_blank"><img src="./images/main/footer_icon3.svg" alt="X"
+                                    onerror="this.src='https://placehold.co/30x30/00548B/fff?text=X'"></a>
+                            <a href="https://www.facebook.com/" target="_blank"><img
+                                    src="./images/main/footer_icon4.svg" alt="Facebook"
+                                    onerror="this.src='https://placehold.co/30x30/00548B/fff?text=F'"></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //inner_footer -->
+
+            <div class="footer_bottom">
+                <div class="footer_bottom_links">
+                    <div class="lang_btn">
+                        <img src="./images/main/footer_icon5.png" alt="Globe"
+                            onerror="this.src='https://placehold.co/16x16/00548B/fff?text=G'">
+                        <span>English</span> <span>Korean</span>
+                    </div>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p>Copyright © 2026 BUSAN MATE. All rights reserved.</p>
+            </div><!-- //footer_bottom -->
+
+            <div class="site_url" onclick="location.href='#'">www.busanmate.com</div>
+        </footer>
+        <!-- Subpage Footer E -->
+
+    </div><!-- #wrap -->
+
+
+    <!-- js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- js 연결 -->
+    <script src="js/script_sub3.js"></script>
+</body>
+
+</html>
