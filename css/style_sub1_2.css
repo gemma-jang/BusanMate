@@ -129,11 +129,14 @@ body {
 }
 
 /* =========================================
-           Header Area
+           Header Area (Fixed Top)
            ========================================= */
 #header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    min-width: 1360px;
     height: 70px;
     background-color: #fff;
     border-bottom: 1px solid #127EC2;
@@ -185,7 +188,6 @@ body {
     color: #127EC2;
 }
 
-/* 서브메뉴 */
 .depth2 {
     display: none;
     position: absolute;
@@ -200,6 +202,7 @@ body {
     padding: 0;
     border-radius: 0 0 8px 8px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gnb>li:hover .depth2 {
@@ -231,22 +234,82 @@ body {
     gap: 30px;
 }
 
-.weather {
+
+
+/* --- 날씨 플립 오버 영역 시작 --- */
+.weather_flipper {
+    height: 24px;
+    /* 한 줄 높이 고정 */
+    overflow: hidden;
+    /* 영역 밖으로 넘어가는 텍스트 숨김 */
+    position: relative;
+}
+
+.weather_list {
+    display: flex;
+    flex-direction: column;
+    /* 3개의 아이템을 보여주고 1개(복제본)로 자연스럽게 순환 */
+    animation: flipWeather 9s infinite;
+}
+
+.weather_list li {
+    height: 24px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
 }
 
-.weather img {
+.weather_list img {
     display: block;
-    width: 24px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+    /* 공간을 22px로 꽉 잡아주어 글자 시작점을 동일하게 맞춤 */
 }
 
-.weather p {
+/* 추가됨: 3번째 아이템(바람)의 너비를 20px로 줄이고, 줄어든 2px만큼 좌우 여백(margin)을 주어 글자 시작점을 보정합니다. */
+.weather_list li:nth-child(3) img {
+    width: 20px;
+    margin: 0 1px;
+}
+
+.weather_list p {
     font-weight: 600;
     color: #333;
     font-size: 16px;
+    line-height: 24px;
 }
+
+/* 플립 애니메이션 (높이 24px 기준) */
+@keyframes flipWeather {
+
+    0%,
+    25% {
+        transform: translateY(0);
+    }
+
+    /* 1번 (온도) 유지 */
+    33%,
+    58% {
+        transform: translateY(-24px);
+    }
+
+    /* 2번 (습도) 유지 */
+    66%,
+    91% {
+        transform: translateY(-48px);
+    }
+
+    /* 3번 (바람) 유지 */
+    100% {
+        transform: translateY(-72px);
+    }
+
+    /* 4번 (온도 복제본)으로 이동 후 즉시 0%로 리셋 */
+}
+
+/* --- 날씨 플립 오버 영역 끝 --- */
 
 .util {
     display: flex;
@@ -267,153 +330,217 @@ body {
 }
 
 
-.banner_sub_2 img {
-    width: 100%;
-    min-width: 1360px;
-    display: block;
-}
-
-
-
-        /* =========================================
+/* =========================================
            Hero Banner (Swiper Slider)
            ========================================= */
-        #visual-sec {
-            position: relative;
-            height: 600px; /* 요청에 따라 600px로 변경 */
-            width: 100%;
-            overflow: hidden;
-            margin-top: 70px; /* 고정 헤더 영역을 피하기 위한 여백 추가 */
-        }
+#visual-sec {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+}
 
-        .main-swiper {
-            width: 100%;
-            height: 100%;
-        }
+/* #visual-sec 끝 */
 
-        /* 슬라이드 내부 이미지 및 텍스트 레이아웃 */
-        .swiper-slide {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            /* 슬라이드 내용 정렬 */
-            justify-content: center;
-            align-items: center;
-        }
+.main-swiper {
+    width: 100%;
+    height: 100%;
+}
 
-        /* 이미지 효과 */
-        #visual-sec .img-box {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+/* .main-swiper 끝 */
 
-        #visual-sec .img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scale(1.1);
-            /* 기본 확대 상태 */
-            transition: transform 1.5s ease-out;
-        }
+.swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        /* 현재 활성화된 슬라이드만 원래 크기로 (확대되었다가 작아지는 효과) */
-        .swiper-slide-active .img-box img,
-        .swiper-slide-duplicate-active .img-box img {
-            transform: scale(1);
-        }
+/* .swiper-slide 끝 */
 
-        /* 하단 컨트롤 영역 (중앙 1320px 기준) */
-        .all-box {
-            position: absolute;
-            left: 50%;
-            bottom: 50px;
-            width: 1320px;
-            transform: translateX(-50%);
-            z-index: 50;
-            /* 화살표와 인디케이터를 위로 올림 */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+#visual-sec .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-        /* 프로그레스 바 */
-        .progress-box {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+/* #visual-sec .img-box 끝 */
 
-        .autoplay-progress {
-            width: 100px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
+#visual-sec .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 1.5s ease-out;
+}
 
-        .autoplay-progress svg {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+/* #visual-sec .img-box img 끝 */
 
-        .autoplay-progress line {
-            stroke: #fff;
-            stroke-width: 4;
-            stroke-dasharray: 100;
-            stroke-dashoffset: calc(100 - (100 * var(--progress, 0)));
-        }
+.swiper-slide-active .img-box img,
+.swiper-slide-duplicate-active .img-box img {
+    transform: scale(1);
+}
 
-        /* 화살표 버튼 스타일 (z-index 및 위치 보정) */
-        .arrow-box {
-            display: flex;
-            gap: 12px;
-            position: relative;
-            z-index: 100;
-        }
+/* .swiper-slide-active .img-box img 등 끝 */
 
-        .swiper-button-prev,
-        .swiper-button-next {
-            position: relative !important;
-            /* Swiper 기본값 무시 */
-            top: auto !important;
-            left: auto !important;
-            right: auto !important;
-            margin: 0 !important;
-            width: 40px !important;
-            height: 40px !important;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            color: #fff !important;
-            transition: 0.3s;
-        }
+/* --- 슬라이드 배너 텍스트 표시 애니메이션 효과 --- */
+.txt-box {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    /* 중앙 정렬에서 왼쪽 정렬로 변경 */
+    width: 1320px;
+    /* 다른 컨텐츠들과 너비를 맞추어 왼쪽 정렬되도록 추가 */
+    color: #fff;
+    pointer-events: none;
+}
 
-        .swiper-button-prev:after,
-        .swiper-button-next:after {
-            font-size: 16px !important;
-            font-weight: bold;
-        }
+/* .txt-box 끝 */
 
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: #fff;
-        }
+.txt-box h3 {
+    font-size: 50px;
+    /* 요청하신 50px로 변경 */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease 0.3s;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
 
-        /* 페이지네이션 (01 / 03 형태) */
-        .swiper-pagination {
-            position: relative !important;
-            width: auto !important;
-            color: #fff;
-            font-size: 14px;
-            font-weight: bold;
-        }
+/* .txt-box h3 끝 */
+
+.txt-box p {
+    font-size: 25px;
+    /* 요청하신 25px로 변경 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease 0.5s;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* .txt-box p 끝 */
+
+/* 활성화된 슬라이드에서 텍스트가 나타남 */
+.swiper-slide-active .txt-box h3,
+.swiper-slide-active .txt-box p,
+.swiper-slide-duplicate-active .txt-box h3,
+.swiper-slide-duplicate-active .txt-box p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* .swiper-slide-active .txt-box p 등 끝 */
+/* ------------------------------------------- */
+
+.all-box {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    width: 1320px;
+    transform: translateX(-50%);
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .all-box 끝 */
+
+.progress-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* .progress-box 끝 */
+
+.autoplay-progress {
+    width: 100px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+/* .autoplay-progress 끝 */
+
+.autoplay-progress svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .autoplay-progress svg 끝 */
+
+.autoplay-progress line {
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-dasharray: 100;
+    stroke-dashoffset: calc(100 - (100 * var(--progress, 0)));
+}
+
+/* .autoplay-progress line 끝 */
+
+.arrow-box {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    z-index: 100;
+}
+
+/* .arrow-box 끝 */
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    color: #fff !important;
+    transition: 0.3s;
+}
+
+/* .swiper-button-prev 등 끝 */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+/* .swiper-button-prev:after 등 끝 */
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+}
+
+/* .swiper-button-prev:hover 등 끝 */
+
+.swiper-pagination {
+    position: relative !important;
+    width: auto !important;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* .swiper-pagination 끝 */
 
 
 

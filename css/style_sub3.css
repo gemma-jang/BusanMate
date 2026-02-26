@@ -89,6 +89,7 @@
  }
 
 
+
  /* =========================================
            Header Area (Fixed Top)
            ========================================= */
@@ -195,22 +196,82 @@
      gap: 30px;
  }
 
- .weather {
+
+
+ /* --- 날씨 플립 오버 영역 시작 --- */
+ .weather_flipper {
+     height: 24px;
+     /* 한 줄 높이 고정 */
+     overflow: hidden;
+     /* 영역 밖으로 넘어가는 텍스트 숨김 */
+     position: relative;
+ }
+
+ .weather_list {
+     display: flex;
+     flex-direction: column;
+     /* 3개의 아이템을 보여주고 1개(복제본)로 자연스럽게 순환 */
+     animation: flipWeather 9s infinite;
+ }
+
+ .weather_list li {
+     height: 24px;
      display: flex;
      align-items: center;
-     gap: 5px;
+     gap: 6px;
  }
 
- .weather img {
+ .weather_list img {
      display: block;
-     width: 24px;
+     width: 22px;
+     height: 22px;
+     object-fit: contain;
+     flex-shrink: 0;
+     /* 공간을 22px로 꽉 잡아주어 글자 시작점을 동일하게 맞춤 */
  }
 
- .weather p {
+ /* 추가됨: 3번째 아이템(바람)의 너비를 20px로 줄이고, 줄어든 2px만큼 좌우 여백(margin)을 주어 글자 시작점을 보정합니다. */
+ .weather_list li:nth-child(3) img {
+     width: 20px;
+     margin: 0 1px;
+ }
+
+ .weather_list p {
      font-weight: 600;
      color: #333;
      font-size: 16px;
+     line-height: 24px;
  }
+
+ /* 플립 애니메이션 (높이 24px 기준) */
+ @keyframes flipWeather {
+
+     0%,
+     25% {
+         transform: translateY(0);
+     }
+
+     /* 1번 (온도) 유지 */
+     33%,
+     58% {
+         transform: translateY(-24px);
+     }
+
+     /* 2번 (습도) 유지 */
+     66%,
+     91% {
+         transform: translateY(-48px);
+     }
+
+     /* 3번 (바람) 유지 */
+     100% {
+         transform: translateY(-72px);
+     }
+
+     /* 4번 (온도 복제본)으로 이동 후 즉시 0%로 리셋 */
+ }
+
+ /* --- 날씨 플립 오버 영역 끝 --- */
 
  .util {
      display: flex;
@@ -232,8 +293,9 @@
 
 
 
+
  /* =========================================
-           NEW BANNER STYLES (Fixed & Centered)
+           MODIFIED: NEW BANNER STYLES (Bottom Left & Right)
            ========================================= */
  .banner_sub3_parallax {
      position: relative;
@@ -243,13 +305,9 @@
      margin-top: 70px;
      /* Header Height */
      overflow: hidden;
-
-     /* 텍스트 중앙 정렬을 위한 Flex 설정 */
-     display: flex;
-     align-items: center;
-     /* 수직 중앙 */
-     justify-content: center;
-     /* 수평 중앙 */
+     /* 기존에 있던 중앙 정렬(flex, align-items, justify-content) 제거 */
+     background-color: #003e68;
+     /* Fallback 배경색 */
  }
 
  .banner_bg {
@@ -257,16 +315,11 @@
      top: 0;
      left: 0;
      width: 100%;
-     /* 부모 너비에 맞춤 */
      height: 100%;
-     /* 부모 높이에 맞춤 (500px -> 100%) */
      background-image: url('../images/sub3/banner_sub3.jpg');
-     /* 예시 이미지 사용 */
-     /* background-attachment: fixed; */
-     /* Parallax Effect */
+     /* 기존 이미지 경로 유지 */
      background-position: center;
      background-size: cover;
-     /* 이미지가 영역을 꽉 채우도록 설정 */
      background-repeat: no-repeat;
      transition: transform 0.7s ease;
      z-index: 0;
@@ -277,45 +330,46 @@
      transform: scale(1.02);
  }
 
- .banner_overlay {
+ /* 콘텐츠 래퍼: absolute로 하단 고정 */
+ .banner_content {
      position: absolute;
-     top: 0;
+     bottom: 60px;
+     /* 하단에서 60px 위로 */
      left: 0;
      width: 100%;
-     height: 100%;
-     background: rgba(0, 0, 0, 0.3);
-     /* 가독성을 위한 어두운 레이어 */
-     z-index: 1;
- }
-
- .banner_content {
-     position: relative;
-     /* absolute 제거 */
      z-index: 10;
-     width: 100%;
-     text-align: center;
-     /* 텍스트 중앙 정렬 */
-     /* padding-bottom 제거 (Flex로 중앙 정렬했으므로 필요 없음) */
  }
 
  .banner_inner {
      width: 1320px;
      margin: 0 auto;
      color: white;
-     /* 텍스트 내용을 중앙으로 모으기 */
+     display: flex;
+     flex-direction: row;
+     /* 가로 방향 배치 */
+     justify-content: space-between;
+     /* 양쪽 끝으로 밀어내기 */
+     align-items: flex-start;
+     /* 텍스트 상단(첫 줄) 맞춤으로 변경 */
+ }
+
+ /* 제목과 라인을 묶어주는 래퍼 (좌측 하단용) */
+ .banner_title_wrap {
      display: flex;
      flex-direction: column;
-     align-items: center;
+     align-items: flex-start;
  }
 
  .banner_title {
      font-family: 'LaundryGothic';
-     font-size: 50px;
-     /* 타이틀 크기 증가 */
+     font-size: 35px;
      font-weight: 700;
-     color: #FCD34D;
-     margin-bottom: 25px;
-     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+     color: #ffffff;
+     margin-bottom: 0;
+     /* 정렬을 위해 기존 margin 제거 */
+     margin-top: -5px;
+     /* 우측 텍스트와 시각적 높이를 맞추기 위한 미세 조정 */
+     /* text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
      opacity: 0;
      /* for animation */
  }
@@ -324,20 +378,22 @@
      width: 100px;
      height: 4px;
      background-color: white;
-     margin-bottom: 30px;
+     margin-bottom: 5px;
      opacity: 0;
      /* for animation */
  }
 
+ /* 우측 하단 텍스트 */
  .banner_desc {
-     font-size: 22px;
+     font-size: 20px;
      font-weight: 400;
-     line-height: 1.6;
+     line-height: 1.4;
      color: #F3F4F6;
-     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+     /* text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); */
      opacity: 0;
-     max-width: 800px;
-     /* 텍스트가 너무 퍼지지 않게 제한 */
+     max-width: 650px;
+     text-align: left;
+     margin-bottom: 5px;
  }
 
  /* Animations */
@@ -364,6 +420,8 @@
  .delay-500 {
      animation-delay: 0.5s;
  }
+
+
 
  /* =========================================
            Find a Mate Styles
@@ -896,7 +954,7 @@
      padding-bottom: 130px;
      /* 수정: 배경 이미지가 충분히 보이도록 하단 여백 조정 */
      background: url('../images/sub3/noticebg.png') no-repeat center bottom;
-     background-size: 100% auto;
+     /* background-size: 100% auto; */
      /* 수정: 가로 폭에 맞추고 비율 유지 (잘림 방지) */
      position: relative;
      z-index: 5;
