@@ -56,17 +56,37 @@
                         <li><a href="sub3.html">Meet a mate</a></li>
                     </ul>
 
-                    <!-- 우측 상단 그룹 (날씨 + 유틸) -->
-                    <div class="header_right">
-                        <!-- 날씨 -->
-                        <ul class="weather">
+                     <!-- 우측 상단 그룹 (날씨 + 유틸) -->
+                <div class="header_right">
+                    <!-- 변경된 날씨 영역 -->
+                    <div class="weather_flipper">
+                        <ul class="weather_list">
+                            <!-- 1. 온도 -->
                             <li>
-                                <img src="./images/main/mingcute_sun-line.svg" alt="Sunny">
+                                <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
+                                    onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
+                                <p>12°C</p>
                             </li>
+                            <!-- 2. 습도 -->
                             <li>
+                                <img src="./images/main/humid.png" alt="Humidity"
+                                    onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=H'">
+                                <p>45%</p>
+                            </li>
+                            <!-- 3. 바람 -->
+                            <li>
+                                <img src="./images/main/wind.png" alt="Wind"
+                                    onerror="this.src='https://placehold.co/24x24/95a5a6/FFFFFF?text=W'">
+                                <p>3m/s</p>
+                            </li>
+                            <!-- 4. 무한 롤링을 위한 1번 복제본 -->
+                            <li>
+                                <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
+                                    onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
                                 <p>12°C</p>
                             </li>
                         </ul>
+                    </div>
 
                         <!-- 유틸리티 아이콘 -->
                         <ul class="util">

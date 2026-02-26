@@ -52,17 +52,38 @@
                         <li><a href="sub2.html">How Busan Feels</a></li>
                         <li><a href="sub3.html">Meet a mate</a></li>
                     </ul>
+
                     <!-- 우측 상단 그룹 (날씨 + 유틸) -->
                     <div class="header_right">
-                        <ul class="weather">
-                            <li>
-                                <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
-                                    onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
-                            </li>
-                            <li>
-                                <p>12°C</p>
-                            </li>
-                        </ul>
+                        <!-- 변경된 날씨 영역 -->
+                        <div class="weather_flipper">
+                            <ul class="weather_list">
+                                <!-- 1. 온도 -->
+                                <li>
+                                    <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
+                                        onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
+                                    <p>12°C</p>
+                                </li>
+                                <!-- 2. 습도 -->
+                                <li>
+                                    <img src="./images/main/humid.png" alt="Humidity"
+                                        onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=H'">
+                                    <p>45%</p>
+                                </li>
+                                <!-- 3. 바람 -->
+                                <li>
+                                    <img src="./images/main/wind.png" alt="Wind"
+                                        onerror="this.src='https://placehold.co/24x24/95a5a6/FFFFFF?text=W'">
+                                    <p>3m/s</p>
+                                </li>
+                                <!-- 4. 무한 롤링을 위한 1번 복제본 -->
+                                <li>
+                                    <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
+                                        onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
+                                    <p>12°C</p>
+                                </li>
+                            </ul>
+                        </div>
 
                         <ul class="util">
                             <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
@@ -79,60 +100,80 @@
             </div><!-- #header -->
             <!-- #header E -->
 
-           <!-- #container S -->
-        <div id="container_sub_2">
-            
-            <!-- Hero Banner S (New Swiper Applied) -->
-            <div id="visual-sec">
-                <div class="swiper main-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="img-box">
-                                <img src="./images/sub1_2/banner1.jpg" alt="Banner 1" onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+1'">
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="img-box">
-                                <img src="./images/sub1_2/banner2.jpg" alt="Banner 2" onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+2'">
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="img-box">
-                                <img src="./images/sub1_2/banner3.jpg" alt="Banner 3" onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+3'">
-                            </div>
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="swiper-slide">
-                            <div class="img-box">
-                                <img src="./images/sub1_2/banner4.jpg" alt="Banner 4" onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+4'">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- #container S -->
+            <div id="container_sub_2">
 
-                <!-- 컨트롤 박스 -->
-                <div class="all-box">
-                    <div class="progress-box">
-                        <!-- 페이지네이션 커스텀 -->
-                        <div class="swiper-pagination"></div>
-                        <!-- 자동재생 바 -->
-                        <div class="autoplay-progress">
-                            <svg viewBox="0 0 100 10" preserveAspectRatio="none">
-                                <line x1="0" y1="5" x2="100" y2="5"></line>
-                            </svg>
+                <!-- Hero Banner S (New Swiper Applied) -->
+                <div id="visual-sec">
+                    <div class="swiper main-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="txt-box">
+                                    <h3 class="txt">Season of Blossoms</h3>
+                                    <p>Meet Busan in soft pink light</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./images/sub1_2/banner1.jpg" alt="Banner 1"
+                                        onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+1'">
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="txt-box">
+                                    <h3 class="txt">Where the Sea Shines</h3>
+                                    <p>Let the ocean lead the way</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./images/sub1_2/banner2.jpg" alt="Banner 2"
+                                        onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+2'">
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="txt-box">
+                                    <h3 class="txt">Falling into Fall</h3>
+                                    <p>Drift through Busan's golden season</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./images/sub1_2/banner3.jpg" alt="Banner 3"
+                                        onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+3'">
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <div class="txt-box">
+                                    <h3 class="txt">Clear Winter Air</h3>
+                                    <p>See the city in its purest form</p>
+                                </div>
+                                <div class="img-box">
+                                    <img src="./images/sub1_2/banner4.jpg" alt="Banner 4"
+                                        onerror="this.src='https://placehold.co/1920x600/00548B/FFFFFF?text=Banner+4'">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- 화살표 박스 -->
-                    <div class="arrow-box">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+
+                    <!-- 컨트롤 박스 -->
+                    <div class="all-box">
+                        <div class="progress-box">
+                            <!-- 페이지네이션 커스텀 -->
+                            <div class="swiper-pagination"></div>
+                            <!-- 자동재생 바 -->
+                            <div class="autoplay-progress">
+                                <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <line x1="0" y1="5" x2="100" y2="5"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- 화살표 박스 -->
+                        <div class="arrow-box">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Hero Banner E --> 
+                <!-- Hero Banner E -->
 
                 <div id="char_wrap">
                     <!-- JJoyak 섹션 시작 -->
@@ -274,11 +315,11 @@
             <footer id="footer_sub1">
                 <!-- [추가] 서브 푸터 뒤에 위치하는 bg2, bg3 장식 요소 -->
                 <div class="footer_bg_deco">
-                    <img src="./images/sub1_2/bg2.png" class="bg2" alt="bg2" data-aos="fade-right" data-aos-duration="1000"
-                        data-aos-delay="600" data-aos-easing="ease-out-back"
+                    <img src="./images/sub1_2/bg2.png" class="bg2" alt="bg2" data-aos="fade-right"
+                        data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease-out-back"
                         onerror="this.src='https://placehold.co/180x180/DDDDDD/000?text=bg2'">
-                    <img src="./images/sub1_2/bg3.png" class="bg3" alt="bg3" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600"
-                            data-aos-easing="ease-out-back"
+                    <img src="./images/sub1_2/bg3.png" class="bg3" alt="bg3" data-aos="fade-left"
+                        data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease-out-back"
                         onerror="this.src='https://placehold.co/150x150/DDDDDD/000?text=bg3'">
                 </div>
 
