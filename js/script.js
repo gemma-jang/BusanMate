@@ -104,13 +104,13 @@ window.onload = function () {
 //  4. Overview Slider (데이터 및 함수)
 const slideData = [
     {
-        title: "Haedong Yonggungsa", addr: "86, Yonggung-gil, Gijang-eup", tel: "+82-51-722-7744", time: "05:00 - 20:00", price: "Free", img: "./images/main/info_img1.svg", mapUrl: "https://www.google.com/maps/search/해동용궁사", siteUrl: "http://yongkungsa.or.kr/"
+        title: "Haedong Yonggungsa", addr: "86, Yonggung-gil, Gijang-eup", tel: "+82-51-722-7744", time: "05:00 - 20:00", price: "Free", img: "./images/main/info_img1.png", mapUrl: "https://www.google.com/maps/search/해동용궁사", siteUrl: "http://yongkungsa.or.kr/"
     },
-    { title: "Haeundae Blueline Park", addr: "116, Cheongsapo-ro", tel: "+82-51-701-5548", time: "09:30 - 19:00", price: "7,000 KRW~", img: "./images/main/info_img2.svg", mapUrl: "https://www.google.com/maps/search/해운대+블루라인+파크", siteUrl: "https://www.bluelinepark.com/ "},
-    { title: "Gwangalli Beach", addr: "219, Gwanganhaebyeon-ro", tel: "+82-51-622-4251", time: "24 Hours", price: "Free", img: "./images/main/info_img3.svg", mapUrl: "https://www.google.com/maps/search/광안리+해수욕장",  siteUrl: "https://www.suyeong.go.kr/tour/index.suyeong" },
-    { title: "BEXCO", addr: "55, APEC-ro", tel: "+82-51-740-7300", time: "Event Based", price: "Varies", img: "./images/main/info_img4.svg", mapUrl: "https://www.google.com/maps/search/BEXCO",  siteUrl: "https://www.bexco.co.kr/"  },
-    { title: "Sajik Baseball Stadium", addr: "45, Sajik-ro", tel: "+82-51-505-7422", time: "Game Days", price: "10,000 KRW~", img: "./images/main/info_img5.svg", mapUrl: "https://www.google.com/maps/search/사직야구장",  siteUrl: "https://www.giantsclub.com/" },
-    { title: "Gamcheon Culture Village", addr: "203, Gamnae 2-ro", tel: "+82-51-204-1444", time: "09:00 - 18:00", price: "Free", img: "./images/main/info_img6.svg", mapUrl: "https://www.google.com/maps/search/감천문화마을",  siteUrl: "https://www.gamcheon.or.kr/" }
+    { title: "Haeundae Blueline Park", addr: "116, Cheongsapo-ro", tel: "+82-51-701-5548", time: "09:30 - 19:00", price: "7,000 KRW~", img: "./images/main/info_img2.png", mapUrl: "https://www.google.com/maps/search/해운대+블루라인+파크", siteUrl: "https://www.bluelinepark.com/ "},
+    { title: "Gwangalli Beach", addr: "219, Gwanganhaebyeon-ro", tel: "+82-51-622-4251", time: "24 Hours", price: "Free", img: "./images/main/info_img3.png", mapUrl: "https://www.google.com/maps/search/광안리+해수욕장",  siteUrl: "https://www.suyeong.go.kr/tour/index.suyeong" },
+    { title: "BEXCO", addr: "55, APEC-ro", tel: "+82-51-740-7300", time: "Event Based", price: "Varies", img: "./images/main/info_img4.png", mapUrl: "https://www.google.com/maps/search/BEXCO",  siteUrl: "https://www.bexco.co.kr/"  },
+    { title: "Sajik Baseball Stadium", addr: "45, Sajik-ro", tel: "+82-51-505-7422", time: "Game Days", price: "10,000 KRW~", img: "./images/main/info_img5.png", mapUrl: "https://www.google.com/maps/search/사직야구장",  siteUrl: "https://www.giantsclub.com/" },
+    { title: "Gamcheon Culture Village", addr: "203, Gamnae 2-ro", tel: "+82-51-204-1444", time: "09:00 - 18:00", price: "Free", img: "./images/main/info_img6.png", mapUrl: "https://www.google.com/maps/search/감천문화마을",  siteUrl: "https://www.gamcheon.or.kr/" }
 ];
 
 let currentSlide = 5;
