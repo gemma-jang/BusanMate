@@ -344,44 +344,26 @@
      width: 1320px;
      margin: 0 auto;
      color: white;
-     display: flex;
-     flex-direction: row;
-     /* 가로 방향 배치 */
-     justify-content: space-between;
-     /* 양쪽 끝으로 밀어내기 */
-     align-items: flex-start;
-     /* 텍스트 상단(첫 줄) 맞춤으로 변경 */
+
  }
 
  /* 제목과 라인을 묶어주는 래퍼 (좌측 하단용) */
- .banner_title_wrap {
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
- }
 
  .banner_title {
      font-family: 'LaundryGothic';
      font-size: 35px;
      font-weight: 700;
      color: #ffffff;
-     margin-bottom: 0;
+     margin-bottom: 20px;
      /* 정렬을 위해 기존 margin 제거 */
      margin-top: -5px;
      /* 우측 텍스트와 시각적 높이를 맞추기 위한 미세 조정 */
-     /* text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
      opacity: 0;
-     /* for animation */
+   
  }
 
- .banner_line {
-     width: 100px;
-     height: 4px;
-     background-color: white;
-     margin-bottom: 5px;
-     opacity: 0;
-     /* for animation */
- }
+
 
  /* 우측 하단 텍스트 */
  .banner_desc {
@@ -389,7 +371,7 @@
      font-weight: 400;
      line-height: 1.4;
      color: #F3F4F6;
-     /* text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); */
+     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
      opacity: 0;
      max-width: 650px;
      text-align: left;

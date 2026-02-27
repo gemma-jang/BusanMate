@@ -363,8 +363,10 @@ body {
     width: 1920px;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 11;
+    /* 기존 1에서 11로 변경 (타이틀이 10이므로 그 위로 올라감) */
 }
+
 
 .seagull_1 {
     position: absolute;
@@ -398,10 +400,13 @@ body {
 
 .flower_3 {
     position: absolute;
+    /* 만약 '화면 맨 위'로 올리고 싶다면 top 좌표를 0이나 작은 값으로 수정하세요 */
     top: 635px;
     right: 8%;
     width: 50px;
-    /* animation: float 4.5s ease-in-out infinite 1s; */
+
+    /* 레이어 순서 (부모의 z-index가 해결된 상태여야 작동합니다) */
+    z-index: 999;
 }
 
 @keyframes float {
@@ -718,7 +723,7 @@ body {
 }
 
 .fac_item.unavailable {
-    opacity: 0.25;
+    opacity: 0.8;
     filter: grayscale(100%);
 }
 
