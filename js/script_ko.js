@@ -1,25 +1,12 @@
-    AOS.init();
+ AOS.init();
 
-        // Language Toggle Function (수정됨)
+        // Language Toggle Function
         function toggleLanguage() {
-            // 현재 URL에서 파일명만 추출합니다 (예: "index.html" 또는 "index_ko.html")
-            const pathName = window.location.pathname;
-            const fileName = pathName.substring(pathName.lastIndexOf('/') + 1);
-            
-            // 만약 현재 파일명이 'index_ko.html' 이면
-            if (fileName === "index_ko.html") {
-                // 'index.html' 로 이동 (영어)
-                window.location.href = pathName.replace("index_ko.html", "index.html");
-            } 
-            // 만약 현재 파일명이 'index.html' 이거나, 
-            // 파일명이 비어있는 경우 (기본 도메인 접속 시)
-            else {
-                // 'index_ko.html' 로 이동 (한국어)
-                if (fileName === "index.html") {
-                    window.location.href = pathName.replace("index.html", "index_ko.html");
-                } else {
-                    window.location.href = pathName + "index_ko.html";
-                }
+            const currentPage = window.location.pathname.split("/").pop();
+            if (currentPage === "index_ko.html") {
+                window.location.href = "index.html";
+            } else {
+                window.location.href = "index_ko.html";
             }
         }
 
@@ -142,13 +129,13 @@
                     comments: [
                         { user: "Sophie", flag: "usa", text: "산책하기 너무 좋은 날씨예요.", time: "2분 전" },
                         { user: "Mark", flag: "can", text: "바람은 좀 불지만 햇살이 좋아요!", time: "11분 전" },
-                        { user: "유리", flag: "kor", text: "피크닉하기 완벽한 날이네요.", time: "1시간 36분 전" }
+                        { user: "Yuri", flag: "kor", text: "피크닉하기 완벽한 날이네요.", time: "1시간 36분 전" }
                     ]
                 },
                 {
                     loc: "광안리", temp: "21°C", img: "./images/main/gwangalli.png",
                     comments: [
-                        { user: "민호", flag: "kor", text: "오늘 밤 광안대교 뷰 미쳤어요!", time: "방금 전" },
+                        { user: "Minho", flag: "kor", text: "오늘 밤 광안대교 뷰 미쳤어요!", time: "방금 전" },
                         { user: "James", flag: "usa", text: "드론쇼 기다리는 중입니다.", time: "15분 전" },
                         { user: "Elena", flag: "can", text: "부산 최고의 야경이네요.", time: "40분 전" }
                     ]
@@ -157,7 +144,7 @@
                     loc: "서면", temp: "23°C", img: "./images/main/seomyeon.png",
                     comments: [
                         { user: "Ken", flag: "can", text: "쇼핑하기 진짜 좋네요.", time: "5분 전" },
-                        { user: "지은", flag: "kor", text: "숨겨진 카페 골목을 찾았어요.", time: "20분 전" },
+                        { user: "Jieun", flag: "kor", text: "숨겨진 카페 골목을 찾았어요.", time: "20분 전" },
                         { user: "Alex", flag: "usa", text: "거리의 활기가 엄청나요.", time: "55분 전" }
                     ]
                 }

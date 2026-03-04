@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
-    <!-- 고정 너비 레이아웃을 유지하려면 아래 뷰포트 설정 유지 (반응형을 원하면 width=device-width로 변경) -->
     <meta name="viewport" content="width=1580">
 
-    <title>Busan Mate</title>
+    <title>Busan Mate - 부산 메이트</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="./images/main/logo5.svg" type="image/x-icon">
 
@@ -18,14 +17,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- css CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- css -->
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style_ko.css">
 </head>
 
 <body>
     <div id="wrap">
-
-
         <!-- #header S -->
         <div id="header">
             <div class="inner_header">
@@ -37,10 +35,9 @@
                     </a>
                 </div>
 
-                <!-- GNB 메뉴 영역 -->
+                <!-- GNB 메뉴 영역 (영문 유지) -->
                 <ul class="gnb">
                     <li><a href="#">About Busan</a>
-                        <!-- 서브 메뉴 추가 -->
                         <ul class="depth2">
                             <li><a href="sub1.html">The City</a></li>
                             <li><a href="sub1_2.html">Characters</a></li>
@@ -52,28 +49,23 @@
 
                 <!-- 우측 상단 그룹 (날씨 + 유틸) -->
                 <div class="header_right">
-                    <!-- 변경된 날씨 영역 -->
                     <div class="weather_flipper">
                         <ul class="weather_list">
-                            <!-- 1. 온도 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
                                 <p>12°C</p>
                             </li>
-                            <!-- 2. 습도 -->
                             <li>
                                 <img src="./images/main/humid.png" alt="Humidity"
                                     onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=H'">
                                 <p>45%</p>
                             </li>
-                            <!-- 3. 바람 -->
                             <li>
                                 <img src="./images/main/wind.png" alt="Wind"
                                     onerror="this.src='https://placehold.co/24x24/95a5a6/FFFFFF?text=W'">
                                 <p>3m/s</p>
                             </li>
-                            <!-- 4. 무한 롤링을 위한 1번 복제본 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
@@ -82,33 +74,25 @@
                         </ul>
                     </div>
 
-                    <!-- 유틸리티 아이콘 -->
                     <ul class="util">
                         <li><a href="#"><img src="./images/main/util_1.png" alt="Search"></a></li>
-                        <li><a href="javascript:void(0);" onclick="toggleLanguage()"><img src="./images/main/util_2.png"
-                                    alt="Language"></a></li>
+                        <li><a href="index.html"><img src="./images/main/util_2.png" alt="Language"></a></li>
                         <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"></a></li>
                         <li><a href="#"><img src="./images/main/util_4.png" alt="Account"></a></li>
                     </ul>
-                </div><!-- .header_right -->
-            </div><!-- .inner_header -->
-        </div><!-- #header -->
+                </div>
+            </div>
+        </div>
         <!-- #header E -->
 
-
-        <!-- hero banner S (Video Background 적용) -->
+        <!-- hero banner S -->
         <div id="visual-sec">
-            <!-- 백그라운드 비디오 -->
             <video autoplay loop muted playsinline class="bg-video">
                 <source src="./media/main_video4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-
-
-            <!-- [추가된 부분] 영상 위 맨 아래쪽에 위치할 물결 이미지 -->
             <img src="./images/main/wave.png" alt="wave" class="wave-bg"
                 onerror="this.src='https://placehold.co/1920x150/transparent/blue?text=Wave'">
-
         </div>
         <!-- hero banner E -->
 
@@ -119,69 +103,59 @@
                 <div class="banner2">
                     <div class="banner2_img">
                         <img src="./images/main/content1.png" alt="content1">
-                    </div><!-- .banner2_img -->
+                    </div>
 
                     <div class="banner_wrap">
                         <img src="./images/main/logo3.svg" alt="logo symbol">
-                        <h1>Navigating Busan is Better with Company. <br>
-                            Meet Your Perfect Travel Mate in the City of the Sea.</h1>
+                        <!-- 국문 번역 적용 -->
+                        <h1>함께할 때 더 즐거운 부산 여행.<br>
+                            바다의 도시에서 완벽한 여행 메이트를 만나보세요.</h1>
 
                         <p>
-                            We've designed this for you, navigating through language barriers and an ocean of
-                            information. Our verified local Mates provide everything from real-time weather tips to
-                            practical assistance. Find your perfect travel partner within our safe and enjoyable
-                            community.
+                            언어의 장벽과 쏟아지는 정보 속에서 길을 잃지 않도록 준비했습니다.
+                            검증된 로컬 메이트들이 실시간 날씨 꿀팁부터 실질적인 가이드까지 여행에 필요한 모든 것을 제공합니다.
+                            안전하고 즐거운 커뮤니티에서 나만의 완벽한 여행 파트너를 찾아보세요.
                         </p>
 
                         <a href="#" class="learn-btn">
-                            <span>Learn More</span>
+                            <span>자세히 보기</span>
                             <img src="./images/main/mdi_arrow-right.svg" alt="arrow">
-                        </a><!-- .learn_btn -->
-                    </div><!-- .banner_wrap -->
-                </div><!-- .banner2 -->
-
+                        </a>
+                    </div>
+                </div>
 
                 <ul class="counter" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
                     <li>
-                        <!-- 숫자 32를 span으로 감쌈 -->
                         <p class="count"><span>32,000</span><span class="count_suffix">K+</span></p>
-                        <p class="counter_letter">Visitors to Busan / year</p>
+                        <p class="counter_letter">매년 부산을 찾는 사람들</p>
                     </li>
                     <li>
-                        <!-- 숫자 22을 span으로 감쌈 -->
                         <p class="count"><span>980</span><span class="count_suffix">K+</span></p>
-                        <p class="counter_letter">Mate Connected</p>
+                        <p class="counter_letter">함께하는 메이트</p>
                     </li>
                     <li>
-                        <!-- 숫자 3.5를 span으로 감쌈 -->
                         <p class="count"><span>10,200</span><span class="count_suffix">K+</span></p>
-                        <p class="counter_letter">Stories Shared</p>
+                        <p class="counter_letter">공유된 여행의 순간</p>
                     </li>
-                </ul><!-- .counter -->
-            </div><!-- #content1 E-->
+                </ul>
+            </div>
+            <!-- #content1 E-->
 
             <!-- Content 2: Overview Busan -->
             <div id="content2">
-                <!-- [수정] 배경 이미지 애니메이션용 태그 (클래스명: content2-bg-animate) -->
                 <div class="content2-bg-animate" data-aos="zoom-in" data-aos-duration="1500"></div>
 
-                <!-- [수정] 텍스트 영역 (배경 위로 띄움) -->
                 <div class="overview" data-aos="fade-down" data-aos-duration="1000"
                     style="position: relative; z-index: 10;">
-                    <h1>Overview Busan</h1>
-                    <p>Where the sea meets mountains, and the city flows in between.</p>
-                </div><!-- .overview -->
+                    <h1>부산 한눈에 보기</h1>
+                    <p>바다와 산이 함께 빚어낸 풍경 속에서, 삶과 여행이 자연스럽게 스며드는 도시</p>
+                </div>
 
-                <!-- [수정] 지도 및 카드 영역 (배경 위로 띄움) -->
                 <div class="overview_container" style="position: relative; z-index: 10;">
-                    <!-- 지도 영역 -->
                     <div class="map_area" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                         <img src="./images/main/overview_busan_maps.svg" class="map_img" alt="Busan Map"
                             onerror="this.src='https://placehold.co/800x600/81C784/fff?text=Busan+Map'">
 
-                        <!-- 랜드마크 핀 (수정: AOS 충돌 방지를 위해 내부 div에 애니메이션 적용) -->
-
-                        <!-- 1. 해동용궁사 -->
                         <div class="landmark p1" onclick="changeOverviewSlide(0)">
                             <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="600"
                                 data-aos-anchor=".map_area">
@@ -198,7 +172,6 @@
                             </div>
                         </div>
 
-                        <!-- 2. 해운대해변열차 -->
                         <div class="landmark p2" onclick="changeOverviewSlide(1)">
                             <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="700"
                                 data-aos-anchor=".map_area">
@@ -215,7 +188,6 @@
                             </div>
                         </div>
 
-                        <!-- 3. 광안리 비치 -->
                         <div class="landmark p3" onclick="changeOverviewSlide(2)">
                             <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="800"
                                 data-aos-anchor=".map_area">
@@ -232,7 +204,6 @@
                             </div>
                         </div>
 
-                        <!-- 4. 벡스코 -->
                         <div class="landmark p4" onclick="changeOverviewSlide(3)">
                             <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="900"
                                 data-aos-anchor=".map_area">
@@ -248,7 +219,6 @@
                             </div>
                         </div>
 
-                        <!-- 5. 사직야구장 -->
                         <div class="landmark p5" onclick="changeOverviewSlide(4)">
                             <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="1000"
                                 data-aos-anchor=".map_area">
@@ -264,7 +234,6 @@
                             </div>
                         </div>
 
-                        <!-- 6. 감천문화마을 -->
                         <div class="landmark p6" onclick="changeOverviewSlide(5)">
                             <div style="width:100%; height:100%;" data-aos="zoom-in" data-aos-delay="1100"
                                 data-aos-anchor=".map_area">
@@ -279,18 +248,15 @@
                                     style="display:none;">
                             </div>
                         </div>
-                    </div><!-- //map_area -->
+                    </div>
 
-                    <!-- 정보 카드 영역 -->
                     <div class="info_card_wrap">
-                        <!-- 캐릭터 (카드 뒤에서 등장 효과) -->
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
                             data-aos-easing="ease-out-back">
                             <img src="./images/main/overview_ming1.png" class="ming_char" alt="Ming Character"
                                 onerror="this.src='https://placehold.co/100x100/F4D03F/000?text=Ming'">
                         </div>
 
-                        <!-- 하얀 박스 (오른쪽에서 등장) -->
                         <div class="info_card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                             <div class="card_img">
                                 <img src="./images/main/gamcheon.svg" alt="Spot Photo" id="slide-img"
@@ -298,21 +264,21 @@
                             </div>
                             <div class="card_body">
                                 <a href="#" id="slide-title-link" target="_blank">
-                                    <h3 id="slide-title">Gamcheon Culture Village</h3>
+                                    <h3 id="slide-title">감천문화마을</h3>
                                 </a>
                                 <ul class="info_list">
                                     <li><img src="./images/main/overview_icon1.png" alt="Addr"
                                             onerror="this.src='https://placehold.co/16x16/333/fff?text=A'"> <span
-                                            id="slide-addr">203, Gamnae 2-ro, Saha-gu, Busan</span></li>
+                                            id="slide-addr">부산 사하구 감내2로 203</span></li>
                                     <li><img src="./images/main/overview_icon2.png" alt="Tel"
                                             onerror="this.style.display='none'"> <span
                                             id="slide-tel">+82-51-204-1444</span></li>
                                     <li><img src="./images/main/overview_icon3.png" alt="Time"
-                                            onerror="this.style.display='none'"> <span id="slide-time">Open daily 09:00
-                                            AM - 06:00 PM</span></li>
+                                            onerror="this.style.display='none'"> <span id="slide-time">매일 09:00 -
+                                            18:00</span></li>
                                     <li><img src="./images/main/overview_icon4.png" alt="Price"
-                                            onerror="this.style.display='none'"> <span id="slide-price">Free
-                                            Entry</span></li>
+                                            onerror="this.style.display='none'"> <span id="slide-price">입장료 무료</span>
+                                    </li>
                                 </ul>
                                 <div class="card_footer">
                                     <a href="https://www.google.com/maps" target="_blank" class="google_btn"
@@ -331,136 +297,117 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- //info_card_wrap -->
-                </div><!-- //overview_container -->
-            </div><!-- #content2 E-->
+                    </div>
+                </div>
+            </div>
 
-
-
-
-            <!-- [중요] Live from Mates Section (AOS 적용) -->
+            <!-- Content 3: Live from Mates Section -->
             <div id="content3">
                 <div class="inner_content3">
-                    <!-- 1. 타이틀: 아래에서 위로 등장 -->
-                    <h2 class="live_title" data-aos="fade-down" data-aos-duration="1000">Live from Mates</h2>
+                    <h2 class="live_title" data-aos="fade-down" data-aos-duration="1000">실시간 메이트 소식</h2>
 
                     <div class="live_card_container">
-                        <!-- 2. 왼쪽 카드: fade-right 대신 fade-up으로 변경하여 자연스럽게 -->
+                        <!-- 1. 날씨 카드 -->
                         <div class="live_card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                             <div class="card_header">
-                                <span class="card_title">Weather Now</span>
-                                <a href="#" class="more_btn">More +</a>
-                            </div><!-- //card_header -->
+                                <span class="card_title">실시간 날씨</span>
+                                <a href="#" class="more_btn">더보기 +</a>
+                            </div>
                             <a href="#" class="white_card_link">
                                 <div class="slide_wrapper" id="weather-slide-wrapper">
-                                    <!-- 초기 컨텐츠 (해운대) -->
                                     <div class="weather_info">
                                         <img src="./images/main/haeundae.jpg" alt="Haeundae" class="location_img"
                                             onerror="this.src='https://placehold.co/48x48/81C784/FFFFFF?text=Sea'">
                                         <div class="location_text">
-                                            <h3><span class="ico ico_loc"></span> Haeundae</h3>
+                                            <h3><span class="ico ico_loc"></span> 해운대</h3>
                                             <span><span class="ico ico_weather"></span> 22°C</span>
                                         </div>
-                                    </div><!-- //weather_info -->
+                                    </div>
                                     <ul class="comment_list">
                                         <li>
                                             <div class="user_info"><span class="ico ico_flag flag_usa"></span> Sophie
                                             </div>
-                                            <div class="comment_text">"Great weather for walking around."</div>
-                                            <span class="time_ago">2 mins ago</span>
+                                            <div class="comment_text">"산책하기 너무 좋은 날씨예요."</div>
+                                            <span class="time_ago">2분 전</span>
                                         </li>
                                         <li>
                                             <div class="user_info"><span class="ico ico_flag flag_can"></span> Mark
                                             </div>
-                                            <div class="comment_text">"A bit windy but sunny!"</div>
-                                            <span class="time_ago">11 mins ago</span>
+                                            <div class="comment_text">"바람은 좀 불지만 햇살이 좋아요!"</div>
+                                            <span class="time_ago">11분 전</span>
                                         </li>
                                         <li>
-                                            <div class="user_info"><span class="ico ico_flag flag_kor"></span> Yuri
-                                            </div>
-                                            <div class="comment_text">"Perfect day for a picnic."</div>
-                                            <span class="time_ago">1h 36m ago</span>
+                                            <div class="user_info"><span class="ico ico_flag flag_kor"></span> 유리</div>
+                                            <div class="comment_text">"피크닉하기 완벽한 날이네요."</div>
+                                            <span class="time_ago">1시간 36분 전</span>
                                         </li>
-                                    </ul><!-- //comment_list -->
-                                </div><!-- //slide_wrapper -->
-                            </a><!-- //white_card_link -->
-                        </div><!-- //live_card -->
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
 
-                        <!-- 3. 오른쪽 카드: fade-left 대신 fade-up으로 변경하여 자연스럽게 -->
+                        <!-- 2. 여행자 카드 -->
                         <div class="live_card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                             <div class="card_header">
-                                <span class="card_title">Live Travel Updates</span>
-                                <a href="#" class="more_btn">More +</a>
-                            </div><!-- //card_header -->
+                                <span class="card_title">지금 부산은</span>
+                                <a href="#" class="more_btn">더보기 +</a>
+                            </div>
                             <a href="#" class="white_card_link">
                                 <div class="slide_wrapper" id="travel-slide-wrapper">
-                                    <!-- 초기 컨텐츠 -->
                                     <div class="travel_item">
                                         <img src="./images/main/user1.png" alt="User" class="user_avatar"
                                             onerror="this.src='https://placehold.co/38x38/ccc/333?text=Mark'">
                                         <div class="travel_content">
                                             <div class="travel_user"><span class="ico ico_flag flag_can"></span> Mark
                                             </div>
-                                            <p class="travel_msg">"Just arrived at Gimhae Airport! Excited."</p>
-                                            <div class="travel_meta"><span><span class="ico ico_loc_gray"></span> Gimhae
-                                                    Airport</span><span class="meta_badge">Now</span></div>
-                                        </div><!-- //travel_content -->
-                                    </div><!-- //travel_item -->
+                                            <p class="travel_msg">"방금 김해공항 도착! 너무 기대돼요."</p>
+                                            <div class="travel_meta"><span><span class="ico ico_loc_gray"></span>
+                                                    김해공항</span><span class="meta_badge">방금 전</span></div>
+                                        </div>
+                                    </div>
                                     <div class="travel_item">
                                         <img src="./images/main/user2.png" alt="User" class="user_avatar"
                                             onerror="this.src='https://placehold.co/38x38/ccc/333?text=Amy'">
                                         <div class="travel_content">
                                             <div class="travel_user"><span class="ico ico_flag flag_usa"></span> Amy
                                             </div>
-                                            <p class="travel_msg">"The coffee at Jeonpo Cafe Street is amazing."</p>
+                                            <p class="travel_msg">"전포 카페거리 커피 진짜 맛있어요."</p>
                                             <div class="travel_meta"><span><span class="ico ico_loc_gray"></span>
-                                                    Jeonpo</span><span class="meta_badge">5m ago</span></div>
-                                        </div><!-- //travel_content -->
-                                    </div><!-- //travel_item -->
-                                </div><!-- //slide_wrapper -->
-                            </a><!-- //white_card_link -->
-                        </div><!-- //live_card -->
-                    </div><!-- //live_card_container -->
+                                                    전포동</span><span class="meta_badge">5분 전</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-
-
-                    <!-- [추가] 캐릭터 그림자 (커졌다가 작아지는 효과: zoom-in + ease-out-back) -->
                     <img src="./images/main/shadow.png" class="jjoyak-shadow" alt="Jjoyak Shadow" data-aos="fade-down"
                         data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease-out-back"
                         onerror="this.style.display='none'">
-
-                    <!-- [수정] 캐릭터 (위로 올라오는 효과) -->
                     <img src="./images/main/jjoyak1.png" alt="Jjoyak Character" class="jjoyak_char" data-aos="fade-up"
                         data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease-out-back"
                         onerror="this.src='https://placehold.co/200x200/F4D03F/000?text=JJOYAK'">
-                </div><!-- //inner_content3 -->
-            </div><!-- //content3 -->
-
+                </div>
+            </div>
 
             <!-- Content 4: Banners -->
             <div id="content4">
                 <div class="inner_content4">
-                    <h2 class="today_busan" data-aos="fade-down" data-aos-duration="1000">Today Busan</h2>
+                    <h2 class="today_busan" data-aos="fade-down" data-aos-duration="1000">오늘의 부산</h2>
 
-                    <!-- [추가] 왼쪽 그림자 (fade-down) -->
                     <img src="./images/main/shadow.png" class="char-shadow-left" alt="Shadow Left" data-aos="fade-down"
                         data-aos-duration="1200" data-aos-delay="300" data-aos-anchor=".today_busan"
                         data-aos-easing="ease-out-back" data-aos-anchor-placement="top-center"
                         onerror="this.style.display='none'">
-
-                    <!-- [수정] 왼쪽 캐릭터: 위로 올라오면서 퉁! 튀는 효과 (ease-out-back) -->
                     <img src="./images/main/ad_banner_char2.png" class="banner-char-left" alt="Character Left"
                         data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-anchor=".today_busan"
                         data-aos-easing="ease-out-back" data-aos-anchor-placement="top-center"
                         onerror="this.src='https://placehold.co/400x500/transparent/eee?text=CharL'">
 
-                    <!-- [추가] 오른쪽 그림자 (fade-down) -->
                     <img src="./images/main/shadow.png" class="char-shadow-right" alt="Shadow Right"
                         data-aos="fade-down" data-aos-duration="1200" data-aos-delay="500"
                         data-aos-anchor=".today_busan" data-aos-easing="ease-out-back"
                         data-aos-anchor-placement="top-center" onerror="this.style.display='none'">
-
-                    <!-- [수정] 오른쪽 캐릭터: 위로 올라오면서 퉁! 튀는 효과 (ease-out-back) -->
                     <img src="./images/main/ad_banner_char1.png" class="banner-char-right" alt="Character Right"
                         data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400" data-aos-anchor=".today_busan"
                         data-aos-easing="ease-out-back" data-aos-anchor-placement="top-center"
@@ -471,97 +418,88 @@
                                 <div class="banner_img_box"><img src="./images/main/ad_1.png" alt="Beomeosa"
                                         onerror="this.src='https://placehold.co/315x460/555/fff?text=Beomeosa'"></div>
                                 <div class="banner_info">
-                                    <h3>Beomeosa Templestay</h3>
-                                    <p>Mar 2 - Apr 25, 2026</p>
+                                    <h3>범어사 템플스테이</h3>
+                                    <p>2026. 03. 02 - 04. 25</p>
                                 </div>
                             </a></li>
                         <li class="banner_item"><a href="#" class="banner_link">
                                 <div class="banner_img_box"><img src="./images/main/ad_2.png" alt="Snap"
                                         onerror="this.src='https://placehold.co/315x460/e0cba8/333?text=Snap'"></div>
                                 <div class="banner_info">
-                                    <h3>Snap With a Mate</h3>
-                                    <p>Oct 6 - Oct 15, 2026</p>
+                                    <h3>메이트와 함께 스냅사진</h3>
+                                    <p>2026. 10. 06 - 10. 15</p>
                                 </div>
                             </a></li>
                         <li class="banner_item"><a href="#" class="banner_link">
                                 <div class="banner_img_box"><img src="./images/main/ad_3.png" alt="BIFF"
                                         onerror="this.src='https://placehold.co/315x460/00a500/fff?text=BIFF'"></div>
                                 <div class="banner_info">
-                                    <h3>2026 BIFF</h3>
-                                    <p>Mar 2 - Apr 25, 2026</p>
+                                    <h3>2026 부산국제영화제</h3>
+                                    <p>2026. 03. 02 - 04. 25</p>
                                 </div>
                             </a></li>
                         <li class="banner_item"><a href="#" class="banner_link">
                                 <div class="banner_img_box"><img src="./images/main/ad_4.png" alt="Jazz"
                                         onerror="this.src='https://placehold.co/315x460/2c3e50/fff?text=Cinema'"></div>
                                 <div class="banner_info">
-                                    <h3>2026 Busan Jazz Port</h3>
-                                    <p>Mar 2 - Apr 25, 2026</p>
+                                    <h3>2026 부산 재즈 포트</h3>
+                                    <p>2026. 03. 02 - 04. 25</p>
                                 </div>
                             </a></li>
                     </ul>
                 </div>
             </div>
 
-
-
-            <!-- [수정] Content 5: Mate's Stories (Zoom-in 효과 + 부드러운 오퍼시티 적용) -->
+            <!-- Content 5: Mate's Stories -->
             <div id="content5">
-                <!-- 배경은 고정하고, 내부 컨텐츠(inner_content5)에만 애니메이션 적용 -->
-                <!-- data-aos-delay="200": 스크롤 후 살짝 늦게 나타나 오퍼시티 효과 강조 -->
                 <div class="inner_content5" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200"
                     data-aos-easing="ease-out">
                     <div class="mate_text_box">
-                        <h4 class="mate_subtitle">Mate's stories</h4>
-                        <h2 class="mate_title">Meet Stories<br>from Our Mates</h2>
-                        <p class="mate_desc">Real moments shared by people who know Busan</p>
+                        <h4 class="mate_subtitle">메이트 스토리</h4>
+                        <h2 class="mate_title">우리들의<br>특별한 여행 이야기</h2>
+                        <p class="mate_desc">부산을 가장 잘 아는 사람들의 진짜 여행기를 만나보세요.</p>
 
                         <div class="hashtag_list" id="hashtagList">
-                            <button class="hash_btn active" onclick="changeMateStory(0)">#WithAMate</button>
-                            <button class="hash_btn" onclick="changeMateStory(1)">#FirstTimeInBusan</button>
-                            <button class="hash_btn" onclick="changeMateStory(2)">#LocalTips</button>
-                            <button class="hash_btn" onclick="changeMateStory(3)">#HiddenSpots</button>
-                            <button class="hash_btn" onclick="changeMateStory(4)">#FoodWalk</button>
-                            <button class="hash_btn" onclick="changeMateStory(5)">#NightMoments</button>
-                            <button class="hash_btn" onclick="changeMateStory(6)">#SlowTravel</button>
-                            <button class="hash_btn" onclick="changeMateStory(7)">#UnexpectedMoments</button>
-                        </div><!-- //hashtag_list -->
-                        <a href="./stories.html" class="read_more_btn">Read More Stories →</a>
-                    </div><!-- //mate_text_box -->
+                            <button class="hash_btn active" onclick="changeMateStory(0)">#메이트와함께</button>
+                            <button class="hash_btn" onclick="changeMateStory(1)">#첫부산여행</button>
+                            <button class="hash_btn" onclick="changeMateStory(2)">#로컬꿀팁</button>
+                            <button class="hash_btn" onclick="changeMateStory(3)">#숨은명소</button>
+                            <button class="hash_btn" onclick="changeMateStory(4)">#먹방투어</button>
+                            <button class="hash_btn" onclick="changeMateStory(5)">#야경스팟</button>
+                            <button class="hash_btn" onclick="changeMateStory(6)">#느린여행</button>
+                            <button class="hash_btn" onclick="changeMateStory(7)">#뜻밖의순간</button>
+                        </div>
+                        <a href="./stories.html" class="read_more_btn">더 많은 스토리 보기 →</a>
+                    </div>
 
                     <div class="mate_card_box">
                         <div class="mate_card_img">
-                            <!-- 초기 이미지 설정 -->
                             <img src="./images/main/mate_stories_photo1.svg" alt="Story" id="mate-story-img"
                                 onerror="this.src='https://placehold.co/680x383/ccc/333?text=Story+1'">
-                        </div><!-- //mate_card_img -->
+                        </div>
                         <div class="mate_card_info" id="mate-card-info">
                             <h3 class="mate_name" id="mate-name">Sarah</h3>
-                            <!-- 해시태그 5개 -->
                             <div class="mate_tags" id="mate-tags">
-                                <span onclick="location.href='./stories.html'">#WithAMate</span>
-                                <span onclick="location.href='./stories.html'">#BusanLife</span>
-                                <span onclick="location.href='./stories.html'">#GamcheonCultureVillage</span>
-                                <span onclick="location.href='./stories.html'">#TravelGram</span>
-                                <span onclick="location.href='./stories.html'">#KoreaTrip</span>
-                            </div><!-- //mate_tags -->
+                                <span onclick="location.href='./stories.html'">#메이트와함께</span>
+                                <span onclick="location.href='./stories.html'">#부산라이프</span>
+                                <span onclick="location.href='./stories.html'">#감천문화마을</span>
+                                <span onclick="location.href='./stories.html'">#여행스타그램</span>
+                                <span onclick="location.href='./stories.html'">#국내여행</span>
+                            </div>
                             <p class="mate_review" id="mate-review">
-                                "Walking through Gamcheon with a local mate made the steep paths feel like a breeze!"
+                                "로컬 메이트와 함께 감천문화마을을 걸으니 가파른 길도 전혀 힘들지 않았어요!"
                             </p>
-                        </div><!-- //mate_card_info -->
-                    </div><!-- //mate_card_box -->
-                </div><!-- //inner_content5 -->
-            </div><!-- //content5 -->
-        </div><!-- //container1 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- [NEW] Footer -->
+        <!-- [NEW] Footer (영문 유지) -->
         <footer id="footer">
-            <!-- [추가] 푸터 캐릭터 그림자 (zoom-in 효과) -->
             <img src="./images/main/shadow1.png" class="footer-char-shadow" alt="Footer Shadow" data-aos="zoom-in"
                 data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="200"
                 onerror="this.style.display='none'">
-
-            <!-- [수정] 푸터 캐릭터 (fade-up 효과 추가) -->
             <img src="./images/main/footer_char.png" class="footer_char" alt="Footer Character" data-aos="fade-up"
                 data-aos-easing="ease-out-back" data-aos-duration="1000"
                 onerror="this.src='https://placehold.co/250x250/F4D03F/000?text=Char'">
@@ -571,10 +509,10 @@
                     <div class="footer_logo" onclick="location.href='#'">
                         <img src="./images/main/footer_logo.png" alt="Busan Mate Logo"
                             onerror="this.src='https://placehold.co/150x40/00548B/fff?text=BUSAN+MATE'">
-                    </div><!-- //footer_logo -->
+                    </div>
                     <p class="footer_desc">Don't just visit, belong to Busan. Get the latest travel tips and local mate
                         updates directly in your inbox.</p>
-                </div><!-- //footer_left -->
+                </div>
 
                 <div class="footer_links">
                     <div class="footer_col">
@@ -585,7 +523,7 @@
                             <li><a href="#">Busan Dialect</a></li>
                             <li><a href="#">How Busan Feels</a></li>
                         </ul>
-                    </div><!-- //footer_col -->
+                    </div>
                     <div class="footer_col">
                         <h4>PLAN YOUR TRIP</h4>
                         <ul>
@@ -594,7 +532,7 @@
                             <li><a href="#">Safety & Emergency</a></li>
                             <li><a href="#">Useful Tips</a></li>
                         </ul>
-                    </div><!-- //footer_col -->
+                    </div>
                     <div class="footer_col">
                         <h4>EXPLORE</h4>
                         <ul>
@@ -602,7 +540,7 @@
                             <li><a href="#">Become a Mate</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul>
-                    </div><!-- //footer_col -->
+                    </div>
                     <div class="footer_col">
                         <h4>FOLLOW</h4>
                         <div class="footer_social">
@@ -617,9 +555,9 @@
                                     src="./images/main/footer_icon4.svg" alt="Facebook"
                                     onerror="this.src='https://placehold.co/30x30/ddd/333?text=F'"></a>
                         </div>
-                    </div><!-- //footer_col -->
-                </div><!-- //footer_links -->
-            </div><!-- //inner_footer -->
+                    </div>
+                </div>
+            </div>
 
             <div class="footer_bottom">
                 <div class="footer_bottom_links">
@@ -631,40 +569,25 @@
                     </div>
                     <a href="#">Terms of Service</a>
                     <a href="#">Privacy Policy</a>
-                </div><!-- //footer_bottom_links -->
+                </div>
                 <p>Copyright © 2026 BUSAN MATE. All rights reserved.</p>
-            </div><!-- //footer_bottom -->
-
+            </div>
             <div class="site_url"
                 style="text-align: left; width: 1320px; margin: 10px auto 0; font-size: 12px; color: #00548B;"
                 onclick="location.href='#'">www.busanmate.com</div>
-        </footer><!-- //footer -->
+        </footer>
 
-    </div><!-- #wrap -->
-
-
+    </div>
 
 
     <!-- Scripts for Slides & Interactions -->
-    <!-- swiper JS-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Aos js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- AOS 제어구문 -->
-    <script>
-        AOS.init();
+    <script src="js/script_ko.js">
+
     </script>
 
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
-
-
-
-
 </body>
-
-
 
 </html>

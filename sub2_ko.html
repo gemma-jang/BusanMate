@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <!--  font-family: 'Otomanopee One Regular'; -->
-
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -22,7 +20,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" href="css/style_sub2.css">
+    <link rel="stylesheet" href="css/style_sub2_ko.css">
+
 </head>
 
 <body>
@@ -58,25 +57,21 @@
                     <!-- 변경된 날씨 영역 -->
                     <div class="weather_flipper">
                         <ul class="weather_list">
-                            <!-- 1. 온도 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
                                 <p>12°C</p>
                             </li>
-                            <!-- 2. 습도 -->
                             <li>
                                 <img src="./images/main/humid.png" alt="Humidity"
                                     onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=H'">
                                 <p>45%</p>
                             </li>
-                            <!-- 3. 바람 -->
                             <li>
                                 <img src="./images/main/wind.png" alt="Wind"
                                     onerror="this.src='https://placehold.co/24x24/95a5a6/FFFFFF?text=W'">
                                 <p>3m/s</p>
                             </li>
-                            <!-- 4. 무한 롤링을 위한 1번 복제본 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
@@ -89,7 +84,8 @@
                     <ul class="util">
                         <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
                                     onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=S'"></a></li>
-                       <li><a href="javascript:void(0);" onclick="toggleLanguage()"><img src="./images/main/util_2.png" alt="Language"></a></li>
+                        <!-- 언어 토글 버튼 -->
+                        <li><a href="javascript:void(0);" onclick="toggleLanguage()"><img src="./images/main/util_2.png" alt="Language"></a></li>
                         <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"
                                     onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=H'"></a></li>
                         <li><a href="#"><img src="./images/main/util_4.png" alt="Account"
@@ -107,11 +103,11 @@
                     onerror="this.src='https://placehold.co/1920x400/eeeeee/333333?text=Banner+Image'">
             </div>
 
-            <!-- [수정] 배경 1920px 적용을 위한 Wrapper 구조 -->
+            <!-- Mate's choice -->
             <div id="mate_choice">
                 <!-- 실제 컨텐츠 (1320px) -->
                 <div class="mate_choice_inner">
-                    <h2>Mate's choice</h2>
+                    <h2>부산 메이트 추천</h2>
 
                     <div class="swiper mateSwiper">
                         <div class="swiper-wrapper">
@@ -131,7 +127,7 @@
                             <div class="swiper-slide"><img src="./images/sub2/sub2_banner7.png" alt="slide7"
                                     onerror="this.src='https://placehold.co/260x360/E67E22/FFFFFF?text=Banner+7'"></div>
 
-                            <!-- 두 번째 세트 -->
+                            <!-- 두 번째 세트 (Loop) -->
                             <div class="swiper-slide"><img src="./images/sub2/sub2_banner1.png" alt="slide1_copy"
                                     onerror="this.src='https://placehold.co/260x360/F1C40F/FFFFFF?text=Banner+1'"></div>
                             <div class="swiper-slide"><img src="./images/sub2/sub2_banner2.png" alt="slide2_copy"
@@ -149,7 +145,7 @@
                         </div>
                     </div>
 
-                    <p>Thoughtfully curated ways to experience Busan.<br>By season, mood, and moment.</p>
+                    <p>계절과 기분, 그리고 순간에 맞추어<br>세심하게 큐레이션된 부산 여행 방법을 제안합니다.</p>
 
                     <div class="mate-nav-buttons">
                         <div class="mate-prev"><img src="./images/sub2/btn1.png" alt="prev"
@@ -163,96 +159,69 @@
 
 
             <div id="local_picks">
-                <!-- [복구] 배경 이미지 추가 -->
+                <!-- 배경 이미지 추가 -->
                 <img src="./images/sub2/localpicks_bg.png" class="local_picks_bg" alt="Local Picks Background"
                     onerror="this.src='https://placehold.co/400x800/E4F5FD/E4F5FD'">
 
                 <div class="local_picks_inner">
-                    <!-- Left Menu Area -->
+                    <!-- Left Menu Area (한국어 번역) -->
                     <div class="local_picks_left">
-                        <h2>Local Picks</h2>
-                        <p>Places we’d take our mates.<br>Local food, shops, markets, and stays.</p>
+                        <h2>로컬 픽</h2>
+                        <p>메이트와 함께 가고 싶은 진짜 로컬 스팟.<br>맛집, 카페, 시장, 그리고 숙소까지.</p>
 
                         <ul class="local_tabs">
-                            <li class="active" data-index="0"><span>🍴</span> Eats & Cafés</li>
-                            <li data-index="1"><span>🛏️</span> Place to Stay</li>
-                            <li data-index="2"><span>🛒</span> Local Market</li>
-                            <li data-index="3"><span>🎁</span> Shops & Souvenirs</li>
+                            <li class="active" data-index="0"><span>🍴</span> 맛집 & 카페</li>
+                            <li data-index="1"><span>🛏️</span> 머물기 좋은 숙소</li>
+                            <li data-index="2"><span>🛒</span> 로컬 시장</li>
+                            <li data-index="3"><span>🎁</span> 소품샵 & 기념품</li>
                         </ul><!-- .local_tabs E -->
                     </div><!-- .local_picks_left E -->
 
                     <!-- Right Cards Area -->
                     <div class="local_picks_right" id="picks_container">
-                        <!-- Card 1 (Jeonpo) -->
+                        <!-- 카드는 JS로 동적 생성됨 (초기값은 JS에서 세팅) -->
                         <div class="pick_card">
-                            <div class="pick_img">
-                                <img src="./images/sub2/localpicks1_1.png" alt="Jeonpo Café Street"
-                                    onerror="this.src='https://placehold.co/400x300/DDDDDD/666666?text=Image+1'">
-                            </div>
+                            <div class="pick_img"><img src="./images/sub2/localpicks1_1.png" alt="Jeonpo"></div>
                             <div class="pick_info">
-                                <!-- [수정] 앵커 태그로 감싸기 (Visit Korea URL) -->
-                                <a href="https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=192977"
-                                    target="_blank" class="info_link">
+                                <a href="#" target="_blank" class="info_link">
                                     <div class="pick_header">
-                                        <h3>Jeonpo Café Street</h3>
+                                        <h3>전포 카페거리</h3>
                                     </div>
-                                    <p class="desc">A dense mix of small cafes, studios, and indie shops. Perfect for
-                                        slow walks and casual cafe hopping.</p>
+                                    <p class="desc">작은 카페와 공방들이 모여있는 곳.</p>
                                 </a>
-
                                 <div class="rating">4.7 <span class="stars">●●●●◐</span> <span>(21)</span></div>
-
-                                <!-- [수정] 리뷰 앵커 태그 -->
                                 <a href="#" class="review_link">
-                                    <p class="review">"Perfect for wandering, coffee hopping, and taking it slow."</p>
+                                    <p class="review">"최고의 장소!"</p>
                                 </a>
                             </div>
                         </div>
-
-                        <!-- Card 2 (Hwagueuk Banjeom) -->
                         <div class="pick_card">
-                            <div class="pick_img">
-                                <img src="./images/sub2/localpicks1_2.png" alt="Hwagueuk Banjeom"
-                                    onerror="this.src='https://placehold.co/400x300/DDDDDD/666666?text=Image+2'">
-                            </div>
+                            <div class="pick_img"><img src="./images/sub2/localpicks1_2.png" alt="Hwagueuk"></div>
                             <div class="pick_info">
-                                <a href="https://www.visitbusan.net/en/index.do?menuCd=DOM_000000302003001000&uc_seq=2098&lang_cd=en"
-                                    target="_blank" class="info_link">
+                                <a href="#" target="_blank" class="info_link">
                                     <div class="pick_header">
-                                        <h3>Hwagueuk Banjeom</h3>
+                                        <h3>화국반점</h3>
                                     </div>
-                                    <p class="desc">A Busan-born specialty coffee brand recognized world wide. Known for
-                                        balanced, high-quality coffee loved by locals.</p>
+                                    <p class="desc">오랜 전통의 중화요리.</p>
                                 </a>
-
-                                <div class="rating">4.7 <span class="stars">●●●●◐</span> <span>(21)</span></div>
-
+                                <div class="rating">4.5 <span class="stars">●●●●◐</span> <span>(21)</span></div>
                                 <a href="#" class="review_link">
-                                    <p class="review">"Korean-style Chinese dishes turned out to be exactly what I was
-                                        craving."</p>
+                                    <p class="review">"맛있어요!"</p>
                                 </a>
                             </div>
                         </div>
-
-                        <!-- Card 3 (Momos Coffee) -->
                         <div class="pick_card">
-                            <div class="pick_img">
-                                <img src="./images/sub2/localpicks1_3.png" alt="Momos Coffee Bar"
-                                    onerror="this.src='https://placehold.co/400x300/DDDDDD/666666?text=Image+3'">
-                            </div>
+                            <div class="pick_img"><img src="./images/sub2/localpicks1_3.png" alt="Momos"></div>
                             <div class="pick_info">
-                                <a href="https://www.momos.co.kr/" target="_blank" class="info_link">
+                                <a href="#" target="_blank" class="info_link">
                                     <div class="pick_header">
-                                        <h3>Momos Coffee Bar</h3>
+                                        <h3>모모스 커피</h3>
                                     </div>
-                                    <p class="desc">A Busan-born specialty coffee brand recognized world wide. Known for
-                                        balanced, high-quality coffee loved by locals.</p>
+                                    <p class="desc">월드 바리스타 챔피언의 커피.</p>
                                 </a>
-
-                                <div class="rating">4.7 <span class="stars">●●●●◐</span> <span>(21)</span></div>
-
+                                <div class="rating">4.9 <span class="stars">●●●●●</span> <span>(23)</span></div>
                                 <a href="#" class="review_link">
-                                    <p class="review">"Smooth, balanced, and worth the visit!"</p>
+                                    <p class="review">"커피 맛이 예술입니다."</p>
                                 </a>
                             </div>
                         </div>
@@ -263,11 +232,11 @@
 
             <div id="busanway_wrap">
                 <div class="busanway_header">
-                    <h3>Busan’s Way of Life</h3>
-                    <p>Baseball is part of everyday life in Busan, played in the streets and cheered for with real
-                        passion.<br>
-                        Busan people are direct, energetic, and expressive, showing their feelings honestly and without
-                        hesitation.</p>
+                    <h3>부산을 움직이는 뜨거운 에너지</h3>
+                    <p>부산의 일상은 늘 생동감으로 넘칩니다.
+                        <br>처음 본 사이라도 금방 친구가 되는 넉살, 거리마다 울려 퍼지는 활기찬 목소리는 이 도시를 살아있게 만드는 원동력입니다.<br>
+                        솔직하고 거침없는 표현 속에 뜨거운 진심을 숨긴 사람들. 무뚝뚝한 말투 너머에는 누구보다 깊고 끈끈한 정이 가득 담겨 있습니다.
+                    </p>
                 </div>
 
                 <div class="busanway_img">
@@ -276,8 +245,8 @@
                         onclick="void(0);"
                         onerror="this.style.backgroundImage='url(https://placehold.co/800x500/E74C3C/FFFFFF?text=Passion)'">
                         <div class="way_txt">
-                            <h4>Baseball Passion</h4>
-                            <p>The city comes alive as strangers cheer together under bright stadium lights</p>
+                            <h4>야구에 대한 열정</h4>
+                            <p>경기장의 밝은 조명 아래, 낯선 이들도 하나가 되어 응원하는 활기찬 도시</p>
                         </div>
                     </div>
 
@@ -286,9 +255,8 @@
                         onclick="void(0);"
                         onerror="this.style.backgroundImage='url(https://placehold.co/800x500/3498DB/FFFFFF?text=Ocean)'">
                         <div class="way_txt">
-                            <h4>Hillside Alleys</h4>
-                            <p>Built along steep hills, these narrow paths reflect Busan’s layered history and resilient
-                                spirit.</p>
+                            <h4>산복도로의 풍경</h4>
+                            <p>가파른 언덕을 따라 이어진 좁은 골목길은 부산의 겹겹이 쌓인 역사와 강인한 정신을 보여줍니다.</p>
                         </div>
                     </div>
 
@@ -297,23 +265,19 @@
                         onclick="void(0);"
                         onerror="this.style.backgroundImage='url(https://placehold.co/800x500/F1C40F/FFFFFF?text=Energy)'">
                         <div class="way_txt">
-                            <h4>Market Warmth</h4>
-                            <p>Vendors greet you like family, sharing food, humor, and small kindnesses.</p>
+                            <h4>시장의 따뜻한 정</h4>
+                            <p>가족처럼 반갑게 맞아주는 상인들, 그리고 음식을 나누며 오가는 소소한 농담들.</p>
                         </div>
                     </div>
                 </div><!-- .busanway_img -->
             </div><!-- #busanway_wrap -->
 
-
-
-
             <div id="dialect_wrap">
                 <div class="dialect_title">
-                    <h3>Talk Like a Local</h3>
-                    <p>Busan is a major port city where people from many regions once gathered. <br>
-                        As different accents
-                        mixed, the dialect became fast, direct, and expressive.
-                        <br>That’s why Busan speech sounds bold and lively today.
+                    <h3>사투리 배워보기</h3>
+                    <p>부산은 과거부터 여러 지역 사람들이 모여들었던 큰 항구 도시입니다. <br>
+                        다양한 말투가 섞이면서 부산 사투리는 빠르고, 직설적이며, 감정 표현이 풍부해졌죠.
+                        <br>이것이 바로 오늘날 부산의 말이 시원시원하고 활기차게 들리는 이유랍니다!
                     </p>
                 </div>
 
@@ -441,8 +405,8 @@
                     <div class="lang_btn">
                         <img src="./images/main/footer_icon5.png" alt="Globe"
                             onerror="this.src='https://placehold.co/16x16/00548B/fff?text=G'">
-                         <span onclick="location.href='index.html'">English</span> <span
-                            onclick="location.href='index_ko.html'">Korean</span>
+                        <span onclick="setLanguage('en')" style="cursor: pointer;">English</span>
+                        <span onclick="setLanguage('ko')" style="cursor: pointer;">Korean</span>
                     </div>
                     <a href="#">Terms of Service</a>
                     <a href="#">Privacy Policy</a>
@@ -458,9 +422,11 @@
 
     <!-- js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- js 연결 -->
-    <script src="js/script_sub2.js"></script>
+
+    <!-- js -->
+    <script src="js/script_sub2_ko.js"></script>
 
 </body>
 

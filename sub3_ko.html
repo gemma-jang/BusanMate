@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1580">
@@ -12,8 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <!--  font-family: 'Otomanopee One Regular'; -->
-
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -27,11 +24,9 @@
 </head>
 
 <body>
-
-
     <div id="wrap">
 
-        <!-- #header S -->
+        <!-- #header S (영문 유지) -->
         <div id="header">
             <div class="inner_header">
                 <!-- 로고 영역 -->
@@ -60,25 +55,21 @@
                     <!-- 변경된 날씨 영역 -->
                     <div class="weather_flipper">
                         <ul class="weather_list">
-                            <!-- 1. 온도 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
                                 <p>12°C</p>
                             </li>
-                            <!-- 2. 습도 -->
                             <li>
                                 <img src="./images/main/humid.png" alt="Humidity"
                                     onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=H'">
                                 <p>45%</p>
                             </li>
-                            <!-- 3. 바람 -->
                             <li>
                                 <img src="./images/main/wind.png" alt="Wind"
                                     onerror="this.src='https://placehold.co/24x24/95a5a6/FFFFFF?text=W'">
                                 <p>3m/s</p>
                             </li>
-                            <!-- 4. 무한 롤링을 위한 1번 복제본 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
@@ -91,7 +82,8 @@
                     <ul class="util">
                         <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
                                     onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=S'"></a></li>
-                   <li><a href="javascript:void(0);" onclick="toggleLanguage()"><img src="./images/main/util_2.png" alt="Language"></a></li>
+                        <!-- 언어 토글 버튼 -->
+                        <li><a href="javascript:void(0);" onclick="toggleLanguage(event)"><img src="./images/main/util_2.png" alt="Language"></a></li>
                         <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"
                                     onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=H'"></a></li>
                         <li><a href="#"><img src="./images/main/util_4.png" alt="Account"
@@ -113,16 +105,13 @@
             <!-- 그라데이션 오버레이 -->
             <div class="banner_overlay"></div>
 
-            <!-- 텍스트 콘텐츠 -->
+            <!-- 텍스트 콘텐츠 (한국어 번역) -->
             <div class="banner_content">
                 <div class="banner_inner">
-                    <h2 class="banner_title animate-fade-up">What is a Mate?</h2>
+                    <h2 class="banner_title animate-fade-up">메이트란 무엇인가요?</h2>
 
                     <p class="banner_desc animate-fade-up delay-500">
-                        A Mate is a travel companion who helps you experience Busan like a local. They’re not a tour
-                        guide, but someone to explore, talk, and share moments with.
-                        Whether it’s walking the city, finding hidden spots, or just grabbing coffee,
-                        a mate makes your trip feel more personal and connected.
+                        메이트는 현지인처럼 부산을 경험할 수 있도록 돕는 여행 동반자입니다. 단순한 투어 가이드가 아니라, 함께 탐험하고 대화하며 순간을 공유하는 친구입니다. 도시를 거닐거나, 숨겨진 명소를 찾거나, 가볍게 커피 한 잔을 마실 때도, 메이트와 함께라면 더욱 잊지 못할 끈끈한 여행이 될 것입니다.
                     </p>
                 </div>
             </div>
@@ -130,104 +119,96 @@
 
         <!-- #findamate S -->
         <div id="findamate">
-            <!-- Header & Filters -->
+            <!-- Header & Filters (한국어 번역) -->
             <div class="findamate_header">
                 <div class="title_wrap">
                     <img src="./images/sub3/Vector.png" alt="search" onerror="this.style.display='none'">
-                    <h2>Find a Mate</h2>
+                    <h2>메이트 찾기</h2>
                 </div>
-                <p>Make your Busan trip unforgettable with the perfect travel mate.</p>
+                <p>완벽한 여행 메이트와 함께 잊지 못할 부산 여행을 만들어보세요.</p>
 
                 <!-- Filters Row -->
                 <div class="filters_row">
                     <div class="filter_group">
-                        <span class="filter_label">Language</span>
-                        <!-- 수정: id 추가 -->
+                        <span class="filter_label">언어</span>
                         <select class="custom_select" id="langSelect">
-                            <option>Select a language</option>
-                            <option>English</option>
-                            <option>Korean</option>
-                            <option>Japanese</option>
-                            <option>Chinese</option>
-                            <option>Spanish</option>
-                            <option>French</option>
-                            <option>German</option>
-                            <option>Russian</option>
-                            <option>Portuguese</option>
-                            <option>Italian</option>
-                            <option>Vietnamese</option>
-                            <option>Thai</option>
-                            <option>Indonesian</option>
-                            <option>Arabic</option>
-                            <option>Hindi</option>
+                            <option>언어 선택</option>
+                            <option>영어</option>
+                            <option>한국어</option>
+                            <option>일본어</option>
+                            <option>중국어</option>
+                            <option>스페인어</option>
+                            <option>프랑스어</option>
+                            <option>독일어</option>
+                            <option>러시아어</option>
+                            <option>포르투갈어</option>
+                            <option>이탈리아어</option>
+                            <option>베트남어</option>
+                            <option>태국어</option>
+                            <option>인도네시아어</option>
+                            <option>아랍어</option>
+                            <option>힌디어</option>
                         </select>
                     </div>
                     <div class="filter_group">
-                        <span class="filter_label">Travel Style</span>
-                        <!-- 수정: id 추가 -->
+                        <span class="filter_label">여행 스타일</span>
                         <select class="custom_select" id="styleSelect">
-                            <option>Select a Travel style</option>
-                            <option>Foodie</option>
-                            <option>Active</option>
-                            <option>Relaxed</option>
-                            <option>Cultural</option>
-                            <option>Nightlife</option>
-                            <option>Shopping</option>
-                            <option>Nature Lover</option>
-                            <option>History Buff</option>
-                            <option>Adventure</option>
-                            <option>Luxury</option>
-                            <option>Local Life</option>
+                            <option>여행 스타일 선택</option>
+                            <option>맛집 탐방</option>
+                            <option>액티비티</option>
+                            <option>여유로운</option>
+                            <option>문화 탐방</option>
+                            <option>나이트라이프</option>
+                            <option>쇼핑</option>
+                            <option>자연 만끽</option>
+                            <option>역사 탐방</option>
+                            <option>모험</option>
+                            <option>럭셔리</option>
+                            <option>로컬 라이프</option>
                         </select>
                     </div>
                     <div class="filter_group">
-                        <span class="filter_label">Availability</span>
-                        <!-- 수정: id 추가 -->
+                        <span class="filter_label">가능한 시간</span>
                         <select class="custom_select" id="availSelect">
-                            <option>Select availability</option>
-                            <option>Weekdays</option>
-                            <option>Weekends</option>
-                            <option>Anytime</option>
+                            <option>시간 선택</option>
+                            <option>평일</option>
+                            <option>주말</option>
+                            <option>언제나</option>
                         </select>
                     </div>
                 </div>
 
-                <!-- Interest Tags -->
-                <!-- 수정: data-value 추가 -->
+                <!-- Interest Tags (한국어 번역) -->
                 <div class="interest_tags">
-                    <span class="tag_title">Interest</span>
+                    <span class="tag_title">관심사</span>
 
-                    <button class="tag_btn" data-value="coffee">☕ coffee</button>
-                    <button class="tag_btn" data-value="Local Food">🍽️ Local Food</button>
-                    <button class="tag_btn" data-value="Walking">🚶 Walking</button>
-                    <button class="tag_btn" data-value="Beach">🌊 Beach</button>
-                    <button class="tag_btn" data-value="Nightview">🌃 Nightview</button>
-                    <button class="tag_btn" data-value="Photography">📷 Photography</button>
-                    <button class="tag_btn" data-value="Hiking">🥾 Hiking</button>
-                    <button class="tag_btn" data-value="Sunset">🌅 Sunset</button>
-                    <button class="tag_btn" data-value="Shopping">🛍️ Shopping</button>
-                    <!-- 추가 태그들 -->
-                    <button class="tag_btn" data-value="Exhibitions">🎨 Exhibitions</button>
-                    <button class="tag_btn" data-value="Reading">📚 Reading</button>
-                    <button class="tag_btn" data-value="Surfing">🏄 Surfing</button>
-                    <!-- 수정: Alcohol -> Pubs & Bars -->
-                    <button class="tag_btn" data-value="Pubs & Bars">🍻 Pubs & Bars</button>
+                    <button class="tag_btn" data-value="커피">☕ 커피</button>
+                    <button class="tag_btn" data-value="현지 음식">🍽️ 현지 음식</button>
+                    <button class="tag_btn" data-value="산책">🚶 산책</button>
+                    <button class="tag_btn" data-value="바다">🌊 바다</button>
+                    <button class="tag_btn" data-value="야경">🌃 야경</button>
+                    <button class="tag_btn" data-value="사진 촬영">📷 사진 촬영</button>
+                    <button class="tag_btn" data-value="등산">🥾 등산</button>
+                    <button class="tag_btn" data-value="일몰">🌅 일몰</button>
+                    <button class="tag_btn" data-value="쇼핑">🛍️ 쇼핑</button>
+                    <button class="tag_btn" data-value="전시 관람">🎨 전시 관람</button>
+                    <button class="tag_btn" data-value="독서">📚 독서</button>
+                    <button class="tag_btn" data-value="서핑">🏄 서핑</button>
+                    <button class="tag_btn" data-value="펍 & 바">🍻 펍 & 바</button>
 
-                    <!-- 수정: Reset 버튼 위치 변경 (맨 끝으로) -->
-                    <button id="resetTagsBtn" class="reset_btn">↺ Reset</button>
+                    <button id="resetTagsBtn" class="reset_btn">↺ 초기화</button>
                 </div>
             </div><!-- .findamate_header -->
 
             <!-- Mate Cards Grid -->
-            <!-- 수정: 자바스크립트로 렌더링되므로 내부는 비워둡니다. -->
             <div class="mate_grid" id="mateGrid">
                 <!-- Javascript will inject cards here -->
             </div><!-- .mate_grid -->
         </div><!-- #findamate -->
 
-        <!-- 수정: Mate Stories 리뷰 섹션 구조 변경 (CSS 박스 + 말풍선 이미지) -->
+        <!-- Mate Stories 리뷰 섹션 (한국어 번역) -->
         <div id="matestories">
-            <h3>Mate Stories</h3>
+            <h3>메이트 스토리</h3>
             <div class="marquee_container">
                 <div class="marquee_track">
                     <!-- Review Set 1 -->
@@ -243,13 +224,12 @@
                                         <span class="flag_icon">🇦🇷</span>
                                         <h4>Angela</h4>
                                     </div>
-                                    <span>Felt like a friend</span>
+                                    <span>친구처럼 편안했어요</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">It felt natural from the first meeting. We shared stories, laughed a
-                                lot, and the trip felt less like travel and more like hanging out with a friend.</p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">첫 만남부터 아주 자연스러웠어요. 이야기를 나누고 많이 웃으며, 여행이라기보다는 오랜 친구와 노는 기분이 들었습니다.</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -265,14 +245,12 @@
                                         <span class="flag_icon">🇺🇸</span>
                                         <h4>Mike</h4>
                                     </div>
-                                    <span>Best local guide</span>
+                                    <span>최고의 로컬 가이드</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">I discovered hidden gems in Busan that I would never have found on my
-                                own. My mate was knowledgeable and super friendly. The best way to experience the city!
-                            </p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">혼자서는 절대 찾지 못했을 부산의 숨은 명소들을 발견했어요. 메이트는 지식이 풍부하고 정말 친절했습니다. 부산을 경험하는 최고의 방법이에요!</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -288,13 +266,12 @@
                                         <span class="flag_icon">🇨🇦</span>
                                         <h4>Sarah</h4>
                                     </div>
-                                    <span>Safe and fun</span>
+                                    <span>안전하고 즐거운 여행</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">As a female solo traveler, safety was my priority. Meeting a verified
-                                mate made me feel secure and I had so much fun exploring the night markets together.</p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">여자 혼자 하는 여행이라 안전이 최우선이었어요. 검증된 메이트를 만나 안심이 되었고 함께 야시장을 구경하며 너무 즐거웠습니다.</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -310,14 +287,12 @@
                                         <span class="flag_icon">🇯🇵</span>
                                         <h4>Ken</h4>
                                     </div>
-                                    <span>Unforgettable memories</span>
+                                    <span>잊지 못할 추억</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">We went surfing at Songjeong beach and had amazing seafood
-                                afterwards. It was the highlight of my trip to Korea. Thanks for the unforgettable
-                                memories!</p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">송정 해수욕장에서 서핑을 하고 엄청난 해산물 식사를 했어요. 한국 여행의 진정한 하이라이트였습니다. 잊지 못할 추억을 만들어줘서 고마워요!</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -333,14 +308,12 @@
                                         <span class="flag_icon">🇩🇪</span>
                                         <h4>Jessica</h4>
                                     </div>
-                                    <span>Language exchange</span>
+                                    <span>언어 교환</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">Great opportunity to practice my Korean while helping my mate with
-                                English. We visited cultural sites and had deep conversations. A true cultural exchange.
-                            </p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">메이트의 영어를 도와주면서 제 한국어도 연습할 수 있는 좋은 기회였어요. 문화 유적지를 방문하고 깊은 대화를 나눴습니다. 진정한 교류였어요.</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -357,13 +330,12 @@
                                         <span class="flag_icon">🇦🇷</span>
                                         <h4>Angela</h4>
                                     </div>
-                                    <span>Felt like a friend</span>
+                                    <span>친구처럼 편안했어요</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">It felt natural from the first meeting. We shared stories, laughed a
-                                lot, and the trip felt less like travel and more like hanging out with a friend.</p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">첫 만남부터 아주 자연스러웠어요. 이야기를 나누고 많이 웃으며, 여행이라기보다는 오랜 친구와 노는 기분이 들었습니다.</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -379,14 +351,12 @@
                                         <span class="flag_icon">🇺🇸</span>
                                         <h4>Mike</h4>
                                     </div>
-                                    <span>Best local guide</span>
+                                    <span>최고의 로컬 가이드</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">I discovered hidden gems in Busan that I would never have found on my
-                                own. My mate was knowledgeable and super friendly. The best way to experience the city!
-                            </p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">혼자서는 절대 찾지 못했을 부산의 숨은 명소들을 발견했어요. 메이트는 지식이 풍부하고 정말 친절했습니다. 부산을 경험하는 최고의 방법이에요!</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -402,13 +372,12 @@
                                         <span class="flag_icon">🇨🇦</span>
                                         <h4>Sarah</h4>
                                     </div>
-                                    <span>Safe and fun</span>
+                                    <span>안전하고 즐거운 여행</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">As a female solo traveler, safety was my priority. Meeting a verified
-                                mate made me feel secure and I had so much fun exploring the night markets together.</p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">여자 혼자 하는 여행이라 안전이 최우선이었어요. 검증된 메이트를 만나 안심이 되었고 함께 야시장을 구경하며 너무 즐거웠습니다.</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -424,14 +393,12 @@
                                         <span class="flag_icon">🇯🇵</span>
                                         <h4>Ken</h4>
                                     </div>
-                                    <span>Unforgettable memories</span>
+                                    <span>잊지 못할 추억</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">We went surfing at Songjeong beach and had amazing seafood
-                                afterwards. It was the highlight of my trip to Korea. Thanks for the unforgettable
-                                memories!</p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">송정 해수욕장에서 서핑을 하고 엄청난 해산물 식사를 했어요. 한국 여행의 진정한 하이라이트였습니다. 잊지 못할 추억을 만들어줘서 고마워요!</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
 
@@ -447,14 +414,12 @@
                                         <span class="flag_icon">🇩🇪</span>
                                         <h4>Jessica</h4>
                                     </div>
-                                    <span>Language exchange</span>
+                                    <span>언어 교환</span>
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">Great opportunity to practice my Korean while helping my mate with
-                                English. We visited cultural sites and had deep conversations. A true cultural exchange.
-                            </p>
-                            <button class="read_more_btn">Read More +</button>
+                            <p class="review_text">메이트의 영어를 도와주면서 제 한국어도 연습할 수 있는 좋은 기회였어요. 문화 유적지를 방문하고 깊은 대화를 나눴습니다. 진정한 교류였어요.</p>
+                            <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
                 </div>
@@ -462,36 +427,35 @@
         </div><!-- #matestories -->
 
 
-        <!-- NOTICE 섹션 추가 -->
+        <!-- NOTICE 섹션 추가 (한국어 번역) -->
         <div id="notice_section">
             <div class="inner_notice">
                 <div class="notice_box">
                     <div class="notice_title">
-                        NOTICE
+                        공지사항
                         <a href="#"><img src="./images/sub3/notice_icon.png" class="notice_icon_img" alt="Notice Icon"
                                 onerror="this.style.display='none'"></a>
                     </div>
 
-                    <!-- 수정: 가로 2개 배치를 유지하며 롤링되도록 구조 변경 -->
                     <div class="notice_content">
                         <ul class="notice_list">
                             <!-- Set 1 -->
                             <li class="notice_row">
-                                <a href="#" class="notice_link">A quick safety reminder for meeting your mate</a>
+                                <a href="#" class="notice_link">메이트를 만나기 전 간단한 안전 수칙 안내</a>
                                 <div class="notice_separator"></div>
-                                <a href="#" class="notice_link">New Mate Stories from real trips in Busan</a>
+                                <a href="#" class="notice_link">부산에서의 진짜 여행기, 새로운 메이트 스토리 오픈</a>
                             </li>
-                            <!-- Set 2 (롤링될 다음 공지) -->
+                            <!-- Set 2 -->
                             <li class="notice_row">
-                                <a href="#" class="notice_link">Check out the top 10 photo spots in Busan!</a>
+                                <a href="#" class="notice_link">부산 인생 샷을 건질 수 있는 사진 명소 TOP 10!</a>
                                 <div class="notice_separator"></div>
-                                <a href="#" class="notice_link">Busan Fireworks Festival 2026 Guide</a>
+                                <a href="#" class="notice_link">2026 부산 불꽃축제 관람 가이드 및 추천 스팟</a>
                             </li>
                             <!-- Set 3 -->
                             <li class="notice_row">
-                                <a href="#" class="notice_link">Join our weekly language exchange meetup</a>
+                                <a href="#" class="notice_link">매주 열리는 언어 교환 모임에 참여해 보세요</a>
                                 <div class="notice_separator"></div>
-                                <a href="#" class="notice_link">Best local food restaurants near Haeundae</a>
+                                <a href="#" class="notice_link">현지인이 추천하는 해운대 근처 최고의 찐 맛집 리스트</a>
                             </li>
                         </ul>
                     </div>
@@ -501,32 +465,32 @@
                     <a href="#" class="notice_icon_item">
                         <img src="./images/sub3/notice1.png" class="notice_menu_img" alt="Tourist Info"
                             onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Tourist+Info'">
-                        <p class="notice_menu_label">Tourist Info</p>
+                        <p class="notice_menu_label">관광 안내</p>
                     </a>
                     <a href="#" class="notice_icon_item">
                         <img src="./images/sub3/notice2.png" class="notice_menu_img" alt="Maps & Guide"
                             onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Maps+Guide'">
-                        <p class="notice_menu_label">Maps & Guide</p>
+                        <p class="notice_menu_label">지도 및 가이드</p>
                     </a>
                     <a href="#" class="notice_icon_item">
                         <img src="./images/sub3/notice3.png" class="notice_menu_img" alt="Emergency"
                             onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Emergency'">
-                        <p class="notice_menu_label">Emergency</p>
+                        <p class="notice_menu_label">긴급 연락처</p>
                     </a>
                     <a href="#" class="notice_icon_item">
                         <img src="./images/sub3/notice4.png" class="notice_menu_img" alt="Medical"
                             onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Medical'">
-                        <p class="notice_menu_label">Medical</p>
+                        <p class="notice_menu_label">의료 지원</p>
                     </a>
                     <a href="#" class="notice_icon_item">
                         <img src="./images/sub3/notice5.png" class="notice_menu_img" alt="Lost & Found"
                             onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Lost+Found'">
-                        <p class="notice_menu_label">Lost & Found</p>
+                        <p class="notice_menu_label">분실물 센터</p>
                     </a>
                     <a href="#" class="notice_icon_item">
                         <img src="./images/sub3/notice6.png" class="notice_menu_img" alt="Safety Tips"
                             onerror="this.src='https://placehold.co/100x100/AADEFF/00548B?text=Safety+Tips'">
-                        <p class="notice_menu_label">Safety Tips</p>
+                        <p class="notice_menu_label">안전 팁</p>
                     </a>
                 </div>
             </div>
@@ -609,8 +573,9 @@
                     <div class="lang_btn">
                         <img src="./images/main/footer_icon5.png" alt="Globe"
                             onerror="this.src='https://placehold.co/16x16/00548B/fff?text=G'">
-                        <span onclick="location.href='index.html'">English</span> <span
-                            onclick="location.href='index_ko.html'">Korean</span>
+                        <!-- 푸터 언어 토글 (수정) -->
+                        <span onclick="setLanguage('en', event)" style="cursor: pointer;">English</span>
+                        <span onclick="setLanguage('ko', event)" style="cursor: pointer;">Korean</span>
                     </div>
                     <a href="#">Terms of Service</a>
                     <a href="#">Privacy Policy</a>
@@ -624,12 +589,12 @@
 
     </div><!-- #wrap -->
 
-
     <!-- js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- js 연결 -->
-    <script src="js/script_sub3.js"></script>
-</body>
+    <script src="js/script_sub3_ko.js"></script>
 
+</body>
 </html>

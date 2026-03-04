@@ -1,3 +1,22 @@
+// 1. Language Toggle Function (헤더 아이콘용)
+        function toggleLanguage(event) {
+            if (event) event.preventDefault();
+            
+            let currentUrl = window.location.href.split('#')[0];
+            
+            if (currentUrl.includes("sub2_ko.html")) {
+                // 현재 한국어 -> 영어로
+                window.location.href = currentUrl.replace("sub2_ko.html", "sub2.html");
+            } else if (currentUrl.includes("sub2.html")) {
+                // 현재 영어 -> 한국어로
+                window.location.href = currentUrl.replace("sub2.html", "sub2_ko.html");
+            } else {
+                // 로컬 호스트나 도메인 루트 진입시
+                let newUrl = currentUrl.endsWith('/') ? currentUrl + "sub2.html" : currentUrl + "/sub2.html";
+                window.location.href = newUrl;
+            }
+        }
+
 document.addEventListener("DOMContentLoaded", function () {
     // Mate's Choice Slider Initialization
     var mateSwiper = new Swiper(".mateSwiper", {
@@ -273,4 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
+    
 }); // DOMContentLoaded E
+

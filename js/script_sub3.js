@@ -1,3 +1,43 @@
+// 1. Language Toggle Function (헤더 아이콘용)
+        function toggleLanguage(event) {
+            if (event) event.preventDefault();
+            let path = window.location.pathname;
+            let file = path.split('/').pop();
+            
+            if (file.indexOf("_ko.html") !== -1) {
+                window.location.href = file.replace("_ko.html", ".html");
+            } else if (file.indexOf(".html") !== -1) {
+                window.location.href = file.replace(".html", "_ko.html");
+            } else {
+                window.location.href = "sub3.html"; // 안전망
+            }
+        }
+
+        // 2. Specific Language Set Function (푸터 텍스트용)
+        function setLanguage(lang, event) {
+            if (event) event.preventDefault();
+            let path = window.location.pathname;
+            let file = path.split('/').pop();
+
+            if (lang === 'en') {
+                if (file.indexOf("_ko.html") !== -1) {
+                    window.location.href = file.replace("_ko.html", ".html");
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                }
+            } else if (lang === 'ko') {
+                if (file.indexOf("_ko.html") !== -1) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+                } else if (file.indexOf(".html") !== -1) {
+                    window.location.href = file.replace(".html", "_ko.html");
+                } else {
+                    window.location.href = "sub3_ko.html";
+                }
+            }
+        }
+
+       
+
 // MATE 데이터베이스 (Mock Data - 30 profiles) - availability 추가, Alcohol -> Pubs & Bars 수정
         const matesData = [
             { id: 1, name: "🇨🇦 Abby", languages: ["English", "Korean"], style: ["Foodie", "Relaxed"], interests: ["coffee", "Walking", "Local Food"], status: "Active", statusClass: "status_active", img: "./images/sub3/findamate1.png", availability: "Weekdays" },

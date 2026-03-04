@@ -1,4 +1,4 @@
-  // Language Toggle Function (헤더 아이콘용)
+ // Language Toggle Function (헤더 아이콘용)
         function toggleLanguage() {
             const currentUrl = window.location.href.split('#')[0];
             if (currentUrl.includes("_ko.html")) {
