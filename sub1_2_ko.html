@@ -43,40 +43,35 @@
                 <!-- GNB 메뉴 영역 -->
                 <ul class="gnb">
                     <li><a href="#">About Busan</a>
-                        <!-- 서브 메뉴 추가 -->
                         <ul class="depth2">
-                            <li><a href="sub1.html">The City</a></li>
-                            <li><a href="sub1_2.html">Characters</a></li>
+                            <li><a href="sub1_ko.html">The City</a></li>
+                            <li><a href="sub1_2_ko.html">Characters</a></li>
                         </ul>
                     </li>
-                    <li><a href="sub2.html">How Busan Feels</a></li>
-                    <li><a href="sub3.html">Meet a mate</a></li>
+                    <li><a href="sub2_ko.html">How Busan Feels</a></li>
+                    <li><a href="sub3_ko.html">Meet a mate</a></li>
                 </ul>
 
-                <!-- 우측 상단 그룹 (날씨 + 유틸) -->
+                <!-- 우측 상단 그룹 -->
                 <div class="header_right">
-                    <!-- 변경된 날씨 영역 -->
+                    <!-- 날씨 영역 -->
                     <div class="weather_flipper">
                         <ul class="weather_list">
-                            <!-- 1. 온도 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
                                 <p>12°C</p>
                             </li>
-                            <!-- 2. 습도 -->
                             <li>
                                 <img src="./images/main/humid.png" alt="Humidity"
                                     onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=H'">
                                 <p>45%</p>
                             </li>
-                            <!-- 3. 바람 -->
                             <li>
                                 <img src="./images/main/wind.png" alt="Wind"
                                     onerror="this.src='https://placehold.co/24x24/95a5a6/FFFFFF?text=W'">
                                 <p>3m/s</p>
                             </li>
-                            <!-- 4. 무한 롤링을 위한 1번 복제본 -->
                             <li>
                                 <img src="./images/main/mingcute_sun-line.svg" alt="Sunny"
                                     onerror="this.src='https://placehold.co/24x24/f1c40f/FFFFFF?text=S'">
@@ -85,13 +80,27 @@
                         </ul>
                     </div>
 
+
+                    <!-- 유틸리티 아이콘 -->
                     <ul class="util">
-                        <li><a href="#"><img src="./images/main/util_1.png" alt="Search"></a></li>
-                        <!-- 언어 토글 버튼 수정 -->
-                        <li><a href="javascript:void(0);" onclick="toggleLanguage()"><img src="./images/main/util_2.png"
-                                    alt="Language"></a></li>
-                        <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"></a></li>
-                        <li><a href="#"><img src="./images/main/util_4.png" alt="Account"></a></li>
+                        <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
+                                    onerror="this.src='https://placehold.co/24x24/bdc3c7/FFFFFF?text=S'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"
+                                    onerror="this.src='https://placehold.co/24x24/e74c3c/FFFFFF?text=H'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_4.png" alt="Account"
+                                    onerror="this.src='https://placehold.co/24x24/bdc3c7/FFFFFF?text=A'"></a></li>
+
+                        <!-- !!! 변경된 언어 토글 영역 (실제 링크 이동 방식) !!! -->
+                        <li class="lang-switch">
+                            <img src="./images/main/util_2.png" alt="Language"
+                                onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=L'">
+                            <div class="lang-text">
+                                <a href="sub1_2_ko.html" class="active">KO</a>
+                                <span class="separator">|</span>
+                                <a href="sub1_2.html">ENG</a>
+                            </div>
+                        </li>
+                        <!-- !!! 변경된 언어 토글 영역 끝 !!! -->
                     </ul>
                 </div><!-- .header_right -->
             </div><!-- .inner_header -->
@@ -213,7 +222,8 @@
                             <div class="char1_right">
                                 <div class="desc_box">
                                     <h3>나는 감자가 아니야!</h3>
-                                    <p>부산 바다의 따사로운 햇살을 닮은 노란색 덕분에 종종 감자로 오해받기도 하지만, <br>사실 전 파도가 빚어낸 매끄러운 조약돌입니다. 오랜 시간 파도에
+                                    <p>부산 바다의 따사로운 햇살을 닮은 노란색 덕분에 종종 감자로 오해받기도 하지만, <br>사실 전 파도가 빚어낸 매끄러운 조약돌입니다. 오랜 시간
+                                        파도에
                                         깎이고 다듬어진 덕분에 누구보다 매끄러운 몸매를 갖게 되었죠.</p>
                                     <p>전 아주 외향적이고 자신감이 넘쳐요. 언제 어디서든 앞장서서 모두를 이끄는 걸 가장 좋아한답니다!</p>
                                 </div>
@@ -221,12 +231,18 @@
                                     <h3>3D Turn Around</h3>
                                     <ul class="turn_around">
                                         <li><img src="./images/sub1_2/char1_turn1.png" alt="3D Turn 1"
+                                                data-aos="fade-up" data-aos-duration="1500"
+                                                data-aos-easing="ease-out-back" data-aos-delay="300"
                                                 onerror="this.src='https://placehold.co/184x197/f1c40f/FFFFFF?text=Turn+1'">
                                         </li>
                                         <li><img src="./images/sub1_2/char1_turn2.png" alt="3D Turn 2"
+                                                data-aos="fade-up" data-aos-duration="1500"
+                                                data-aos-easing="ease-out-back" data-aos-delay="400"
                                                 onerror="this.src='https://placehold.co/184x197/f1c40f/FFFFFF?text=Turn+2'">
                                         </li>
                                         <li><img src="./images/sub1_2/char1_turn3.png" alt="3D Turn 3"
+                                                data-aos="fade-up" data-aos-duration="1500"
+                                                data-aos-easing="ease-out-back" data-aos-delay="500"
                                                 onerror="this.src='https://placehold.co/184x197/f1c40f/FFFFFF?text=Turn+3'">
                                         </li>
                                     </ul>
@@ -250,19 +266,26 @@
                             <div class="char2_left">
                                 <div class="desc_box">
                                     <h3>함께하는 즐거움</h3>
-                                    <p>제가 입고 있는 부드러운 푸른색은 부산 파도에서 선물 받은 색이에요. 바다 거품이 밀려오는 순간 태어났거든요. 그래서인지 전 잔잔한 바다처럼 조금 조용한 편이에요.</p>
+                                    <p>제가 입고 있는 부드러운 푸른색은 부산 파도에서 선물 받은 색이에요. 바다 거품이 밀려오는 순간 태어났거든요. 그래서인지 전 잔잔한 바다처럼 조금
+                                        조용한 편이에요.</p>
                                     <p>차분하고 조용한 성격이지만, 언제나 메이트들과 함께 어울려 다니는 걸 가장 즐겨요.</p>
                                 </div>
                                 <div class="turn_box">
                                     <h3>3D Turn Around</h3>
                                     <ul class="turn_around">
                                         <li><img src="./images/sub1_2/char2_turn1.png" alt="Mingles Turn 1"
+                                                data-aos="fade-up" data-aos-duration="1500"
+                                                data-aos-easing="ease-out-back" data-aos-delay="300"
                                                 onerror="this.src='https://placehold.co/184x197/87CEEB/FFFFFF?text=Turn+1'">
                                         </li>
                                         <li><img src="./images/sub1_2/char2_turn2.png" alt="Mingles Turn 2"
+                                                data-aos="fade-up" data-aos-duration="1500"
+                                                data-aos-easing="ease-out-back" data-aos-delay="400"
                                                 onerror="this.src='https://placehold.co/184x197/87CEEB/FFFFFF?text=Turn+2'">
                                         </li>
                                         <li><img src="./images/sub1_2/char2_turn3.png" alt="Mingles Turn 3"
+                                                data-aos="fade-up" data-aos-duration="1500"
+                                                data-aos-easing="ease-out-back" data-aos-delay="500"
                                                 onerror="this.src='https://placehold.co/184x197/87CEEB/FFFFFF?text=Turn+3'">
                                         </li>
                                     </ul>
@@ -300,10 +323,18 @@
 
             <!-- #char_video -->
             <div id="char_video">
-                <img src="./images/sub1_2/char_video.png" alt="video">
-                <!-- 임의의 사진 -->
+                <!-- 
+          controls: 재생, 정지, 볼륨 등 컨트롤 바 표시
+          autoplay: 자동 재생 (대부분의 브라우저에서 muted와 함께 써야 자동재생됨)
+          muted: 음소거
+          loop: 반복 재생
+        -->
+                <video controls autoplay muted loop>
+                    <source src="./media/char_subno.mp4 " type="video/mp4" muted autoplay loop>
+                    <!-- 브라우저가 비디오를 지원하지 않을 때 나오는 문구 -->
+                    해당 브라우저는 비디오 태그를 지원하지 않습니다.
+                </video>
             </div><!-- #char_video -->
-
         </div><!-- #container_sub_2 -->
 
 
@@ -346,27 +377,27 @@
                     <div class="footer_col">
                         <h4>DISCOVER</h4>
                         <ul>
-                            <li><a href="#">Local Picks</a></li>
-                            <li><a href="#">Mate's Stories</a></li>
-                            <li><a href="#">Busan Dialect</a></li>
-                            <li><a href="#">How Busan Feels</a></li>
+                            <li><a href="sub2.html#localpick_wrap">Local Picks</a></li>
+                            <li><a href="sub3.html#matestories">Mate's Stories</a></li>
+                            <li><a href="sub2.html#dialect_wrap">Busan Dialect</a></li>
+                            <li><a href="sub2.html">How Busan Feels</a></li>
                         </ul>
-                    </div>
+                    </div><!-- //footer_col -->
                     <div class="footer_col">
                         <h4>PLAN YOUR TRIP</h4>
                         <ul>
-                            <li><a href="#">Weather & Live Updates</a></li>
-                            <li><a href="#">Transportation</a></li>
-                            <li><a href="#">Safety & Emergency</a></li>
-                            <li><a href="#">Useful Tips</a></li>
+                            <li><a href="sub1.html#content4_sub1">Weather & Live Updates</a></li>
+                            <li><a href="sub1.html#content4_sub1">Transportation</a></li>
+                            <li><a href="sub1.html#content4_sub1">Safety & Emergency</a></li>
+                            <li><a href="sub1.html#content4_sub1">Useful Tips</a></li>
                         </ul>
-                    </div>
+                    </div><!-- //footer_col -->
                     <div class="footer_col">
                         <h4>EXPLORE</h4>
                         <ul>
-                            <li><a href="#">About Busan Mate</a></li>
-                            <li><a href="#">Become a Mate</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html#content1">About Busan Mate</a></li>
+                            <li><a href="sub3.html#findamate">Become a Mate</a></li>
+                            <li><a href="sub3.html#notice_section ">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer_col">

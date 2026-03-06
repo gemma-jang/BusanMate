@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1580">
@@ -26,7 +27,8 @@
 <body>
     <div id="wrap">
 
-        <!-- #header S (영문 유지) -->
+
+        <!-- #header S -->
         <div id="header">
             <div class="inner_header">
                 <!-- 로고 영역 -->
@@ -35,24 +37,23 @@
                         <img src="./images/main/logo1.svg" alt="logo"
                             onerror="this.src='https://placehold.co/60x60/00548B/FFFFFF?text=LOGO'">
                     </a>
-                </div><!-- .logo -->
+                </div>
 
                 <!-- GNB 메뉴 영역 -->
                 <ul class="gnb">
                     <li><a href="#">About Busan</a>
-                        <!-- 서브 메뉴 추가 -->
                         <ul class="depth2">
-                            <li><a href="sub1.html">The City</a></li>
-                            <li><a href="sub1_2.html">Characters</a></li>
+                            <li><a href="sub1_ko.html">The City</a></li>
+                            <li><a href="sub1_2_ko.html">Characters</a></li>
                         </ul>
                     </li>
-                    <li><a href="sub2.html">How Busan Feels</a></li>
-                    <li><a href="sub3.html">Meet a mate</a></li>
+                    <li><a href="sub2_ko.html">How Busan Feels</a></li>
+                    <li><a href="sub3_ko.html">Meet a mate</a></li>
                 </ul>
 
-                <!-- 우측 상단 그룹 (날씨 + 유틸) -->
+                <!-- 우측 상단 그룹 -->
                 <div class="header_right">
-                    <!-- 변경된 날씨 영역 -->
+                    <!-- 날씨 영역 -->
                     <div class="weather_flipper">
                         <ul class="weather_list">
                             <li>
@@ -78,17 +79,28 @@
                         </ul>
                     </div>
 
+
                     <!-- 유틸리티 아이콘 -->
                     <ul class="util">
                         <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
-                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=S'"></a></li>
-                        <!-- 언어 토글 버튼 -->
-                        <li><a href="javascript:void(0);" onclick="toggleLanguage(event)"><img src="./images/main/util_2.png" alt="Language"></a></li>
+                                    onerror="this.src='https://placehold.co/24x24/bdc3c7/FFFFFF?text=S'"></a></li>
                         <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"
-                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=H'"></a></li>
+                                    onerror="this.src='https://placehold.co/24x24/e74c3c/FFFFFF?text=H'"></a></li>
                         <li><a href="#"><img src="./images/main/util_4.png" alt="Account"
-                                    onerror="this.src='https://placehold.co/20x20/cccccc/FFFFFF?text=A'"></a></li>
-                    </ul><!-- .util -->
+                                    onerror="this.src='https://placehold.co/24x24/bdc3c7/FFFFFF?text=A'"></a></li>
+
+                        <!-- !!! 변경된 언어 토글 영역 (실제 링크 이동 방식) !!! -->
+                        <li class="lang-switch">
+                            <img src="./images/main/util_2.png" alt="Language"
+                                onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=L'">
+                            <div class="lang-text">
+                                <a href="sub3_ko.html" class="active">KO</a>
+                                <span class="separator">|</span>
+                                <a href="sub3.html">ENG</a>
+                            </div>
+                        </li>
+                        <!-- !!! 변경된 언어 토글 영역 끝 !!! -->
+                    </ul>
                 </div><!-- .header_right -->
             </div><!-- .inner_header -->
         </div><!-- #header -->
@@ -111,7 +123,8 @@
                     <h2 class="banner_title animate-fade-up">메이트란 무엇인가요?</h2>
 
                     <p class="banner_desc animate-fade-up delay-500">
-                        메이트는 현지인처럼 부산을 경험할 수 있도록 돕는 여행 동반자입니다. 단순한 투어 가이드가 아니라, 함께 탐험하고 대화하며 순간을 공유하는 친구입니다. 도시를 거닐거나, 숨겨진 명소를 찾거나, 가볍게 커피 한 잔을 마실 때도, 메이트와 함께라면 더욱 잊지 못할 끈끈한 여행이 될 것입니다.
+                        메이트는 현지인처럼 부산을 경험할 수 있도록 돕는 여행 동반자입니다. 단순한 투어 가이드가 아니라, 함께 탐험하고 대화하며 순간을 공유하는 친구입니다. 도시를 거닐거나,
+                        숨겨진 명소를 찾거나, 가볍게 커피 한 잔을 마실 때도, 메이트와 함께라면 더욱 잊지 못할 끈끈한 여행이 될 것입니다.
                     </p>
                 </div>
             </div>
@@ -154,13 +167,13 @@
                         <span class="filter_label">여행 스타일</span>
                         <select class="custom_select" id="styleSelect">
                             <option>여행 스타일 선택</option>
-                            <option>맛집 탐방</option>
+                            <option>맛집 투어</option>
                             <option>액티비티</option>
-                            <option>여유로운</option>
+                            <option>쉼과 여유</option>
                             <option>문화 탐방</option>
                             <option>나이트라이프</option>
                             <option>쇼핑</option>
-                            <option>자연 만끽</option>
+                            <option>자연 즐기기</option>
                             <option>역사 탐방</option>
                             <option>모험</option>
                             <option>럭셔리</option>
@@ -183,7 +196,7 @@
                     <span class="tag_title">관심사</span>
 
                     <button class="tag_btn" data-value="커피">☕ 커피</button>
-                    <button class="tag_btn" data-value="현지 음식">🍽️ 현지 음식</button>
+                    <button class="tag_btn" data-value="현지 음식">🍽️ 로컬 음식</button>
                     <button class="tag_btn" data-value="산책">🚶 산책</button>
                     <button class="tag_btn" data-value="바다">🌊 바다</button>
                     <button class="tag_btn" data-value="야경">🌃 야경</button>
@@ -249,7 +262,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">혼자서는 절대 찾지 못했을 부산의 숨은 명소들을 발견했어요. 메이트는 지식이 풍부하고 정말 친절했습니다. 부산을 경험하는 최고의 방법이에요!</p>
+                            <p class="review_text">혼자서는 절대 찾지 못했을 부산의 숨은 명소들을 발견했어요. 메이트는 지식이 풍부하고 정말 친절했습니다. 부산을 경험하는
+                                최고의 방법이에요!</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -270,7 +284,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">여자 혼자 하는 여행이라 안전이 최우선이었어요. 검증된 메이트를 만나 안심이 되었고 함께 야시장을 구경하며 너무 즐거웠습니다.</p>
+                            <p class="review_text">여자 혼자 하는 여행이라 안전이 최우선이었어요. 검증된 메이트를 만나 안심이 되었고 함께 야시장을 구경하며 너무
+                                즐거웠습니다.</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -291,7 +306,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">송정 해수욕장에서 서핑을 하고 엄청난 해산물 식사를 했어요. 한국 여행의 진정한 하이라이트였습니다. 잊지 못할 추억을 만들어줘서 고마워요!</p>
+                            <p class="review_text">송정 해수욕장에서 서핑을 하고 엄청난 해산물 식사를 했어요. 한국 여행의 진정한 하이라이트였습니다. 잊지 못할 추억을
+                                만들어줘서 고마워요!</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -312,7 +328,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">메이트의 영어를 도와주면서 제 한국어도 연습할 수 있는 좋은 기회였어요. 문화 유적지를 방문하고 깊은 대화를 나눴습니다. 진정한 교류였어요.</p>
+                            <p class="review_text">메이트의 영어를 도와주면서 제 한국어도 연습할 수 있는 좋은 기회였어요. 문화 유적지를 방문하고 깊은 대화를 나눴습니다.
+                                진정한 교류였어요.</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -355,7 +372,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">혼자서는 절대 찾지 못했을 부산의 숨은 명소들을 발견했어요. 메이트는 지식이 풍부하고 정말 친절했습니다. 부산을 경험하는 최고의 방법이에요!</p>
+                            <p class="review_text">혼자서는 절대 찾지 못했을 부산의 숨은 명소들을 발견했어요. 메이트는 지식이 풍부하고 정말 친절했습니다. 부산을 경험하는
+                                최고의 방법이에요!</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -376,7 +394,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">여자 혼자 하는 여행이라 안전이 최우선이었어요. 검증된 메이트를 만나 안심이 되었고 함께 야시장을 구경하며 너무 즐거웠습니다.</p>
+                            <p class="review_text">여자 혼자 하는 여행이라 안전이 최우선이었어요. 검증된 메이트를 만나 안심이 되었고 함께 야시장을 구경하며 너무
+                                즐거웠습니다.</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -397,7 +416,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">송정 해수욕장에서 서핑을 하고 엄청난 해산물 식사를 했어요. 한국 여행의 진정한 하이라이트였습니다. 잊지 못할 추억을 만들어줘서 고마워요!</p>
+                            <p class="review_text">송정 해수욕장에서 서핑을 하고 엄청난 해산물 식사를 했어요. 한국 여행의 진정한 하이라이트였습니다. 잊지 못할 추억을
+                                만들어줘서 고마워요!</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -418,7 +438,8 @@
                                 </div>
                             </div>
                             <div class="review_divider"></div>
-                            <p class="review_text">메이트의 영어를 도와주면서 제 한국어도 연습할 수 있는 좋은 기회였어요. 문화 유적지를 방문하고 깊은 대화를 나눴습니다. 진정한 교류였어요.</p>
+                            <p class="review_text">메이트의 영어를 도와주면서 제 한국어도 연습할 수 있는 좋은 기회였어요. 문화 유적지를 방문하고 깊은 대화를 나눴습니다.
+                                진정한 교류였어요.</p>
                             <button class="read_more_btn">더보기 +</button>
                         </div>
                     </div>
@@ -527,27 +548,27 @@
                     <div class="footer_col">
                         <h4>DISCOVER</h4>
                         <ul>
-                            <li><a href="#">Local Picks</a></li>
-                            <li><a href="#">Mate's Stories</a></li>
-                            <li><a href="#">Busan Dialect</a></li>
-                            <li><a href="#">How Busan Feels</a></li>
+                            <li><a href="sub2.html#localpick_wrap">Local Picks</a></li>
+                            <li><a href="sub3.html#matestories">Mate's Stories</a></li>
+                            <li><a href="sub2.html#dialect_wrap">Busan Dialect</a></li>
+                            <li><a href="sub2.html">How Busan Feels</a></li>
                         </ul>
-                    </div>
+                    </div><!-- //footer_col -->
                     <div class="footer_col">
                         <h4>PLAN YOUR TRIP</h4>
                         <ul>
-                            <li><a href="#">Weather & Live Updates</a></li>
-                            <li><a href="#">Transportation</a></li>
-                            <li><a href="#">Safety & Emergency</a></li>
-                            <li><a href="#">Useful Tips</a></li>
+                            <li><a href="sub1.html#content4_sub1">Weather & Live Updates</a></li>
+                            <li><a href="sub1.html#content4_sub1">Transportation</a></li>
+                            <li><a href="sub1.html#content4_sub1">Safety & Emergency</a></li>
+                            <li><a href="sub1.html#content4_sub1">Useful Tips</a></li>
                         </ul>
-                    </div>
+                    </div><!-- //footer_col -->
                     <div class="footer_col">
                         <h4>EXPLORE</h4>
                         <ul>
-                            <li><a href="#">About Busan Mate</a></li>
-                            <li><a href="#">Become a Mate</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html#content1">About Busan Mate</a></li>
+                            <li><a href="sub3.html#findamate">Become a Mate</a></li>
+                            <li><a href="sub3.html#notice_section ">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer_col">
@@ -597,4 +618,5 @@
     <script src="js/script_sub3_ko.js"></script>
 
 </body>
+
 </html>

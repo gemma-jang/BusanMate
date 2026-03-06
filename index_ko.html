@@ -39,12 +39,12 @@
                 <ul class="gnb">
                     <li><a href="#">About Busan</a>
                         <ul class="depth2">
-                            <li><a href="sub1.html">The City</a></li>
-                            <li><a href="sub1_2.html">Characters</a></li>
+                            <li><a href="sub1_ko.html">The City</a></li>
+                            <li><a href="sub1_2_ko.html">Characters</a></li>
                         </ul>
                     </li>
-                    <li><a href="sub2.html">How Busan Feels</a></li>
-                    <li><a href="sub3.html">Meet a mate</a></li>
+                    <li><a href="sub2_ko.html">How Busan Feels</a></li>
+                    <li><a href="sub3_ko.html">Meet a mate</a></li>
                 </ul>
 
                 <!-- 우측 상단 그룹 (날씨 + 유틸) -->
@@ -74,11 +74,27 @@
                         </ul>
                     </div>
 
+
+                    <!-- 유틸리티 아이콘 -->
                     <ul class="util">
-                        <li><a href="#"><img src="./images/main/util_1.png" alt="Search"></a></li>
-                        <li><a href="index.html"><img src="./images/main/util_2.png" alt="Language"></a></li>
-                        <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"></a></li>
-                        <li><a href="#"><img src="./images/main/util_4.png" alt="Account"></a></li>
+                        <li><a href="#"><img src="./images/main/util_1.png" alt="Search"
+                                    onerror="this.src='https://placehold.co/24x24/bdc3c7/FFFFFF?text=S'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_3.png" alt="Heart"
+                                    onerror="this.src='https://placehold.co/24x24/e74c3c/FFFFFF?text=H'"></a></li>
+                        <li><a href="#"><img src="./images/main/util_4.png" alt="Account"
+                                    onerror="this.src='https://placehold.co/24x24/bdc3c7/FFFFFF?text=A'"></a></li>
+
+                        <!-- !!! 변경된 언어 토글 영역 (실제 링크 이동 방식) !!! -->
+                        <li class="lang-switch">
+                            <img src="./images/main/util_2.png" alt="Language"
+                                onerror="this.src='https://placehold.co/24x24/3498db/FFFFFF?text=L'">
+                            <div class="lang-text">
+                                <a href="index_ko.html" class="active">KO</a>
+                                <span class="separator">|</span>
+                                <a href="index.html">ENG</a>
+                            </div>
+                        </li>
+                        <!-- !!! 변경된 언어 토글 영역 끝 !!! -->
                     </ul>
                 </div>
             </div>
@@ -88,7 +104,7 @@
         <!-- hero banner S -->
         <div id="visual-sec">
             <video autoplay loop muted playsinline class="bg-video">
-                <source src="./media/main_video4.mp4" type="video/mp4">
+                <source src="./media/main_video5.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <img src="./images/main/wave.png" alt="wave" class="wave-bg"
@@ -518,27 +534,27 @@
                     <div class="footer_col">
                         <h4>DISCOVER</h4>
                         <ul>
-                            <li><a href="#">Local Picks</a></li>
-                            <li><a href="#">Mate's Stories</a></li>
-                            <li><a href="#">Busan Dialect</a></li>
-                            <li><a href="#">How Busan Feels</a></li>
+                            <li><a href="sub2.html#localpick_wrap">Local Picks</a></li>
+                            <li><a href="sub3.html#matestories">Mate's Stories</a></li>
+                            <li><a href="sub2.html#dialect_wrap">Busan Dialect</a></li>
+                            <li><a href="sub2.html">How Busan Feels</a></li>
                         </ul>
                     </div>
                     <div class="footer_col">
                         <h4>PLAN YOUR TRIP</h4>
                         <ul>
-                            <li><a href="#">Weather & Live Updates</a></li>
-                            <li><a href="#">Transportation</a></li>
-                            <li><a href="#">Safety & Emergency</a></li>
-                            <li><a href="#">Useful Tips</a></li>
+                            <li><a href="sub1.html#content4_sub1">Weather & Live Updates</a></li>
+                            <li><a href="sub1.html#content4_sub1">Transportation</a></li>
+                            <li><a href="sub1.html#content4_sub1">Safety & Emergency</a></li>
+                            <li><a href="sub1.html#content4_sub1">Useful Tips</a></li>
                         </ul>
                     </div>
                     <div class="footer_col">
                         <h4>EXPLORE</h4>
                         <ul>
-                            <li><a href="#">About Busan Mate</a></li>
-                            <li><a href="#">Become a Mate</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html#content1">About Busan Mate</a></li>
+                            <li><a href="sub3.html#findamate">Become a Mate</a></li>
+                            <li><a href="sub3.html#notice_section ">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer_col">
