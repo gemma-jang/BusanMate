@@ -1,0 +1,1768 @@
+@charset "utf-8";
+
+/* =========================================
+   Webfont Definition
+   ========================================= */
+/* Pretendard */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* LaundryGothic */
+@font-face {
+    font-family: 'LaundryGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicR.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LaundryGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* =========================================
+   Reset & Base Styles
+   ========================================= */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+video * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 레이아웃 계산을 편하게 하기 위해 추가 권장 */
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    /* a태그가 크기 값을 가지도록 설정 */
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    /* 기본 행간 추가 */
+}
+
+
+/* 최소 너비 설정 (고정형 웹사이트) */
+#wrap {
+    min-width: 1580px;
+    overflow: hidden;
+}
+
+
+/* =========================================
+           Header Area (Fixed Top)
+           ========================================= */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1360px;
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #127EC2;
+    z-index: 1000;
+}
+
+.inner_header {
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 60px;
+    display: block;
+}
+
+.gnb {
+    display: flex;
+    column-gap: 40px;
+    height: 100%;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.gnb>li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.gnb>li>a {
+    color: #00548B;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+    display: block;
+    padding: 0 10px;
+}
+
+.gnb>li:hover>a {
+    color: #127EC2;
+}
+
+.depth2 {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-top: 2px solid #127EC2;
+    min-width: 140px;
+    text-align: center;
+    padding: 0;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gnb>li:hover .depth2 {
+    display: block;
+}
+
+.depth2 li {
+    display: block;
+}
+
+.depth2 li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.depth2 li a:hover {
+    color: #fff;
+    background-color: #127EC2;
+    font-weight: 700;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* --- 날씨 플립 오버 영역 --- */
+.weather_flipper {
+    height: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+.weather_list {
+    display: flex;
+    flex-direction: column;
+    animation: flipWeather 9s infinite;
+}
+
+.weather_list li {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.weather_list img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.weather_list li:nth-child(3) img {
+    width: 20px;
+    margin: 0 1px;
+}
+
+.weather_list p {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@keyframes flipWeather {
+
+    0%,
+    25% {
+        transform: translateY(0);
+    }
+
+    33%,
+    58% {
+        transform: translateY(-24px);
+    }
+
+    66%,
+    91% {
+        transform: translateY(-48px);
+    }
+
+    100% {
+        transform: translateY(-72px);
+    }
+}
+
+/* --- 유틸리티 영역 --- */
+.util {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.util li {
+    display: flex;
+    align-items: center;
+}
+
+.util li>a {
+    display: flex;
+    align-items: center;
+}
+
+.util img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* =========================================
+           Language Toggle Switch Styles (개별 링크 방식으로 수정됨)
+           ========================================= */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* 아이콘과 텍스트 사이 간격 */
+}
+
+.lang-text {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+/* 각 언어 링크 디자인 */
+.lang-text a {
+    font-weight: 500;
+    color: #aaa;
+    /* 비활성화된 언어의 연한 색상 */
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.lang-text a:hover {
+    color: #127EC2;
+}
+
+/* 현재 활성화된 언어 강조 */
+.lang-text a.active {
+    color: #127EC2;
+    font-weight: 700;
+}
+
+.lang-text .separator {
+    margin: 0 4px;
+    color: #ddd;
+    /* 구분선 색상 */
+    font-weight: 400;
+    font-size: 13px;
+}
+
+/* =========================================
+           Hero Banner (Video)
+           ========================================= */
+#visual-sec {
+    position: relative;
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 배경 비디오 스타일 */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* ✨ 추가된 부분: 영상 위 물결 이미지 ✨ */
+.wave-bg {
+    position: absolute;
+
+    /* 👇 여기서 위치값을 수정하세요 👇 */
+    /* 맨 아래쪽에 위치하게 하려면 bottom: 0 을 사용합니다 */
+    bottom: -205px;
+    left: 0;
+    /* 👆 위치값 수정 부분 👆 */
+
+    width: 100%;
+    /* 가로로 꽉 차게 설정 */
+    height: auto;
+    /* 원본 이미지 비율 유지 */
+    z-index: 2;
+    /* 비디오(z-index:1) 위에 보이도록 2로 설정 */
+    pointer-events: none;
+    /* 클릭 등 마우스 이벤트를 방해하지 않게 설정 */
+}
+
+/* =========================================
+           Content 1
+           ========================================= */
+
+/* Content 1 */
+#content1 {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.banner2 {
+    width: 1320px;
+    display: flex;
+    /* 좌우 배치 */
+    justify-content: center;
+    align-items: flex-start;
+    /* 높이 맞춤 */
+    margin: 200px auto 100px;
+    gap: 0;
+
+    /* 이미지와 텍스트 박스 사이 간격 없음 */
+}
+
+.banner2_img {
+    /* [수정] 요청하신 이미지 크기 고정 */
+    width: 782px;
+    height: 445px;
+    display: flex;
+    /* 이미지를 flex item으로 */
+    flex-shrink: 0;
+    /* 크기 줄어들지 않게 */
+}
+
+.banner2_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* 이미지 크기가 박스를 넘지 않도록 */
+    object-fit: cover;
+}
+
+.banner_wrap {
+    /* [수정] 1320px - 782px = 538px */
+    width: 538px;
+    height: 445px;
+    border: 1px solid #127EC2;
+    border-left: none;
+    /* 이미지와 맞닿는 부분 선 제거 */
+    padding: 110px 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    /* 크기 줄어들지 않게 */
+}
+
+.banner_wrap>img {
+    width: 84px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.banner_wrap h1 {
+    font-size: 23px;
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.banner_wrap p {
+    font-family: 'Pretendard';
+    letter-spacing: -0.02em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.learn-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.learn-btn span {
+    font-family: "Anton", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.learn-btn img {
+    width: 24px;
+    height: auto;
+}
+
+/* Counter */
+.counter {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* 중앙 정렬 */
+    gap: 150px;
+    /* 항목 사이 간격 */
+    text-align: center;
+    color: #127EC2;
+
+}
+
+.counter li {
+    list-style: none;
+    text-align: center;
+    /* width: 300px; */
+    /* [중요] 부모 영역 너비를 고정하여 주변 요소 흔들림 방지 */
+}
+
+.counter li:nth-child(1) {
+    width: 320px;
+}
+
+.counter span {
+    font-size: 70px;
+    font-weight: 500;
+    font-family: 'Pretendard';
+}
+
+.count {
+    font-size: 70px;
+    /* M+ 부분 폰트 사이즈 */
+    font-weight: 500;
+    line-height: 1;
+    font-family: 'Pretendard';
+    /* [수정] 흔들림 방지를 위한 Flex 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+/* [수정] 숫자 span에 고정 폭과 우측 정렬 지정 */
+.count span {
+    display: block;
+    /* width: 280px;  */
+    /* [중요] 32,000 (70px 폰트)이 충분히 들어갈 넓은 너비 고정 */
+    text-align: right;
+    /* 숫자가 오른쪽(K+ 쪽)으로 붙게 함 */
+    font-variant-numeric: tabular-nums;
+    margin-right: 5px;
+    /* 숫자와 K+ 사이 간격 */
+    flex-shrink: 0;
+
+}
+
+/* K+ 텍스트 부분 */
+.count_suffix {
+    font-size: 35px !important;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.counter_letter {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #127EC2;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/* Content 2: Overview & Map */
+/* [수정] 부모 영역: 고정된 배경(하늘)만 남김 */
+#content2 {
+    width: 1920px;
+    height: 970px;
+    position: relative;
+    /* 고정된 배경 이미지 */
+    background: url('../images/main/overview_bg.png') no-repeat center top;
+    background-size: cover;
+    overflow: hidden;
+    /* 줌인 시 밖으로 나가지 않게 */
+}
+
+/* [추가] 줌인 효과가 적용될 배경(건물) 스타일 */
+.content2-bg-animate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 움직일 배경 이미지 */
+    background: url('../images/main/overview_bg2.png') no-repeat center bottom 60px;
+    background-size: 1522.74px 624.24px;
+
+    z-index: 1;
+    /* 하늘(0) 위, 콘텐츠(10) 아래 */
+    pointer-events: none;
+    /* 클릭 방해 금지 */
+}
+
+
+
+
+.overview {
+    padding-top: 150px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.overview h1 {
+    font-family: 'LaundryGothic';
+    color: #00548B;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.overview p {
+    font-family: 'LaundryGothic';
+    color: #333;
+    font-size: 18px;
+}
+
+.overview_container {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.map_area {
+    position: relative;
+    margin-right: 50px;
+    /* [수정] 지도 크기 확보 */
+    width: 800px;
+    height: 600px;
+}
+
+.map_img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* [수정] 랜드마크 핀 스타일 */
+.landmark {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 80px;
+    /* 터치 영역 확보 */
+    height: 80px;
+}
+
+.landmark:hover,
+.landmark.active {
+    transform: scale(1.1);
+    /* 확대 효과 */
+    z-index: 10;
+}
+
+/* 랜드마크 일러스트 이미지 */
+.land_img {
+    /* width: 90px; 일러스트 크기 */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* 말풍선 이미지 */
+.land_bubble {
+    position: absolute;
+    top: -40px;
+    /* 일러스트 위로 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    /* 말풍선 크기 */
+    display: none;
+    /* 기본 숨김 */
+    z-index: 2;
+}
+
+
+
+
+
+/* [수정] 6번 랜드마크 말풍선 위치/크기 조정 (커진 이미지에 맞춤) */
+.landmark.p6 .land_bubble {
+    width: 175px;
+    /* 말풍선 조금 더 키움 */
+    bottom: 155%;
+    /* 더 위로 올림 (간격 확보) */
+}
+
+
+/* 기본 상태 말풍선 */
+.land_bubble.default {
+    display: block;
+}
+
+/* 호버/활성 상태에서 말풍선 교체 */
+.landmark:hover .land_bubble.default,
+.landmark.active .land_bubble.default {
+    display: none;
+}
+
+.landmark:hover .land_bubble.hover,
+.landmark.active .land_bubble.hover {
+    display: block;
+}
+
+/* [수정] 각 랜드마크 위치 (Top, Left %로 대략적 위치 잡음) */
+/* 해동용궁사 */
+.landmark.p1 {
+    top: 15%;
+    left: 79%;
+}
+
+/* 해운대해변열차 */
+.landmark.p2 {
+    top: 50%;
+    left: 77%;
+}
+
+/* 광안리 */
+.landmark.p3 {
+    top: 62%;
+    left: 60%;
+}
+
+/* 벡스코 */
+.landmark.p4 {
+    top: 30%;
+    left: 65%;
+}
+
+/* 사직 */
+.landmark.p5 {
+    top: 43%;
+    left: 45%;
+}
+
+/* 감천 */
+.landmark.p6 {
+    top: 63%;
+    left: 30%;
+}
+
+
+.info_card_wrap {
+    position: relative;
+    /* [수정] ming_char를 위해 z-index stacking context 생성 방지 또는 조정 */
+}
+
+/* [수정] 캐릭터를 박스 뒤로 보내고 위치 조정 */
+.ming_char {
+    position: absolute;
+    top: -90px;
+    right: 30px;
+    width: 120px;
+    z-index: 1;
+    /* 카드(5)보다 뒤로(1) */
+}
+
+/* 정보 카드 스타일 */
+.info_card {
+    background-color: #ffffff;
+    width: 311px;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 22px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+    /* 캐릭터(1)보다 앞으로 */
+    display: flex;
+    flex-direction: column;
+}
+
+.card_img {
+    width: 267px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 0 auto 15px;
+    flex-shrink: 0;
+    background-color: #f0f0f0;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.card_body {
+    padding: 0;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_body h3 {
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info_list {
+    /* margin-bottom: auto; */
+}
+
+.info_list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+/* [수정] 아이콘 이미지 크기 조정 */
+.info_list li img {
+    width: 18px;
+    /* 크기 조정 */
+    height: auto;
+    /* margin-top: 3px; 주석 처리 */
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.google_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.google_btn:hover {
+    color: #127EC2;
+
+}
+
+/* [수정] 구글맵 버튼 호버 시 아이콘 색상 변경 (Filter 사용) */
+.google_btn:hover img {
+    filter: invert(36%) sepia(62%) saturate(2423%) hue-rotate(190deg) brightness(91%) contrast(93%);
+}
+
+/* [수정] 구글맵 버튼 호버 시 아이콘 색상 변경 (Filter 사용) */
+.google_btn:hover img {
+    filter: invert(36%) sepia(62%) saturate(2423%) hue-rotate(190deg) brightness(91%) contrast(93%);
+}
+
+.google_btn img {
+    width: 18px;
+    vertical-align: middle;
+    transition: filter 0.2s;
+}
+
+.slide_controls {
+    display: flex;
+    gap: 8px;
+}
+
+.slide_controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+/* [수정] 슬라이드 버튼 호버 효과 수정 */
+.slide_controls button:hover {
+    transform: scale(1.3);
+    /* 스케일 확대 */
+    filter: invert(36%) sepia(62%) saturate(2423%) hue-rotate(190deg) brightness(91%) contrast(93%);
+    /* 색상 변경 */
+}
+
+.slide_controls button img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* =================================================================
+           Content 3 (Live from Mates)
+           ================================================================= */
+#content3 {
+    width: 100%;
+    padding: 0;
+    /* padding 제거, margin으로 제어 */
+    position: relative;
+}
+
+.inner_content3 {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* [요청사항 수정] 타이틀 스타일 공통 적용 */
+.live_title,
+.today_busan {
+    font-family: 'LaundryGothic';
+    font-size: 35px;
+    color: #00548B;
+    font-weight: 700;
+    margin-top: 200px;
+    /* 위쪽 여백 200px */
+    margin-bottom: 50px;
+    /* 아래쪽 여백 50px */
+}
+
+.live_card_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* 파란색 카드 (650x290) */
+.live_card {
+    width: 650px;
+    height: 290px;
+    background-color: #127EC2;
+    border-radius: 20px;
+    position: relative;
+
+    /* [중요] 레이아웃 재계산 및 정렬 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 헤더는 위, 흰박스는 아래로 밀착 */
+
+    /* 패딩 조정: 290px 높이 안에 흰색박스(195px)가 들어가야 하므로 여백을 줄임 */
+    padding: 25px 38px 25px 38px;
+    box-sizing: border-box;
+    /* 리셋 문법 오류로 여기서 한번 더 강제 적용 */
+}
+
+/* 말풍선 아이콘 */
+.live_card::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 40px;
+    background: url(../images/main/live_card_icon.svg) no-repeat center/contain;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    flex-shrink: 0;
+    /* 헤더 크기 줄어들지 않게 고정 */
+}
+
+.card_title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.more_btn {
+    background-color: #fff;
+    color: #333;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.more_btn:hover {
+    background-color: #eee;
+}
+
+/* 흰색 컨텐츠 박스 (574x195) */
+.white_card_link {
+    display: block;
+    width: 574px;
+    /* 패딩 38px * 2 = 76px. 650 - 76 = 574px. 딱 맞음 */
+    height: 195px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    flex-shrink: 0;
+    /* [중요] 박스가 찌그러지지 않도록 고정 */
+}
+
+.slide_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    /* 내부 콘텐츠 위아래 양쪽 정렬 */
+}
+
+/* --- 아이콘 및 내부 스타일 --- */
+.ico {
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.ico_loc {
+    width: 14px;
+    height: 18px;
+    background-image: url(../images/main/streamline-flex-color_location-heart-pin-flat.png);
+}
+
+.ico_loc_gray {
+    width: 12px;
+    height: 16px;
+    background-image: url(../images/main/pin.svg);
+}
+
+.ico_weather {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/main/mingcute_sun-line.svg);
+}
+
+.ico_flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 4px;
+    background-color: #eee;
+}
+
+.flag_usa {
+    background-image: url(../images/main/circle-flags_uk.png);
+}
+
+.flag_can {
+    background-image: url(../images/main/emojione_flag-for-canada.png);
+}
+
+.flag_kor {
+    background-image: url(../images/main/emojione_flag-for-south-korea.png);
+}
+
+.weather_info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.location_img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.location_text h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #127EC2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 2px;
+}
+
+.location_text span {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.comment_list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.comment_list li:last-child {
+    margin-bottom: 0;
+}
+
+.user_info {
+    font-weight: 700;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.comment_text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+}
+
+.time_ago {
+    font-size: 10px;
+    color: #fff;
+    background: #666;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.travel_item {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.travel_item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.user_avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.travel_content {
+    flex: 1;
+    min-width: 0;
+}
+
+.travel_user {
+    font-size: 15px;
+    font-weight: 700;
+    color: #127EC2;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.travel_msg {
+    font-size: 13px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.travel_meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #888;
+}
+
+.meta_badge {
+    font-size: 10px;
+    background: #666;
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 4px;
+}
+
+.jjoyak_char {
+    position: absolute;
+    right: -120px;
+    /* 오른쪽 모서리 근처로 이동 */
+    bottom: -90px;
+    /* 하단 위치 조정 */
+    width: 250px;
+    z-index: 10;
+}
+
+/* [추가] 쪼약이 캐릭터 그림자 스타일 */
+.jjoyak-shadow {
+    position: absolute;
+    right: -50px;
+    /* 캐릭터와 동일한 x축 위치 */
+    bottom: -30px;
+    /* 캐릭터 발밑으로 위치 조정 */
+    width: 100px;
+    /* 캐릭터와 동일한 너비 */
+    z-index: 9;
+    /* 캐릭터(z-index:10)보다 뒤에 오도록 설정 */
+    pointer-events: none;
+    opacity: 0.7;
+    /* 그림자니까 약간 투명하게 */
+}
+
+
+/* =================================================================
+           Content 4 (Banners) - 새로 추가된 부분
+           ================================================================= */
+#content4 {
+    width: 1320px;
+    margin: 0 auto;
+    /* 상하 여백 */
+    background-color: #fff;
+    position: relative;
+}
+
+.inner_content4 {
+    width: 1320px;
+    margin: 0 auto 200px;
+    position: relative;
+}
+
+
+/* =========================================
+   Content 4 (Today Busan) 스타일 수정
+   ========================================= */
+
+/* 1. 기존 가상요소(배경 캐릭터) 제거 */
+/* 기존에 CSS로 넣었던 배경 이미지가 겹쳐 보이지 않도록 숨깁니다. */
+.inner_content4::before,
+.inner_content4::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+}
+
+/* 2. 왼쪽 캐릭터 이미지 스타일 (img 태그용) */
+.banner-char-left {
+    position: absolute;
+    bottom: 40px;
+    /* 기존 디자인 위치 유지 */
+    left: -192px;
+    /* 기존 디자인 위치 유지 */
+    width: 400px;
+    /* 기존 크기 유지 */
+    height: auto;
+    /* 비율 유지 */
+    z-index: 100;
+    /* 배너 리스트 뒤쪽 */
+    pointer-events: none;
+    /* 이미지가 마우스 클릭을 방해하지 않도록 설정 */
+}
+
+/* 3. 오른쪽 캐릭터 이미지 스타일 (img 태그용) */
+.banner-char-right {
+    position: absolute;
+    bottom: -60px;
+    /* 기존 디자인 위치 유지 */
+    right: -165px;
+    /* 기존 디자인 위치 유지 */
+    width: 400px;
+    /* 기존 크기 유지 */
+    height: auto;
+    z-index: 100;
+    pointer-events: none;
+}
+
+
+/* [추가] 그림자 스타일 */
+.char-shadow-left {
+    position: absolute;
+    bottom: 125px;
+    /* 캐릭터 발 밑으로 조정 */
+    left: -100px;
+    /* 캐릭터와 동일한 x축 위치 */
+    width: 110px;
+    z-index: 0;
+    /* 캐릭터(100)보다 뒤에 */
+    pointer-events: none;
+}
+
+.char-shadow-right {
+    position: absolute;
+    bottom: 125px;
+    /* 오른쪽 캐릭터가 더 내려가 있으므로(-100px) 그림자도 더 아래로 */
+    right: -95px;
+    width: 110px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 4. 배너 리스트 레이어 순서 조정 */
+/* 캐릭터(z-index: 1)보다 배너가 위에 와야 클릭이 가능합니다. */
+.banner_list {
+    position: relative;
+    z-index: 10;
+}
+
+.banner_list {
+    display: flex;
+    justify-content: space-between;
+    /* 양쪽 정렬 */
+    gap: 20px;
+    /* (1320 - (315*4)) / 3 = 20px */
+}
+
+.banner_item {
+    width: 315px;
+}
+
+.banner_link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.banner_img_box {
+    width: 315px;
+    height: 460px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* 텍스트와 간격 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.banner_img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.banner_link:hover .banner_img_box img {
+    transform: scale(1.05);
+    /* 호버 시 확대 효과 */
+}
+
+.banner_info {
+    text-align: center;
+}
+
+.banner_info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.banner_info p {
+    font-size: 15px;
+    color: #666;
+    font-family: 'Pretendard';
+}
+
+
+
+
+/* [NEW] Content 5: Mate's Stories */
+#content5 {
+    width: 100%;
+    height: 700px;
+    /* 배경 이미지 적용 (placeholder) */
+    background: url(../images/main/mate_stories_bg.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.inner_content5 {
+    width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.inner_content5[data-aos="zoom-in"] {
+    transform: scale(0.85);
+}
+
+.mate_text_box {
+    width: 50%;
+}
+
+.mate_subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #00548B;
+    margin-bottom: 10px;
+}
+
+.mate_title {
+    font-family: 'LaundryGothic';
+    font-size: 50px;
+    color: #00548B;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.mate_desc {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.hashtag_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hash_btn {
+    background-color: #fff;
+    color: #00548B;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.hash_btn:hover {
+    background-color: #00548B;
+    color: #fff;
+}
+
+.read_more_btn {
+    display: inline-block;
+    background-color: #00548B;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read_more_btn:hover {
+    background-color: #127EC2;
+}
+
+.mate_card_box {
+    width: 680px;
+    height: 383px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mate_card_img {
+    width: 100%;
+    height: 100%;
+    /* 전체를 덮도록 하되, 텍스트 부분은 overlay 처리 */
+}
+
+.mate_card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.mate_card_info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.7);
+    /* 반투명 흰색 배경 */
+    backdrop-filter: blur(5px);
+}
+
+.mate_name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.mate_tags {
+    font-size: 13px;
+    color: #00548B;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+}
+
+.mate_tags span {
+    cursor: pointer;
+}
+
+
+
+
+/* =========================================
+           Mate Stories Styles (추가됨)
+           ========================================= */
+.mate_review {
+    font-size: 14px;
+    color: #555;
+    margin-top: 12px;
+    line-height: 1.5;
+    font-style: italic;
+    border-top: 1px solid #666;
+    padding-top: 10px;
+}
+
+/* 활성화된 해시태그 버튼 스타일 */
+.hash_btn.active {
+    background-color: #00548B;
+    color: #fff;
+}
+
+/* 기타 스타일 */
+.landmark {
+    cursor: pointer;
+}
+
+
+/* 이미지 페이드 효과 */
+#mate-story-img,
+.mate_card_info {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+/* [NEW] Footer */
+#footer {
+    width: 100%;
+    height: 386px;
+    background: url(../images/main/footer_bg.png) no-repeat center bottom;
+    background-size: cover;
+    height: 386px;
+    /* [수정] 높이 386px 고정 */
+    padding-top: 70px;
+    /* 내부 여백 조절 */
+    position: relative;
+    margin-top: -50px;
+    /* 자연스러운 연결을 위해 */
+    box-sizing: border-box;
+    /* padding 포함 높이 계산 */
+}
+
+.footer_char {
+    position: absolute;
+    top: -50px;
+    left: 500px;
+    width: 250px;
+    /* 캐릭터 크기 */
+    z-index: 10;
+}
+
+.inner_footer {
+    width: 1320px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer_left {
+    width: 30%;
+}
+
+.footer_logo img {
+    width: 150px;
+    display: block;
+    margin: 20px 0 20px;
+    cursor: pointer;
+}
+
+.footer_desc {
+    font-size: 11px;
+    color: #00548B;
+    /* 요청된 색상 적용 */
+    line-height: 1.6;
+}
+
+.footer_links {
+    display: flex;
+    gap: 80px;
+}
+
+.footer_col h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00548B;
+    /* 요청된 색상 */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer_col ul li {
+    margin-bottom: 5px;
+}
+
+.footer_col ul li a {
+    font-size: 12px;
+    color: #00548B;
+    /* 요청된 색상 */
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.footer_col ul li a:hover {
+    color: #157EC2;
+}
+
+.footer_social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_social a img {
+    width: 20px;
+    height: 20px;
+    /* 아이콘 이미지가 없을 때를 대비해 배경색을 줌 */
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* border-radius: 50%; */
+}
+
+/* 1. 인스타그램 (첫 번째 아이콘) */
+.footer_social a:nth-child(1):hover img {
+    content: url('../images/main/footer_icon_1.svg');
+}
+
+/* 2. 유튜브 (두 번째 아이콘) */
+.footer_social a:nth-child(2):hover img {
+    content: url('../images/main/footer_icon_2.svg');
+}
+
+/* 3. X (세 번째 아이콘) */
+.footer_social a:nth-child(3):hover img {
+    content: url('../images/main/footer_icon_3.svg');
+}
+
+/* 4. 페이스북 (네 번째 아이콘) */
+.footer_social a:nth-child(4):hover img {
+    content: url('../images/main/footer_icon_4.svg');
+}
+
+.footer_bottom {
+    width: 1320px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #00548B;
+    /* 요청된 색상 */
+}
+
+.footer_bottom_links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.lang_btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.lang_btn img {
+    width: 16px;
+}
+
+/* [수정] English / Korean 호버 효과 */
+.lang_btn span {
+    color: #00548B;
+    transition: color 0.3s;
+    margin-left: 3px;
+}
+
+.lang_btn span:hover {
+    color: #157EC2;
+}
+
+.footer_bottom_links a {
+    color: #00548B;
+    /* 요청된 색상 */
+    transition: color 0.3s;
+}
+
+.footer_bottom_links a:hover {
+    color: #157EC2;
+}
+
+.site_url {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.site_url:hover {
+    color: #fff;
+}
+
+/* [추가] 푸터 캐릭터 그림자 스타일 */
+.footer-char-shadow {
+    position: absolute;
+    top: 45px;
+    /* 캐릭터(top:-50px)의 발 밑 위치 */
+    left: 525px;
+    /* 캐릭터와 동일한 x축 */
+    width: 200px;
+    z-index: 9;
+    pointer-events: none;
+    opacity: 0.6;
+}
