@@ -121,7 +121,6 @@ body {
 }
 
 
-
 /* =========================================
            Header Area (Fixed Top)
            ========================================= */
@@ -228,21 +227,16 @@ body {
     gap: 30px;
 }
 
-
-
-/* --- 날씨 플립 오버 영역 시작 --- */
+/* --- 날씨 플립 오버 영역 --- */
 .weather_flipper {
     height: 24px;
-    /* 한 줄 높이 고정 */
     overflow: hidden;
-    /* 영역 밖으로 넘어가는 텍스트 숨김 */
     position: relative;
 }
 
 .weather_list {
     display: flex;
     flex-direction: column;
-    /* 3개의 아이템을 보여주고 1개(복제본)로 자연스럽게 순환 */
     animation: flipWeather 9s infinite;
 }
 
@@ -259,10 +253,8 @@ body {
     height: 22px;
     object-fit: contain;
     flex-shrink: 0;
-    /* 공간을 22px로 꽉 잡아주어 글자 시작점을 동일하게 맞춤 */
 }
 
-/* 추가됨: 3번째 아이템(바람)의 너비를 20px로 줄이고, 줄어든 2px만큼 좌우 여백(margin)을 주어 글자 시작점을 보정합니다. */
 .weather_list li:nth-child(3) img {
     width: 20px;
     margin: 0 1px;
@@ -275,7 +267,6 @@ body {
     line-height: 24px;
 }
 
-/* 플립 애니메이션 (높이 24px 기준) */
 @keyframes flipWeather {
 
     0%,
@@ -283,46 +274,86 @@ body {
         transform: translateY(0);
     }
 
-    /* 1번 (온도) 유지 */
     33%,
     58% {
         transform: translateY(-24px);
     }
 
-    /* 2번 (습도) 유지 */
     66%,
     91% {
         transform: translateY(-48px);
     }
 
-    /* 3번 (바람) 유지 */
     100% {
         transform: translateY(-72px);
     }
-
-    /* 4번 (온도 복제본)으로 이동 후 즉시 0%로 리셋 */
 }
 
-/* --- 날씨 플립 오버 영역 끝 --- */
-
+/* --- 유틸리티 영역 --- */
 .util {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+.util li {
+    display: flex;
+    align-items: center;
+}
+
+.util li>a {
+    display: flex;
+    align-items: center;
+}
+
 .util img {
     display: block;
     width: 20px;
     height: 20px;
+    object-fit: contain;
 }
 
-.util li:nth-child(2) img {
-    width: 19px;
-    height: 21px;
-    padding-top: 2px;
+/* =========================================
+           Language Toggle Switch Styles (개별 링크 방식으로 수정됨)
+           ========================================= */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* 아이콘과 텍스트 사이 간격 */
 }
 
+.lang-text {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+/* 각 언어 링크 디자인 */
+.lang-text a {
+    font-weight: 500;
+    color: #aaa;
+    /* 비활성화된 언어의 연한 색상 */
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.lang-text a:hover {
+    color: #127EC2;
+}
+
+/* 현재 활성화된 언어 강조 */
+.lang-text a.active {
+    color: #127EC2;
+    font-weight: 700;
+}
+
+.lang-text .separator {
+    margin: 0 4px;
+    color: #ddd;
+    /* 구분선 색상 */
+    font-weight: 400;
+    font-size: 13px;
+}
 
 /* =========================================
            Hero Banner (Video)
@@ -375,6 +406,7 @@ body {
 /* Content 1 */
 #content1 {
     padding-bottom: 100px;
+    padding-top: 30px;
 }
 
 .banner2 {

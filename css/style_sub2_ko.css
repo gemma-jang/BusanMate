@@ -79,8 +79,9 @@
       line-height: 1.5;
   }
 
+  /* 최소 너비 설정 (고정형 웹사이트) */
   #wrap {
-      min-width: 1580px;
+      min-width: 1700px;
       overflow: hidden;
   }
 
@@ -190,6 +191,7 @@
       gap: 30px;
   }
 
+  /* --- 날씨 플립 오버 영역 --- */
   .weather_flipper {
       height: 24px;
       overflow: hidden;
@@ -227,7 +229,6 @@
       color: #333;
       font-size: 16px;
       line-height: 24px;
-      margin: 0;
   }
 
   @keyframes flipWeather {
@@ -252,29 +253,114 @@
       }
   }
 
+  /* --- 유틸리티 영역 --- */
   .util {
       display: flex;
       align-items: center;
       gap: 20px;
   }
 
+  .util li {
+      display: flex;
+      align-items: center;
+  }
+
+  .util li>a {
+      display: flex;
+      align-items: center;
+  }
+
   .util img {
       display: block;
       width: 20px;
       height: 20px;
-      cursor: pointer;
-      transition: opacity 0.3s;
+      object-fit: contain;
   }
 
-  .util img:hover {
-      opacity: 0.7;
+  /* =========================================
+           Language Toggle Switch Styles (개별 링크 방식으로 수정됨)
+           ========================================= */
+  .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      /* 아이콘과 텍스트 사이 간격 */
   }
 
-  .util li:nth-child(2) img {
-      width: 19px;
-      height: 21px;
-      padding-top: 2px;
+  .lang-text {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
   }
+
+  /* 각 언어 링크 디자인 */
+  .lang-text a {
+      font-weight: 500;
+      color: #aaa;
+      /* 비활성화된 언어의 연한 색상 */
+      transition: color 0.3s, font-weight 0.3s;
+  }
+
+  .lang-text a:hover {
+      color: #127EC2;
+  }
+
+  /* 현재 활성화된 언어 강조 */
+  .lang-text a.active {
+      color: #127EC2;
+      font-weight: 700;
+  }
+
+  .lang-text .separator {
+      margin: 0 4px;
+      color: #ddd;
+      /* 구분선 색상 */
+      font-weight: 400;
+      font-size: 13px;
+  }
+
+  /* =========================================
+           Language Toggle Switch Styles (개별 링크 방식으로 수정됨)
+           ========================================= */
+  .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      /* 아이콘과 텍스트 사이 간격 */
+  }
+
+  .lang-text {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+  }
+
+  /* 각 언어 링크 디자인 */
+  .lang-text a {
+      font-weight: 500;
+      color: #aaa;
+      /* 비활성화된 언어의 연한 색상 */
+      transition: color 0.3s, font-weight 0.3s;
+  }
+
+  .lang-text a:hover {
+      color: #127EC2;
+  }
+
+  /* 현재 활성화된 언어 강조 */
+  .lang-text a.active {
+      color: #127EC2;
+      font-weight: 700;
+  }
+
+  .lang-text .separator {
+      margin: 0 4px;
+      color: #ddd;
+      /* 구분선 색상 */
+      font-weight: 400;
+      font-size: 13px;
+  }
+
 
   /* =========================================
            Container Sub 2 & Banner
@@ -303,6 +389,14 @@
       background-size: 100% auto;
       font-family: 'LaundryGothic', sans-serif;
   }
+
+  .swiper_txt {
+      font-family: 'Pretendard';
+      font-weight: 600;
+      color: #333;
+      font-size: 16px;
+  }
+
 
   .mate_choice_inner {
       width: 1320px;

@@ -118,7 +118,7 @@
   /* =========================================
            Header Area (Fixed Top)
            ========================================= */
-  #header {
+ #header {
       position: fixed;
       top: 0;
       left: 0;
@@ -221,6 +221,7 @@
       gap: 30px;
   }
 
+  /* --- 날씨 플립 오버 영역 --- */
   .weather_flipper {
       height: 24px;
       overflow: hidden;
@@ -282,22 +283,70 @@
       }
   }
 
+  /* --- 유틸리티 영역 --- */
   .util {
       display: flex;
       align-items: center;
       gap: 20px;
   }
 
+  .util li {
+      display: flex;
+      align-items: center;
+  }
+
+  .util li>a {
+      display: flex;
+      align-items: center;
+  }
+
   .util img {
       display: block;
       width: 20px;
       height: 20px;
+      object-fit: contain;
   }
 
-  .util li:nth-child(2) img {
-      width: 19px;
-      height: 21px;
-      padding-top: 2px;
+  /* =========================================
+           Language Toggle Switch Styles (개별 링크 방식으로 수정됨)
+           ========================================= */
+  .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      /* 아이콘과 텍스트 사이 간격 */
+  }
+
+  .lang-text {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+  }
+
+  /* 각 언어 링크 디자인 */
+  .lang-text a {
+      font-weight: 500;
+      color: #aaa;
+      /* 비활성화된 언어의 연한 색상 */
+      transition: color 0.3s, font-weight 0.3s;
+  }
+
+  .lang-text a:hover {
+      color: #127EC2;
+  }
+
+  /* 현재 활성화된 언어 강조 */
+  .lang-text a.active {
+      color: #127EC2;
+      font-weight: 700;
+  }
+
+  .lang-text .separator {
+      margin: 0 4px;
+      color: #ddd;
+      /* 구분선 색상 */
+      font-weight: 400;
+      font-size: 13px;
   }
 
   /* =========================================
