@@ -922,19 +922,19 @@
   .ico_loc {
       width: 14px;
       height: 18px;
-      background-image: url(./images/main/streamline-flex-color_location-heart-pin-flat.png);
+      background-image: url(../images/main/streamline-flex-color_location-heart-pin-flat.png);
   }
 
   .ico_loc_gray {
       width: 12px;
       height: 16px;
-      background-image: url(./images/main/pin.svg);
+      background-image: url(../images/main/pin.svg);
   }
 
   .ico_weather {
       width: 20px;
       height: 20px;
-      background-image: url(./images/main/mingcute_sun-line.svg);
+      background-image: url(../images/main/mingcute_sun-line.svg);
   }
 
   .ico_flag {
@@ -945,15 +945,15 @@
   }
 
   .flag_usa {
-      background-image: url(./images/main/circle-flags_uk.png);
+      background-image: url(../images/main/circle-flags_uk.png);
   }
 
   .flag_can {
-      background-image: url(./images/main/emojione_flag-for-canada.png);
+      background-image: url(../images/main/emojione_flag-for-canada.png);
   }
 
   .flag_kor {
-      background-image: url(./images/main/emojione_flag-for-south-korea.png);
+      background-image: url(../images/main/emojione_flag-for-south-korea.png);
   }
 
   .weather_info {
