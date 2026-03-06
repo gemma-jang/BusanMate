@@ -1,20 +1,14 @@
-    AOS.init();
+ AOS.init();
 
-        // Language Toggle Function (수정됨)
+        // Language Toggle Function 
         function toggleLanguage() {
-            // 현재 URL에서 파일명만 추출합니다 (예: "index.html" 또는 "index_ko.html")
             const pathName = window.location.pathname;
             const fileName = pathName.substring(pathName.lastIndexOf('/') + 1);
             
-            // 만약 현재 파일명이 'index_ko.html' 이면
             if (fileName === "index_ko.html") {
-                // 'index.html' 로 이동 (영어)
                 window.location.href = pathName.replace("index_ko.html", "index.html");
             } 
-            // 만약 현재 파일명이 'index.html' 이거나, 
-            // 파일명이 비어있는 경우 (기본 도메인 접속 시)
             else {
-                // 'index_ko.html' 로 이동 (한국어)
                 if (fileName === "index.html") {
                     window.location.href = pathName.replace("index.html", "index_ko.html");
                 } else {
@@ -48,7 +42,7 @@
             }
         });
 
-        // 2. Counters (숫자 애니메이션) 로직
+        // 2. Counters 
         function animateCounters() {
             const counterSection = document.querySelector('.counter');
             if (!counterSection) return;
@@ -87,7 +81,7 @@
             observer.observe(counterSection);
         }
 
-        // 3. Init (초기 로드 이벤트 통합)
+        // 3. Init 
         window.onload = function () {
             try { updateSlide(); } catch (e) { console.error("Slide Init Error:", e); }
             try { animateCounters(); } catch (e) { console.error("Counter Init Error:", e); }
@@ -95,14 +89,14 @@
             try { startLiveUpdates(); } catch (e) { console.error("Live Update Error:", e); }
         };
 
-        // 4. Overview Slider (데이터 및 함수 - 한글 번역)
+        // 4. Overview Slider (English Data)
         const slideData = [
-            { title: "해동용궁사", addr: "부산 기장군 기장읍 용궁길 86", tel: "+82-51-722-7744", time: "05:00 - 20:00", price: "입장료 무료", img: "./images/main/info_img1.png", mapUrl: "https://www.google.com/maps/search/해동용궁사", siteUrl: "http://yongkungsa.or.kr/" },
-            { title: "해운대 블루라인파크", addr: "부산 해운대구 청사포로 116", tel: "+82-51-701-5548", time: "09:30 - 19:00", price: "7,000원부터~", img: "./images/main/info_img2.png", mapUrl: "https://www.google.com/maps/search/해운대+블루라인+파크", siteUrl: "https://www.bluelinepark.com/ " },
-            { title: "광안리 해수욕장", addr: "부산 수영구 광안해변로 219", tel: "+82-51-622-4251", time: "24시간 개방", price: "무료", img: "./images/main/info_img3.png", mapUrl: "https://www.google.com/maps/search/광안리+해수욕장", siteUrl: "https://www.suyeong.go.kr/tour/index.suyeong" },
-            { title: "벡스코 (BEXCO)", addr: "부산 해운대구 APEC로 55", tel: "+82-51-740-7300", time: "행사 일정 참조", price: "행사별 상이", img: "./images/main/info_img4.png", mapUrl: "https://www.google.com/maps/search/BEXCO", siteUrl: "https://www.bexco.co.kr/" },
-            { title: "사직야구장", addr: "부산 동래구 사직로 45", tel: "+82-51-505-7422", time: "경기 당일", price: "10,000원부터~", img: "./images/main/info_img5.png", mapUrl: "https://www.google.com/maps/search/사직야구장", siteUrl: "https://www.giantsclub.com/" },
-            { title: "감천문화마을", addr: "부산 사하구 감내2로 203", tel: "+82-51-204-1444", time: "09:00 - 18:00", price: "입장료 무료", img: "./images/main/info_img6.png", mapUrl: "https://www.google.com/maps/search/감천문화마을", siteUrl: "https://www.gamcheon.or.kr/" }
+            { title: "Haedong Yonggungsa", addr: "86 Yonggung-gil, Gijang, Busan", tel: "+82-51-722-7744", time: "05:00 - 20:00", price: "Free admission", img: "./images/main/info_img1.png", mapUrl: "https://www.google.com/maps/search/Haedong+Yonggungsa", siteUrl: "http://yongkungsa.or.kr/" },
+            { title: "Haeundae Blue Line Park", addr: "116 Cheongsapo-ro, Haeundae-gu", tel: "+82-51-701-5548", time: "09:30 - 19:00", price: "From 7,000 KRW", img: "./images/main/info_img2.png", mapUrl: "https://www.google.com/maps/search/Haeundae+Blue+Line+Park", siteUrl: "https://www.bluelinepark.com/ " },
+            { title: "Gwangalli Beach", addr: "219 Gwanganhaebyeon-ro, Suyeong-gu", tel: "+82-51-622-4251", time: "Open 24 hours", price: "Free", img: "./images/main/info_img3.png", mapUrl: "https://www.google.com/maps/search/Gwangalli+Beach", siteUrl: "https://www.suyeong.go.kr/tour/index.suyeong" },
+            { title: "BEXCO", addr: "55 APEC-ro, Haeundae-gu, Busan", tel: "+82-51-740-7300", time: "Varies by event", price: "Varies by event", img: "./images/main/info_img4.png", mapUrl: "https://www.google.com/maps/search/BEXCO", siteUrl: "https://www.bexco.co.kr/" },
+            { title: "Sajik Baseball Stadium", addr: "45 Sajik-ro, Dongnae-gu, Busan", tel: "+82-51-505-7422", time: "Game days", price: "From 10,000 KRW", img: "./images/main/info_img5.png", mapUrl: "https://www.google.com/maps/search/Sajik+Baseball+Stadium", siteUrl: "https://www.giantsclub.com/" },
+            { title: "Gamcheon Culture Village", addr: "203 Gamnae 2-ro, Saha-gu, Busan", tel: "+82-51-204-1444", time: "09:00 - 18:00", price: "Free admission", img: "./images/main/info_img6.png", mapUrl: "https://www.google.com/maps/search/Gamcheon+Culture+Village", siteUrl: "https://www.gamcheon.or.kr/" }
         ];
 
         let currentSlide = 5;
@@ -134,47 +128,47 @@
         function prevSlide() { currentSlide = (currentSlide - 1 + slideData.length) % slideData.length; updateSlide(); }
 
 
-        // [수정] Live Updates (데이터 한글 번역)
+        // Live Updates (English Data)
         function startLiveUpdates() {
             const weatherData = [
                 {
-                    loc: "해운대", temp: "22°C", img: "./images/main/haeundae.png",
+                    loc: "Haeundae", temp: "22°C", img: "./images/main/haeundae.png",
                     comments: [
-                        { user: "Sophie", flag: "usa", text: "산책하기 너무 좋은 날씨예요.", time: "2분 전" },
-                        { user: "Mark", flag: "can", text: "바람은 좀 불지만 햇살이 좋아요!", time: "11분 전" },
-                        { user: "유리", flag: "kor", text: "피크닉하기 완벽한 날이네요.", time: "1시간 36분 전" }
+                        { user: "Sophie", flag: "usa", text: "Great weather for a walk.", time: "2 mins ago" },
+                        { user: "Mark", flag: "can", text: "A bit windy, but the sun is nice!", time: "11 mins ago" },
+                        { user: "Yuri", flag: "kor", text: "Perfect day for a picnic.", time: "1 hr 36 mins ago" }
                     ]
                 },
                 {
-                    loc: "광안리", temp: "21°C", img: "./images/main/gwangalli.png",
+                    loc: "Gwangalli", temp: "21°C", img: "./images/main/gwangalli.png",
                     comments: [
-                        { user: "민호", flag: "kor", text: "오늘 밤 광안대교 뷰 미쳤어요!", time: "방금 전" },
-                        { user: "James", flag: "usa", text: "드론쇼 기다리는 중입니다.", time: "15분 전" },
-                        { user: "Elena", flag: "can", text: "부산 최고의 야경이네요.", time: "40분 전" }
+                        { user: "Minho", flag: "kor", text: "Gwangandaegyo Bridge view is crazy tonight!", time: "Just now" },
+                        { user: "James", flag: "usa", text: "Waiting for the drone show.", time: "15 mins ago" },
+                        { user: "Elena", flag: "can", text: "The best night view in Busan.", time: "40 mins ago" }
                     ]
                 },
                 {
-                    loc: "서면", temp: "23°C", img: "./images/main/seomyeon.png",
+                    loc: "Seomyeon", temp: "23°C", img: "./images/main/seomyeon.png",
                     comments: [
-                        { user: "Ken", flag: "can", text: "쇼핑하기 진짜 좋네요.", time: "5분 전" },
-                        { user: "지은", flag: "kor", text: "숨겨진 카페 골목을 찾았어요.", time: "20분 전" },
-                        { user: "Alex", flag: "usa", text: "거리의 활기가 엄청나요.", time: "55분 전" }
+                        { user: "Ken", flag: "can", text: "Really good for shopping.", time: "5 mins ago" },
+                        { user: "Jieun", flag: "kor", text: "Found a hidden cafe alley.", time: "20 mins ago" },
+                        { user: "Alex", flag: "usa", text: "The street energy is amazing.", time: "55 mins ago" }
                     ]
                 }
             ];
 
             const travelUpdateData = [
                 [
-                    { name: "Mark", flag: "can", msg: "방금 김해공항 도착! 너무 기대돼요.", loc: "김해공항", time: "방금 전", img: "./images/main/user1.png" },
-                    { name: "Amy", flag: "usa", msg: "전포 카페거리 커피 진짜 맛있어요.", loc: "전포동", time: "5분 전", img: "./images/main/user2.png" }
+                    { name: "Mark", flag: "can", msg: "Just arrived at Gimhae Airport! So excited.", loc: "Gimhae Airport", time: "Just now", img: "./images/main/user1.png" },
+                    { name: "Amy", flag: "usa", msg: "The coffee at Jeonpo Cafe Street is really good.", loc: "Jeonpo-dong", time: "5 mins ago", img: "./images/main/user2.png" }
                 ],
                 [
-                    { name: "Eric", flag: "usa", msg: "황령산 등산 중입니다.", loc: "황령산", time: "12분 전", img: "./images/main/user3.png" },
-                    { name: "Zach", flag: "can", msg: "자갈치 시장에서 회 먹어보는 중!", loc: "자갈치시장", time: "30분 전", img: "./images/main/user4.png" }
+                    { name: "Eric", flag: "usa", msg: "Hiking up Hwangnyeongsan Mountain.", loc: "Hwangnyeongsan", time: "12 mins ago", img: "./images/main/user3.png" },
+                    { name: "Zach", flag: "can", msg: "Trying raw fish at Jagalchi Market!", loc: "Jagalchi Market", time: "30 mins ago", img: "./images/main/user4.png" }
                 ],
                 [
-                    { name: "Sarah", flag: "usa", msg: "흰여울문화마을 산책 중.", loc: "영도", time: "1시간 전", img: "./images/main/user1.png" },
-                    { name: "민지", flag: "kor", msg: "태종대에서 바닷바람 쐬는 중.", loc: "태종대", time: "1시간 20분 전", img: "./images/main/user2.png" }
+                    { name: "Sarah", flag: "usa", msg: "Walking around Huinnyeoul Culture Village.", loc: "Yeongdo", time: "1 hr ago", img: "./images/main/user1.png" },
+                    { name: "Minji", flag: "kor", msg: "Enjoying the sea breeze at Taejongdae.", loc: "Taejongdae", time: "1 hr 20 mins ago", img: "./images/main/user2.png" }
                 ]
             ];
 
@@ -246,47 +240,47 @@
             }, 4000);
         }
 
-        // 5. Mate Stories Logic (한글 번역)
+        // 5. Mate Stories Logic (English Data)
         const storiesData = [
             {
                 img: "./images/main/mate_stories_photo1.png", name: "Sarah",
-                tags: ["#메이트와함께", "#부산라이프", "#감천문화마을", "#여행스타그램", "#국내여행"],
-                review: "로컬 메이트와 함께 감천문화마을을 걸으니 가파른 길도 전혀 힘들지 않았어요!"
+                tags: ["#WithMate", "#BusanLife", "#GamcheonCultureVillage", "#Travelgram", "#KoreaTravel"],
+                review: "Walking through Gamcheon Culture Village with a local mate made the steep hills feel like nothing!"
             },
             {
                 img: "./images/main/mate_stories_photo2.png", name: "James",
-                tags: ["#첫부산여행", "#광안리", "#광안대교", "#야경맛집", "#부산여행"],
-                review: "밤에 처음 본 광안대교는 정말 숨 막히게 아름다웠습니다. 빨리 또 오고 싶어요."
+                tags: ["#FirstBusanTrip", "#Gwangalli", "#Gwangandaegyo", "#NightView", "#BusanTravel"],
+                review: "Seeing the Gwangandaegyo Bridge at night for the first time was breathtaking. I want to come back soon."
             },
             {
-                img: "./images/main/mate_stories_photo3.png", name: "민지",
-                tags: ["#로컬꿀팁", "#돼지국밥", "#서면맛집", "#부산먹방", "#찐맛집"],
-                review: "메이트가 알려준 찐 맛집 골목에서 최고의 돼지국밥을 맛봤어요!"
+                img: "./images/main/mate_stories_photo3.png", name: "Minji",
+                tags: ["#LocalTips", "#DwaejiGukbap", "#SeomyeonFood", "#BusanFoodie", "#LocalEats"],
+                review: "I tasted the best Dwaeji Gukbap in a local food alley recommended by my mate!"
             },
             {
                 img: "./images/main/mate_stories_photo4.png", name: "Alex",
-                tags: ["#숨은명소", "#영도카페", "#흰여울문화마을", "#오션뷰", "#조용한여행"],
-                review: "영도에 숨겨진 조용한 오션뷰 카페들을 탐방한 게 이번 여행의 하이라이트였어요."
+                tags: ["#HiddenGems", "#YeongdoCafe", "#HuinnyeoulCultureVillage", "#OceanView", "#QuietTravel"],
+                review: "Exploring hidden, quiet ocean-view cafes in Yeongdo was the highlight of this trip."
             },
             {
                 img: "./images/main/mate_stories_photo5.png", name: "Chen",
-                tags: ["#먹방투어", "#길거리음식", "#BIFF광장", "#씨앗호떡", "#남포동", "#부산맛집"],
-                review: "BIFF 광장 길거리 음식은 필수 코스! 씨앗호떡은 정말 인생 맛입니다!"
+                tags: ["#FoodTour", "#StreetFood", "#BIFFSquare", "#SsiatHotteok", "#Nampodong", "#BusanFood"],
+                review: "BIFF Square street food is a must! The Ssiat Hotteok is the best I've ever had!"
             },
             {
                 img: "./images/main/mate_stories_photo6.png", name: "Elena",
-                tags: ["#야경스팟", "#해상케이블카", "#송도해수욕장", "#시티라이트", "#로맨틱부산"],
-                review: "밤에 타는 송도 해상케이블카에서 본 도시의 불빛들은 정말 로맨틱했어요."
+                tags: ["#NightView", "#MarineCableCar", "#SongdoBeach", "#CityLights", "#RomanticBusan"],
+                review: "The city lights seen from the Songdo Marine Cable Car at night were so romantic."
             },
             {
                 img: "./images/main/mate_stories_photo7.png", name: "Yuki",
-                tags: ["#느린여행", "#해운대", "#밤산책", "#버스킹", "#힐링타임"],
-                review: "해운대 바닷가에 앉아 버스킹을 듣는 것만으로도 완전 힐링되는 시간이었어요."
+                tags: ["#SlowTravel", "#Haeundae", "#NightWalk", "#Busking", "#HealingTime"],
+                review: "Just sitting on Haeundae Beach listening to busking was completely healing."
             },
             {
                 img: "./images/main/mate_stories_photo8.png", name: "Daniel",
-                tags: ["#뜻밖의순간", "#자갈치시장", "#수산시장", "#로컬바이브", "#해산물파티"],
-                review: "자갈치 시장에서 우연히 작은 축제를 발견했어요. 활기와 에너지가 넘치는 곳!"
+                tags: ["#UnexpectedMoments", "#JagalchiMarket", "#FishMarket", "#LocalVibe", "#SeafoodParty"],
+                review: "I stumbled upon a small festival at Jagalchi Market. A place full of life and energy!"
             }
         ];
 
