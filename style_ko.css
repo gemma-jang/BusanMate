@@ -118,7 +118,7 @@
   /* =========================================
            Header Area (Fixed Top)
            ========================================= */
- #header {
+  #header {
       position: fixed;
       top: 0;
       left: 0;
@@ -372,11 +372,18 @@
       z-index: 1;
   }
 
+  /* ✨ 수정된 부분: 영상 위 물결 이미지 위치 고정 ✨ */
   .wave-bg {
       position: absolute;
       bottom: -205px;
-      left: 0;
+      /* 기본 위치 유지 */
+      left: 50%;
+      /* 가운데 정렬 기준점 */
+      transform: translateX(-50%);
+      /* 정확히 정중앙으로 이동 */
       width: 100%;
+      min-width: 1920px;
+      /* 모바일에서도 축소되지 않도록 최소 너비를 강제 고정 */
       height: auto;
       z-index: 2;
       pointer-events: none;
