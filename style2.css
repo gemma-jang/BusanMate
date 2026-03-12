@@ -404,7 +404,7 @@ body {
 /* Content 1 */
 #content1 {
     padding-bottom: 100px;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 
 .banner2 {
@@ -1763,4 +1763,5 @@ body {
     z-index: 9;
     pointer-events: none;
     opacity: 0.6;
+
 }
