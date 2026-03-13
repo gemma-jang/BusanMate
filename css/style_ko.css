@@ -537,7 +537,7 @@
 
   /* Content 2: Overview & Map */
   #content2 {
-      width: 1920px;
+      
       height: 970px;
       position: relative;
       background: url('../images/main/overview_bg.png') no-repeat center top;
@@ -1562,4 +1562,5 @@
       z-index: 9;
       pointer-events: none;
       opacity: 0.6;
+
   }
