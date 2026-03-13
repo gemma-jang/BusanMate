@@ -577,7 +577,7 @@ body {
 /* Content 2: Overview & Map */
 /* [수정] 부모 영역: 고정된 배경(하늘)만 남김 */
 #content2 {
-    width: 1920px;
+   
     height: 970px;
     position: relative;
     /* 고정된 배경 이미지 */
@@ -1765,3 +1765,4 @@ body {
     opacity: 0.6;
 
 }
+
